@@ -1,0 +1,84 @@
+{
+  "stock": [
+    {
+      "id": "EU160",
+      "series": "E4DCU",
+      "manufacturer": "Newag",
+      "year": 2012,
+      "type": "express",
+      "seats": 0,
+      "standing": 0,
+      "length": 19.9,
+      "weight": 79,
+      "max_speed": 160,
+      "power": 5600,
+      "electric": true,
+      "price": 18400000,
+      "condition": "new"
+    }
+    {
+      "id": "EU200",
+      "series": "E4MSUa",
+      "manufacturer": "Newag",
+      "year": 2023,
+      "type": "express",
+      "seats": 0,
+      "standing": 0,
+      "length": 19.9,
+      "weight": 88,
+      "max_speed": 200,
+      "power": 5600,
+      "electric": true,
+      "price": 25800000,
+      "condition": "new"
+    }
+    {
+      "id": "X4E",
+      "series": "Vectron",
+      "manufacturer": "Siemens",
+      "year": 2010,
+      "type": "express",
+      "seats": 0,
+      "standing": 0,
+      "length": 19.0,
+      "weight": 80,
+      "max_speed": 200,
+      "power": 5200,
+      "electric": true,
+      "price": 25500000,
+      "condition": "new"
+    }
+    {
+      "id": "111Ed",
+      "series": "Gama",
+      "manufacturer": "Pesa",
+      "year": 2012,
+      "type": "express",
+      "seats": 0,
+      "standing": 0,
+      "length": 19.8,
+      "weight": 83,
+      "max_speed": 160,
+      "power": 5600,
+      "electric": true,
+      "price": 17500000,
+      "condition": "new"
+    }
+    {
+      "id": "BR 186/187",
+      "series": "Traxx",
+      "manufacturer": "Bombardier",
+      "year": 2000,
+      "type": "express",
+      "seats": 0,
+      "standing": 0,
+      "length": 18.9,
+      "weight": 84,
+      "max_speed": 160,
+      "power": 5600,
+      "electric": true,
+      "price": 217000000,
+      "condition": "new"
+    }
+  ]
+}
