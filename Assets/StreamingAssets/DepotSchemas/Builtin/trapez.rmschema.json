@@ -1,0 +1,23 @@
+{
+    "schemaFormatVersion": 1,
+    "id": "builtin_trapez",
+    "name": "Trapez R190 (2 crossovery + 3m gap)",
+    "description": "Klasyczny PKP trapez — 4 rozjazdy R190 w trapezowym układzie. 2 crossovery (każdy = rozjazd + wstawka skośna + rozjazd odwrotny) z 3m wstawką prostą między nimi na Tor A. Crossover 1 (Tor B → Tor A) i crossover 2 (Tor A → Tor B) sekwencyjnie, NIE krzyżują się jak Scissors X. Pozwala na zmianę toru A↔B w obu kierunkach. Tylko międzytorze wybieralne, ilość torów stała = 2.",
+    "category": "Trapez",
+    "type": "generative",
+    "author": "Built-in",
+    "tags": ["trapez", "standard", "crossover", "r190"],
+    "version": "1.0",
+    "createdAt": "2026-05-02T00:00:00Z",
+    "modifiedAt": "2026-05-02T00:00:00Z",
+    "workshopId": 0,
+    "previewPngBase64": "",
+    "parameters": {
+        "trackCount": 2,
+        "trackSpacing": 5.0,
+        "trackSpacings": [],
+        "turnoutType": "R190",
+        "turnoutTypes": [],
+        "mirror": false
+    }
+}

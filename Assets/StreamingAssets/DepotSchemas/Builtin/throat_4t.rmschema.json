@@ -1,0 +1,23 @@
+{
+    "schemaFormatVersion": 1,
+    "id": "builtin_throat_4t",
+    "name": "Wachlarz 4-torowy R190",
+    "description": "Wachlarz 4-torowy klasyczny PKP. Wszystkie rozjazdy R190 z łukami powrotnymi tego samego promienia. Międzytorze 5.0m.",
+    "category": "Throat",
+    "type": "generative",
+    "author": "Built-in",
+    "tags": ["throat", "standard", "r190"],
+    "version": "1.0",
+    "createdAt": "2026-05-01T00:00:00Z",
+    "modifiedAt": "2026-05-02T00:00:00Z",
+    "workshopId": 0,
+    "previewPngBase64": "",
+    "parameters": {
+        "trackCount": 4,
+        "trackSpacing": 5.0,
+        "trackSpacings": [],
+        "turnoutType": "",
+        "turnoutTypes": ["R190", "R190", "R190"],
+        "mirror": false
+    }
+}

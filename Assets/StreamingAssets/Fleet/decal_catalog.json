@@ -1,0 +1,37 @@
+{
+  "decals": [
+    { "id": "digit-0", "displayName": "Cyfra 0", "category": "digit", "spriteResourcePath": "Decals/digit-0", "supportsCustomText": false },
+    { "id": "digit-1", "displayName": "Cyfra 1", "category": "digit", "spriteResourcePath": "Decals/digit-1", "supportsCustomText": false },
+    { "id": "digit-2", "displayName": "Cyfra 2", "category": "digit", "spriteResourcePath": "Decals/digit-2", "supportsCustomText": false },
+    { "id": "digit-3", "displayName": "Cyfra 3", "category": "digit", "spriteResourcePath": "Decals/digit-3", "supportsCustomText": false },
+    { "id": "digit-4", "displayName": "Cyfra 4", "category": "digit", "spriteResourcePath": "Decals/digit-4", "supportsCustomText": false },
+    { "id": "digit-5", "displayName": "Cyfra 5", "category": "digit", "spriteResourcePath": "Decals/digit-5", "supportsCustomText": false },
+    { "id": "digit-6", "displayName": "Cyfra 6", "category": "digit", "spriteResourcePath": "Decals/digit-6", "supportsCustomText": false },
+    { "id": "digit-7", "displayName": "Cyfra 7", "category": "digit", "spriteResourcePath": "Decals/digit-7", "supportsCustomText": false },
+    { "id": "digit-8", "displayName": "Cyfra 8", "category": "digit", "spriteResourcePath": "Decals/digit-8", "supportsCustomText": false },
+    { "id": "digit-9", "displayName": "Cyfra 9", "category": "digit", "spriteResourcePath": "Decals/digit-9", "supportsCustomText": false },
+
+    { "id": "custom-text", "displayName": "Tekst niestandardowy", "category": "letter", "spriteResourcePath": "", "supportsCustomText": true },
+    { "id": "company-name", "displayName": "Nazwa firmy gracza", "category": "logo", "spriteResourcePath": "", "supportsCustomText": true },
+
+    { "id": "icon-wheelchair", "displayName": "Wózek inwalidzki", "category": "info", "spriteResourcePath": "Decals/wheelchair", "supportsCustomText": false },
+    { "id": "icon-bicycle", "displayName": "Rower", "category": "info", "spriteResourcePath": "Decals/bicycle", "supportsCustomText": false },
+    { "id": "icon-wifi", "displayName": "Wi-Fi", "category": "info", "spriteResourcePath": "Decals/wifi", "supportsCustomText": false },
+    { "id": "icon-usb", "displayName": "USB / gniazdka", "category": "info", "spriteResourcePath": "Decals/usb", "supportsCustomText": false },
+    { "id": "icon-toilet", "displayName": "Toaleta", "category": "info", "spriteResourcePath": "Decals/toilet", "supportsCustomText": false },
+    { "id": "icon-quiet", "displayName": "Strefa ciszy", "category": "info", "spriteResourcePath": "Decals/quiet", "supportsCustomText": false },
+    { "id": "icon-reservation", "displayName": "Rezerwacja", "category": "info", "spriteResourcePath": "Decals/reservation", "supportsCustomText": false },
+    { "id": "icon-first-class", "displayName": "1 klasa", "category": "info", "spriteResourcePath": "Decals/first-class", "supportsCustomText": false },
+    { "id": "icon-child", "displayName": "Strefa dziecka", "category": "info", "spriteResourcePath": "Decals/child", "supportsCustomText": false },
+    { "id": "icon-restaurant", "displayName": "Restauracja", "category": "info", "spriteResourcePath": "Decals/restaurant", "supportsCustomText": false },
+
+    { "id": "warning-triangle", "displayName": "Trójkąt ostrzegawczy", "category": "warning", "spriteResourcePath": "Decals/warning-triangle", "supportsCustomText": false },
+    { "id": "warning-no-lean", "displayName": "Nie wychylać się", "category": "warning", "spriteResourcePath": "Decals/no-lean", "supportsCustomText": false },
+    { "id": "warning-no-smoking", "displayName": "Zakaz palenia", "category": "warning", "spriteResourcePath": "Decals/no-smoking", "supportsCustomText": false },
+
+    { "id": "arrow-up", "displayName": "Strzałka góra", "category": "arrow", "spriteResourcePath": "Decals/arrow-up", "supportsCustomText": false },
+    { "id": "arrow-down", "displayName": "Strzałka dół", "category": "arrow", "spriteResourcePath": "Decals/arrow-down", "supportsCustomText": false },
+    { "id": "arrow-left", "displayName": "Strzałka lewa", "category": "arrow", "spriteResourcePath": "Decals/arrow-left", "supportsCustomText": false },
+    { "id": "arrow-right", "displayName": "Strzałka prawa", "category": "arrow", "spriteResourcePath": "Decals/arrow-right", "supportsCustomText": false }
+  ]
+}

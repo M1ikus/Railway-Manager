@@ -1,0 +1,2065 @@
+{
+  "assistant": {
+    "panel": {
+      "title_format": "Twój zastępca — {0}",
+      "suggestion_header": "Sugestia",
+      "no_suggestion": "Nic pilnego, Szefie.",
+      "capabilities_header": "W czym mogę pomóc",
+      "history_header": "Ostatnie działania",
+      "history_empty": "Jeszcze nic nie zrobiłem.",
+      "show_how": "Pokaż jak",
+      "propose": "Przygotuj plan",
+      "auto_format": "Auto: {0}"
+    },
+    "whisper": {
+      "test": "Szefie, działam. To testowy szept — kliknij, żeby otworzyć panel.",
+      "intro_format": "Witam na posterunku, Szefie! Jestem {0} — będę podpowiadał. Klik w mój portret otwiera panel pomocy.",
+      "auto_done_format": "Zrobione w tle: {0}. Kliknij — szczegóły w panelu."
+    },
+    "rule": {
+      "ob_track": "Szefie, zajezdnia nie ma jeszcze torów. Kliknij — pokażę, jak je poprowadzić.",
+      "ob_vehicle": "Tory gotowe. Czas na pierwszy pojazd — pokażę, gdzie kupować.",
+      "ob_deliver": "Pojazd jest w drodze do zajezdni — podgląd dostawy w zakładce Tabor.",
+      "ob_timetable": "Mamy tabor — ułóżmy pierwszy rozkład jazdy. Kliknij, poprowadzę.",
+      "ob_circulation": "Rozkład jest. Mogę spiąć go w obieg za Ciebie — kliknij.",
+      "ob_crew": "Brakuje maszynisty — bez załogi nic nie pojedzie. Pokażę rekrutację.",
+      "emu_trap": "Uwaga, Szefie: mamy pojazd elektryczny, a tory zajezdni są bez sieci — nie wyjedzie. Elektryfikacja albo plan B.",
+      "crew_missing": "Obiegi są, ale załogi bez grafików — mogę ułożyć turnusy. Kliknij.",
+      "broken_down": "Szefie, mamy niesprawny lub zaległy tabor. Mogę odstawić pojazdy do warsztatu — kliknij.",
+      "vehicle_idle": "Część taboru stoi bez przydziału do obiegu. Może zaprzęgniemy go do pracy? Kliknij.",
+      "orphan_timetable": "Niektóre rozkłady nie są w żadnym obiegu — nikt ich nie obsłuży. Mogę je spiąć.",
+      "line_unprofitable": "Któraś z linii dokłada do interesu od kilku dni. Zerknijmy w finanse.",
+      "no_desk": "Część personelu nie ma swojego stanowiska — postawmy brakujące biurka.",
+      "bored": "Wszystko chodzi jak w zegarku, Szefie. Może czas na nową linię? Kliknij — policzę."
+    },
+    "stuck": {
+      "offer_help": "Szefie, widzę że idzie opornie — mogę to przygotować. Kliknij."
+    },
+    "plan": {
+      "nothing": "Na ten moment nie mam nic do zaproponowania, Szefie.",
+      "circulation_autogen": {
+        "title_format": "Obiegi do utworzenia: {0}",
+        "effect": "Połączę wolne rozkłady w obiegi i przypiszę najlepsze dostępne pojazdy.",
+        "orphans_format": "Bez dopasowania: {0} rozkładów (zostaną wolne)."
+      },
+      "crew_autogen": {
+        "title_format": "Turnusy załóg do utworzenia: {0}",
+        "effect": "Ułożę turnusy załóg dla dzisiejszych kursów (przerwy i limity pracy wg ustawień)."
+      },
+      "workshop": {
+        "title_format": "Do warsztatu: {0} pojazd(ów)",
+        "effect": "Zarezerwuję stanowiska i odeślę pojazdy na przegląd (dojazd po torach zajezdni).",
+        "line_format": "{0} {1}: przegląd {2} → stanowisko #{3}",
+        "no_slot_format": "{0} {1}: brak wolnego stanowiska dla {2} (rozważ ZNTK)"
+      }
+    },
+    "capability": {
+      "circulation": {
+        "autogen": "Generowanie obiegów z rozkładów"
+      },
+      "depot": {
+        "buildTrack": "Budowa torów w zajezdni",
+        "placeDesk": "Stanowiska pracy dla personelu"
+      },
+      "maintenance": {
+        "workshop": "Odstawienie taboru do warsztatu"
+      },
+      "economy": {
+        "review": "Przegląd rentowności linii"
+      },
+      "fleet": {
+        "buy": "Zakup taboru",
+        "deliver": "Dostawa pojazdu do zajezdni"
+      },
+      "timetable": {
+        "create": "Tworzenie rozkładu jazdy"
+      },
+      "personnel": {
+        "hire": "Zatrudnienie maszynisty"
+      },
+      "crew": {
+        "autogen": "Generowanie grafików załóg (turnusy)"
+      }
+    },
+    "preview": {
+      "title_fallback": "Propozycja",
+      "effect_header": "Efekt",
+      "cost_format": "Koszt: {0}",
+      "accept": "Zatwierdź",
+      "cancel": "Anuluj",
+      "more_lines_format": "… (+{0} dalszych)"
+    },
+    "planner": {
+      "reject": {
+        "no_route": "brak trasy w sieci",
+        "composition_unsupported": "lokomotywa+wagony — złóż skład ręcznie (planner dobiera zespoły)",
+        "unavailable": "niedostępny (naprawa/stan)",
+        "not_electrified": "trasa bez sieci trakcyjnej",
+        "range": "za mały zasięg na paliwie (powrót do tankowania)",
+        "no_seats": "brak miejsc pasażerskich"
+      },
+      "ui": {
+        "title": "Planner połączeń",
+        "from_label": "Skąd",
+        "to_label": "Dokąd",
+        "station_placeholder": "Wpisz nazwę stacji (min 2 znaki)…",
+        "compute": "Policz połączenie",
+        "not_ready": "Mapa jeszcze się ładuje, Szefie — spróbuj za chwilę.",
+        "pick_both": "Wybierz obie stacje (różne).",
+        "facts_format": "Trasa: {0} km · {1} · popyt ~{2} pax/dzień · {3}",
+        "electrified_yes": "pod siecią",
+        "electrified_no": "BEZ sieci",
+        "archetype": {
+          "agglomeration": "aglomeracyjna",
+          "regional": "regionalna",
+          "interregional": "międzyregionalna"
+        },
+        "candidates_header": "Tabor (najlepsze dopasowanie):",
+        "rejected_header_format": "Odrzucone ({0}):",
+        "no_candidates": "Żaden pojazd z floty nie obsłuży tej relacji — powody niżej.",
+        "variants_header_format": "Warianty dla: {0}",
+        "variant": {
+          "economic": "Oszczędny",
+          "balanced": "Zbalansowany",
+          "comfort": "Komfort"
+        },
+        "variant_line_format": "{0} kursów/d · takt {1} min · obłożenie ~{2}%",
+        "net_format": "bilans dzienny: {0}",
+        "subsidy_hint": "· kwalifikuje się do dotacji",
+        "create": "Utwórz",
+        "created_format": "Utworzyłem rozkład „{0}”, Szefie. Zaraz przypomnę o spięciu w obieg.",
+        "create_failed": "Nie udało się utworzyć rozkładu (graf/kategoria) — szczegóły w logu.",
+        "history_format": "Rozkład „{0}” (planner relacji)"
+      }
+    },
+    "guidance": {
+      "fallback": "Pokażę krok po kroku, gdy moduł dostarczy instrukcje.",
+      "circulation_autogen": {
+        "step1": "Otwórz listę obiegów — zakładka Obiegi przy rozkładach.",
+        "step2": "Użyj [Wygeneruj auto] albo przeciągnij rozkłady do obiegu ręcznie."
+      },
+      "depot_buildtrack": {
+        "step1": "Kliknij zakładkę BUDOWANIE w lewym pasku.",
+        "step2": "Wybierz narzędzie TOR i poprowadź tor od istniejącego punktu."
+      },
+      "fleet_buy": {
+        "warn_no_catenary": "Zanim kupisz: zajezdnia nie ma sieci trakcyjnej — pojazd elektryczny nie wyjedzie. Rozważ spalinowy albo najpierw elektryfikację.",
+        "step1": "Otwórz zakładkę TABOR w lewym pasku.",
+        "step2": "W zakładce Rynek wybierz pojazd i dodaj do koszyka."
+      },
+      "fleet_deliver": {
+        "step1": "Pojazd jedzie do zajezdni — status dostawy znajdziesz w TABOR → Mój tabor."
+      },
+      "timetable_create": {
+        "step1": "Otwieram planner połączeń — wybierz skąd i dokąd chcesz jeździć.",
+        "step2": "Wolisz ręcznie? Zakładka ROZKŁADY → Nowy rozkład."
+      },
+      "personnel_hire": {
+        "step1": "Otwórz zakładkę PERSONEL w lewym pasku.",
+        "step2": "W zakładce Rekrutacja zatrudnij maszynistę."
+      },
+      "crew_autogen": {
+        "step1": "Otwórz PERSONEL → zakładka Turnusy.",
+        "step2": "Użyj Auto-generatora turnusów (ustawienia + podgląd przed zatwierdzeniem)."
+      },
+      "maintenance_workshop": {
+        "step1": "Otwieram panel Warsztaty — tu widać stanowiska i kolejkę przeglądów.",
+        "step2": "Wybierz pojazd i stanowisko (poziom przeglądu musi pasować). Brak miejsca? Rozważ ZNTK w zakładce Zewnętrzne."
+      },
+      "economy_review": {
+        "step1": "Otwieram Finanse — sekcja per-linia pokaże, która dokłada.",
+        "step2": "Rozważ: zmianę taktu, inną kategorię handlową, dotację wojewódzką albo zawieszenie obiegu."
+      },
+      "depot_placedesk": {
+        "step1": "Kliknij zakładkę BUDOWANIE w lewym pasku.",
+        "step2": "W narzędziu pomieszczeń wybierz pokój i postaw biurko w sekcji „Dostępne akcje” — pracownik sam je zajmie."
+      }
+    }
+  },
+  "dispatch": {
+    "policy": {
+      "label": "Dyspozytura (mapa OSM)",
+      "off": "Wyłączona (klasyczne semafory)",
+      "balanced": "Zrównoważona",
+      "punctuality": "Priorytet punktualności"
+    }
+  },
+  "_meta": {
+    "language": "Polski",
+    "code": "pl",
+    "completion_percent": 5,
+    "_comment": "Minimal seed dla M13-3 testowania (Settings UI). Pełen rollout w M13-4."
+  },
+  "common": {
+    "yes": "Tak",
+    "no": "Nie",
+    "confirm": "Potwierdź",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "save": "Zapisz",
+    "load": "Wczytaj",
+    "delete": "Usuń",
+    "rename": "Zmień nazwę",
+    "off": "Wył.",
+    "on": "Wł.",
+    "low": "Niskie",
+    "medium": "Średnie",
+    "high": "Wysokie",
+    "ultra": "Ultra",
+    "unlimited": "Bez limitu"
+  },
+  "fleet": {
+    "title": "Tabor",
+    "counter_format": "Posiadasz {0} pojazdów: {1}",
+    "tabs": {
+      "my_fleet": "Mój tabor",
+      "consists": "Składy",
+      "buy_fleet": "Kup tabor"
+    },
+    "close_button": "X",
+    "vehicle_type": {
+      "short": {
+        "electric_loco": "Lok. el.",
+        "diesel_loco": "Lok. sp.",
+        "emu": "EZT",
+        "dmu": "SZT",
+        "passenger_car": "Wagon",
+        "unknown": "?"
+      },
+      "filter": {
+        "all": "Wszystkie",
+        "loco": "Lok",
+        "emu": "EZT",
+        "dmu": "SZT",
+        "car": "Wagon"
+      }
+    },
+    "status": {
+      "moving_on_map": "W ruchu",
+      "stopped_on_map": "Stoi (mapa)",
+      "stopped_in_depot": "Stoi (zajezdnia)",
+      "moving_in_depot": "Manewry",
+      "in_repair": "W naprawie",
+      "out_of_service": "Wyłączony",
+      "in_production": "W produkcji",
+      "in_transit": "W dostawie",
+      "awaiting_pickup": "Oczekuje na odbiór",
+      "unknown": "?"
+    },
+    "counter_parts": {
+      "loco_format": "{0} lokomotyw",
+      "emu_format": "{0} EZT",
+      "dmu_format": "{0} SZT",
+      "car_format": "{0} wagonów"
+    },
+    "my_fleet": {
+      "search_label": "Szukaj:",
+      "search_placeholder": "Wpisz serię, numer...",
+      "columns": {
+        "name": "Seria / Numer",
+        "status": "Status",
+        "task": "Zadanie",
+        "consist": "Skład",
+        "mileage": "Przebieg",
+        "seats": "Miejsca",
+        "inspection": "Przegląd",
+        "condition": "Stan"
+      },
+      "empty_no_match_format": "Brak pojazdów pasujących do \"{0}\"",
+      "empty_no_vehicles": "Brak pojazdów w taborze",
+      "consist_format": "Obieg #{0}"
+    },
+    "market": {
+      "sub_tabs": {
+        "used": "Używane",
+        "new": "Nowe"
+      },
+      "columns": {
+        "location": "Lokalizacja",
+        "price": "Cena"
+      },
+      "empty_no_match_format": "Brak pojazdów pasujących do \"{0}\"",
+      "empty_no_market": "Brak pojazdów na rynku",
+      "inspection_format": "{0} do {1}",
+      "dash": "—"
+    },
+    "cart": {
+      "button_label": "Koszyk",
+      "title_format": "Koszyk ({0} pozycji)",
+      "total_format": "Razem: {0}",
+      "order_all": "Zamów wszystko",
+      "empty": "Koszyk jest pusty",
+      "delivery": {
+        "self_pickup": "Odbiór",
+        "delivery": "Dostawa"
+      }
+    },
+    "configurator": {
+      "empty_select_prompt": "Wybierz model z listy po lewej",
+      "quantity_label": "Ilość:",
+      "order_button": "Do koszyka",
+      "price_short_format": "{0}M",
+      "section": {
+        "safety": "Bezpieczeństwo",
+        "voltages": "Napięcia",
+        "comfort": "Komfort"
+      },
+      "option": {
+        "included": "(w cenie)",
+        "modifier_format": "+{0}"
+      },
+      "time": {
+        "month_singular": "1 miesiąc",
+        "month_plural_format": "{0} mies.",
+        "production_single_format": "Czas produkcji: {0}",
+        "production_multi_format": "1 szt: {0} | {1} szt: {2}"
+      },
+      "price": {
+        "total_format": "{0}",
+        "multi_format": "{0}x {1} = {2}"
+      },
+      "stats": {
+        "vmax_format": "V max: {0} km/h",
+        "power_format": "Moc: {0} kW",
+        "axles_format": "Osie: {0}",
+        "seats_format": "Miejsca: {0}"
+      }
+    },
+    "consists": {
+      "empty": "Brak zestawionych składów"
+    },
+    "seat_layout": {
+      "title": "Konfiguracja miejsc",
+      "mode_manual": "Ręczne",
+      "generate_button": "Generuj układ",
+      "eraser_button": "Gumka",
+      "clear_all_button": "Wyczyść wszystko",
+      "doors_label": "Drzwi:",
+      "coach_short_format": "Cz.{0}:",
+      "coach_short_label_format": "Cz.{0}",
+      "coach_full_format": "Człon {0}",
+      "count_format": "{0}/{1}",
+      "schematic_title_format": "Schemat ({0} członów)",
+      "wc": "WC"
+    },
+    "detail": {
+      "seat_preview": {
+        "title": "Podgląd miejsc",
+        "placeholder": "Wkrótce"
+      }
+    },
+    "currency": {
+      "million_format": "{0}M zł",
+      "from_million_format": "od {0}M"
+    }
+  },
+  "timetable": {
+    "category_editor": {
+      "title": "KATEGORIE HANDLOWE",
+      "list_label": "Lista kategorii:",
+      "empty": "Brak kategorii. Kliknij [+ Nowa].",
+      "button": {
+        "new": "+ Nowa",
+        "close": "✕",
+        "edit": "Edytuj",
+        "delete": "Usuń",
+        "save": "Zapisz",
+        "clear_form": "Wyczyść form"
+      },
+      "form": {
+        "header_new": "Nowa kategoria",
+        "header_select_prompt": "Wybierz kategorię z listy lub kliknij [+ Nowa]",
+        "header_edit_format": "Edycja: {0} — {1}",
+        "field": {
+          "id": "ID:",
+          "short_code": "Skrót:",
+          "name": "Nazwa:",
+          "base_price": "Cena bazowa zł:",
+          "price_per_km": "+ za km zł:",
+          "first_class_mult": "1 klasa ×:",
+          "min_stop_sec": "Min postój s:",
+          "priority": "Priorytet:",
+          "vmax_suggestion": "Sugerowana Vmax km/h:",
+          "default_emu_dmu": "Domyślnie EMU/DMU",
+          "requires": "Wymaga:",
+          "wifi": "WiFi",
+          "restaurant": "WR",
+          "sleeping": "WL",
+          "notes": "Notatki:",
+          "stops_policy": "  Polityka postojów:"
+        },
+        "placeholder": {
+          "id": "np. ic_premium",
+          "short_code": "IC",
+          "name": "InterCity Premium",
+          "notes": "opcjonalne"
+        },
+        "status": {
+          "fill_form": "Wypełnij pola i kliknij Zapisz",
+          "edit_form": "Edytuj pola i kliknij Zapisz",
+          "id_required": "ID jest wymagane (np. 'os', 'ic_premium')",
+          "name_required": "Skrót i nazwa są wymagane",
+          "id_invalid_chars": "ID może zawierać tylko litery, cyfry i podkreślnik",
+          "id_already_exists_format": "ID '{0}' już istnieje — wybierz inne",
+          "no_category_selected": "Brak wybranej kategorii do edycji",
+          "save_failed": "Nie udało się dodać kategorii",
+          "saved_format": "Zapisano: {0} — {1}",
+          "cant_delete_format": "Nie można usunąć '{0}' — używana przez rozkłady"
+        }
+      }
+    },
+    "list": {
+      "title": "ROZKŁADY JAZDY",
+      "empty": "Brak rozkładów. Kliknij [+ Nowy] żeby stworzyć pierwszy.",
+      "button": {
+        "categories": "Kategorie...",
+        "new": "+ Nowy",
+        "close": "✕"
+      },
+      "filter_label": "Filtr:",
+      "filter": {
+        "active": "Aktywne",
+        "suspended": "Wstrzymane",
+        "archived": "Archiwalne",
+        "all": "Wszystkie"
+      },
+      "row_status": {
+        "active": "aktywny",
+        "suspended": "wstrzymany",
+        "archived": "archiwum"
+      },
+      "row_action": {
+        "map": "Mapa",
+        "duplicate": "Dup"
+      },
+      "column_header": "Nr     Trasa                          Kat.R Kat.H Start  Koniec  Jazda Post.  Tab.  Vm     Status     Akcje",
+      "composition": {
+        "emu": "EMU",
+        "loco": "Lok",
+        "unknown": "?"
+      }
+    },
+    "circulations": {
+      "title": "OBIEGI SKŁADÓW",
+      "button": {
+        "new_empty": "+ Nowy pusty obieg",
+        "auto_generate": "Wygeneruj auto",
+        "close": "✕"
+      },
+      "column": {
+        "circulations": "Obiegi",
+        "schedules_pool": "Pula rozkładów (przeciągaj →)"
+      },
+      "warnings_label": "Ostrzeżenia:",
+      "pool": {
+        "empty": "Wszystkie rozkłady są już w obiegach.\nStwórz nowe w zakładce 'Rozkłady'."
+      },
+      "warning": {
+        "flash_prefix_format": "⛔ {0}",
+        "draft_no_vehicle_format": "⚠ Obieg '{0}' nie ma pojazdu (Draft)",
+        "all_vehicles_assigned": "✓ Wszystkie obiegi mają pojazdy",
+        "issue_error_format": "  ❌ krok {0}: {1}",
+        "issue_warn_format": "  ⚠ krok {0}: {1}"
+      },
+      "row": {
+        "no_name": "(bez nazwy)",
+        "info_format": "  {0} kroków · {1} · {2}",
+        "broken_vehicles_prefix": "  ⚠ Niesprawne pojazdy: ",
+        "broken_more_format": " +{0} więcej",
+        "broken_vehicle_format": "{0} {1} ({2})",
+        "broken_reason_repair": "naprawa",
+        "broken_reason_off": "wyłączony",
+        "broken_reason_condition_format": "kond. {0}%",
+        "drop_first_schedule": "⇐ Upuść tu pierwszy rozkład",
+        "button_options": "⚙",
+        "button_duplicate": "Dup",
+        "button_remove": "✕"
+      },
+      "step_bar": {
+        "deadhead_tag": " [SŁUŻB.]",
+        "format": "[{0} {1}{2}  →  {3} {4}{5}]  #{6}{7}",
+        "missing_format": "#{0} (rozkład usunięty)",
+        "track_format": " t.{0}",
+        "btn_up": "↑",
+        "btn_down": "↓",
+        "btn_remove": "✕"
+      },
+      "gap": {
+        "format": "   ⋮ obrót {0} min"
+      },
+      "tile": {
+        "no_train_number": "—",
+        "format": "#{0} {1}\n{2} → {3}\n{4}-{5}  {6}  ⇄"
+      },
+      "format": {
+        "route_empty": "— pusty —",
+        "route_single_format": "{0} → {1}",
+        "route_multi_format": "{0} → ... → {1}",
+        "vehicle_add": "+ Pojazd",
+        "vehicle_unknown_format": "?#{0}",
+        "vehicle_named_format": "{0} {1}",
+        "vehicles_count_format": "{0} pojazdów",
+        "day_mask_everyday": "codz.",
+        "day_mask_weekdays": "pn-pt",
+        "day_mask_weekend": "sb-nd",
+        "unknown": "?"
+      },
+      "status": {
+        "draft": "Draft",
+        "active": "Active",
+        "paused": "Paused",
+        "archived": "Archived"
+      },
+      "modal": {
+        "common": {
+          "cancel": "Anuluj"
+        },
+        "assign": {
+          "title": "Przypisanie pojazdu",
+          "vehicle_label": "Pojazd:",
+          "confirm_btn": "Przypisz",
+          "select_prompt": "— wybierz pojazd —",
+          "vehicle_option_format": "{0} {1} (kond. {2}%)",
+          "status": {
+            "select": "Wybierz pojazd",
+            "ok_format": "✓ OK: {0} {1}",
+            "conflict_format": "⚠ Konflikt z: {0}"
+          }
+        },
+        "auto_gen_settings": {
+          "title": "Ustawienia automatycznej generacji obiegów",
+          "min_gap_label": "Minimalna przerwa między rozkładami:",
+          "min_gap_hint": "min (ponad reverse margin)",
+          "respect_composition": "Respektuj typ taboru (EMU/DMU vs Lok+Wagony)",
+          "respect_class": "Respektuj klasę usługi (nie mieszaj osobowy z ekspresem)",
+          "auto_assign": "Auto-przypisz pojazdy z floty",
+          "select_label": "Wybierz rozkłady do uwzględnienia:",
+          "no_unassigned": "Brak aktywnych rozkładów nie przypisanych do żadnego obiegu",
+          "select_all": "Zaznacz wszystkie",
+          "deselect_all": "Odznacz wszystkie",
+          "generate_btn": "Generuj",
+          "no_selection_flash": "Wybierz co najmniej jeden rozkład w auto-gen settings",
+          "tt_row_format": "#{0} {1}  {2} → {3}  {4}-{5}  {6}"
+        },
+        "auto_gen_preview": {
+          "title": "Podgląd automatycznej generacji",
+          "accept_all_btn": "Zatwierdź wszystkie",
+          "row_main_format": "• {0}  ({1} kursów, {2} min, {3})\n{4}",
+          "vehicle_undef": "   pojazd: niezdefiniowany",
+          "vehicle_ok_format": "   ✓ pojazd: {0}",
+          "vehicle_warn_format": "   ⚠ {0}",
+          "summary_format": "Zostanie stworzonych {0} obiegów. Pojazdy auto-przypisane: {1}/{0}."
+        },
+        "options": {
+          "title": "Opcje obiegu",
+          "name_label": "Nazwa:",
+          "type_label": "Typ:",
+          "type_one_time_toggle": "Jednorazowy",
+          "recurring_section": "Powtarzalny (cykliczny):",
+          "days_label": "Dni:",
+          "preset_workdays": "Rob.",
+          "preset_weekend": "Wkd",
+          "preset_everyday": "Codz.",
+          "valid_label": "Ważny przez:",
+          "valid_hint": "tygodni (0 = bezterminowo)",
+          "one_time_section": "Jednorazowy:",
+          "date_label": "Data:",
+          "date_placeholder": "RRRR-MM-DD",
+          "notes_label": "Notatki:",
+          "notes_placeholder": "opcjonalne",
+          "save_btn": "Zapisz"
+        },
+        "deadhead": {
+          "title": "Stacje się nie spinają",
+          "body_format": "Stacje się nie spinają:\n\nPoprzedni kończy w: {0}\nNastępny zaczyna w: {1}\n\nStworzyć rozkład służbowy {0} → {1}?",
+          "yes_btn": "Tak, stwórz służbowy"
+        },
+        "return_trip": {
+          "title": "Rozkład powrotny",
+          "body_format": "Obieg zaczyna się {0} → {1}.\n\nStworzyć rozkład powrotny {1} → {0}?",
+          "no_btn": "Nie, dziękuję",
+          "yes_btn": "Tak, stwórz powrotny"
+        }
+      }
+    },
+    "vehicle_assign": {
+      "title": "Przypisanie pojazdów",
+      "title_format": "Przypisanie pojazdów — {0} (#{1})",
+      "save_btn": "Zapisz",
+      "cancel_btn": "Anuluj",
+      "column": {
+        "days": "Dni obiegu (przeciągnij pojazd →)",
+        "pool": "Pula pojazdów"
+      },
+      "empty": {
+        "no_active_dates": "Brak dni obowiązywania — ustaw kalendarz w opcjach obiegu",
+        "no_matching_vehicles": "Brak pojazdów pasujących do rozkładów tego obiegu.",
+        "no_fleet": "Brak pojazdów w flocie. Kup tabor w zakładce 'Tabor'."
+      },
+      "status": {
+        "drag_hint": "Przeciągnij pojazdy z prawej strony na dni po lewej",
+        "assigned_format": "{0}/{1} dni przypisanych",
+        "conflicts_format": "⚠ {0} konfliktów z innymi obiegami",
+        "consist_errors_format": "⚠ {0} dni z niepoprawnym składem",
+        "ok_prefix_format": "✓ {0}",
+        "separator": "  ·  "
+      },
+      "day": {
+        "names": {
+          "mon": "Pon",
+          "tue": "Wt",
+          "wed": "Śr",
+          "thu": "Cz",
+          "fri": "Pt",
+          "sat": "Sob",
+          "sun": "Ndz"
+        },
+        "label_format": "{0}\n{1}",
+        "drop_hint": "⇐ upuść pojazd",
+        "copy_btn": "↓ kopiuj\ndo wszystkich"
+      },
+      "consist_status": {
+        "error_prefix": "  ❌ Skład: ",
+        "warn_prefix": "  ⚠ Skład: ",
+        "ok_prefix": "  ✓ Skład: "
+      },
+      "vehicle": {
+        "tile_format": "{0}\n{1}",
+        "tile_conflict_format": "\n⚠ #{0}",
+        "tile_unknown_format": "?#{0}",
+        "remove_btn": "✕"
+      },
+      "pool": {
+        "filter_format": "Filtr wg rozkładów obiegu: {0}",
+        "tile_format": "#{0} {1} {2}\nkond. {3}%\n{4}",
+        "availability_free": "✓ wolny",
+        "availability_busy_format": "⚠ zajęty (#{0})",
+        "availability_partial_format": "⚠ {0}/{1} dni zajętych"
+      },
+      "type": {
+        "loco": "lokomotywy",
+        "car": "wagony",
+        "emu": "EMU",
+        "dmu": "DMU",
+        "separator": " + "
+      }
+    },
+    "creator": {
+      "title": "Kreator rozkładu jazdy",
+      "section": {
+        "route": "TRASA",
+        "parameters": "PARAMETRY"
+      },
+      "button": {
+        "close": "✕",
+        "back_to_list": "← Wróć do listy",
+        "confirm": "Zatwierdź",
+        "force_confirm": "Zatwierdź mimo kolizji",
+        "generate_route": "Wygeneruj trasę",
+        "compute_stops": "Oblicz postoje",
+        "pick_on_map": "Na mapie",
+        "add_waypoint": "+ Dodaj punkt pośredni",
+        "remove_waypoint": "✕"
+      },
+      "route": {
+        "label_a": "A:",
+        "label_b": "B:",
+        "label_via_format": "Via {0}:",
+        "input_placeholder": "wpisz nazwę stacji...",
+        "waypoint_placeholder": "punkt pośredni...",
+        "info_distance_format": "Trasa: {0} km",
+        "info_no_connection": "Brak połączenia między stacjami",
+        "suggestion": {
+          "station": "stacja",
+          "halt": "przystanek"
+        }
+      },
+      "params": {
+        "category": "Kategoria:",
+        "mode": "Tryb:",
+        "emu_dmu": "EMU/DMU",
+        "consist": "  Skład:",
+        "consist_symbolic": "Symboliczny",
+        "consist_concrete": "Konkretny (M5)",
+        "vmax": "Vmax:",
+        "kmh": "km/h",
+        "start_date": "Start data:",
+        "start_date_placeholder": "RRRR-MM-DD",
+        "start_time": "godz.:",
+        "start_time_placeholder": "GG:MM",
+        "weeks_valid": "Ważny:",
+        "weeks_valid_hint": "tyg. (0=bezterm.)",
+        "takt_label": "Takt:",
+        "takt_toggle": "powtarzaj kurs co N min",
+        "takt_every": "co",
+        "takt_until": "min, do:",
+        "takt_until_placeholder": "GG:MM",
+        "train_number": "Nr poc.:",
+        "train_number_placeholder": "auto-gen",
+        "train_number_auto": "Auto",
+        "days_label": "Dni:",
+        "preset_weekdays": "Robocze",
+        "preset_weekend": "Weekend",
+        "preset_everyday": "Codz."
+      },
+      "day_short": {
+        "mon": "Pn",
+        "tue": "Wt",
+        "wed": "Śr",
+        "thu": "Cz",
+        "fri": "Pt",
+        "sat": "Sb",
+        "sun": "Nd"
+      },
+      "takt_summary": {
+        "interval_must_be_positive": "interwał musi być > 0",
+        "last_before_first": "ostatni kurs przed pierwszym?",
+        "summary_format": "{0} kursów {1}..{2} co {3} min"
+      },
+      "train_number_status": {
+        "select_route_first": "Wybierz trasę najpierw",
+        "no_free_for_category": "Brak wolnych numerów dla tej kategorii",
+        "no_free": "Brak wolnych numerów",
+        "select_route_to_validate": "Wybierz trasę żeby zwalidować",
+        "empty_will_autogen": "Pusty → auto-gen przy zatwierdzaniu",
+        "ok_format": "OK ({0})",
+        "soft_warn_format": "⚠ {0} — kliknij Zatwierdź ponownie"
+      },
+      "stops": {
+        "km_format": "{0}km",
+        "duration_unit_s": "s",
+        "summary_format": "Czas: {0} min | Postoje: {1}/{2} | {3}",
+        "segment_collision_format": "⚠ {0}",
+        "track_warning_format": "Tor {0} na {1} wydluza trase {2}x — moze byc nieodpowiedni do kierunku"
+      }
+    }
+  },
+  "finance": {
+    "title": "<b>Finanse</b>    <size=14>(ESC aby zamknąć)</size>",
+    "close_btn": "✕",
+    "service_inactive": "(EconomyManager nie aktywny)",
+    "today": {
+      "header_format": "<b><size=20>Bilans dzisiejszy ({0})</size></b>",
+      "revenue_format": "Przychody:  <color=#60FF60>+{0} zł</color>",
+      "costs_format": "Koszty:     <color=#FF6060>-{0} zł</color>",
+      "subsidies_format": "Dotacje:    <color=#60C0FF>+{0} zł</color>",
+      "net_format": "<b>NET:        <color={0}>{1} zł</color></b>",
+      "money_format": "Stan kasy: <b>{0} zł</b>"
+    },
+    "lines": {
+      "header": "<b><size=16>Per linia (obieg)</size></b>",
+      "empty": "<i><color=#888>(brak aktywnych obiegów dziś)</color></i>",
+      "overhead_label": "(overhead/ogólne)",
+      "circ_format": "#{0} {1}",
+      "circ_id_format": "#{0}",
+      "stats_format": "  <size=12>kursów: {0}  pax: {1}</size>",
+      "rev_cost_format": "  <size=12>przychód: <color=#60FF60>+{0} zł</color>  koszt: <color=#FF6060>-{1} zł</color></size>",
+      "subsidy_format": "  <size=11><color={0}>dotacja: {1}</color></size>",
+      "net_format": "  <size=12>NET: <color={0}><b>{1} zł</b></color></size>"
+    },
+    "history": {
+      "header": "<b><size=16>Historia — ostatnie 7 dni</size></b>",
+      "empty": "<i><color=#888>(jeszcze brak zamkniętych dni — pierwszy minie o północy)</color></i>",
+      "date_format": "<size=11>{0}</size>",
+      "bar_format": "  <size=10><color={0}>{1}</color></size>",
+      "stats_format": "  <size=11>rev={0}zł cost={1}zł sub={2}zł <color={3}>net={4}zł</color></size>"
+    }
+  },
+  "maintenance": {
+    "alerts": {
+      "overdue_format": "⚠ {0} overdue",
+      "breakdown_format": "✕ {0} awarie",
+      "parts_format": "⚠ {0} brak części"
+    },
+    "workshops": {
+      "title": "<b>Warsztaty</b>    <size=14>(ESC aby zamknąć)</size>",
+      "close_btn": "✕",
+      "service_inactive": "<i><color=#888>(WorkshopManager nieaktywny)</color></i>",
+      "slots": {
+        "header": "<b><size=18>Sloty warsztatowe</size></b>",
+        "no_halls": "<i><color=#888>Brak hal warsztatowych w depotcie.</color></i>",
+        "no_halls_hint": "<size=12>Aby zbudować warsztat:\n• Zbuduj halę (min. 100 m²) w trybie Budowanie\n• Im większa hala, tym wyższy poziom (P1-P5)</size>",
+        "hall_name_format": "<b>Hala #{0}</b>  <size=12><color=#AAA>{1}</color></size>",
+        "hall_meta_format": "<size=11><color=#888>max P{0} • {1} slotów</color></size>",
+        "slot_free_format": "  <color=#60FF60>● Slot #{0} — WOLNY</color>",
+        "slot_busy_format": "  <color=#FFA060>● Slot #{0} — {1} {2}</color>",
+        "slot_eta_format": "    <size=11><color=#888>gotowe za {0}</color></size>",
+        "vehicle_fallback_format": "vehicle#{0}"
+      },
+      "external": {
+        "header": "<b><size=16>Zadania zewnętrzne (ZNTK)</size></b>",
+        "phase_out": "Transport →",
+        "phase_inspection": "Przegląd",
+        "phase_back": "← Powrót",
+        "row_format": "  <color={0}>● {1} {2} @ {3}</color>",
+        "row_eta_format": "    <size=11><color=#888>{0}  ETA {1}  koszt {2} zł</color></size>",
+        "picker_title_format": "<b>Wybierz zakład zewnętrzny</b>  <size=12>vehicle#{0} P{1} ({2})</size>",
+        "picker_no_workshops": "<i><color=#888>Brak zakładów obsługujących tę kombinację poziomu + typu.</color></i>",
+        "picker_row_main_format": "<b>{0}</b>  <size=11><color=#AAA>@ {1}</color></size>\n<size=11>obsługa: {2}  <color={3}>cena ×{4}</color>  <color={5}>czas ×{6}</color></size>",
+        "send_btn": "Wyślij"
+      },
+      "overdue": {
+        "header": "<b><size=18>Pojazdy do przeglądu</size></b>",
+        "all_current": "\n\n<i><color=#60FF60>Wszystkie pojazdy mają aktualne przeglądy.</color></i>",
+        "header_with_count_format": "\n<size=12><color=#AAA>{0} pojazdów czeka na przegląd</color></size>",
+        "row_info_format": "<b>#{0} {1}</b> — {2}\n<size=11><color={3}>urgency: {4}</color>  <color=#AAA>mileage: {5} km</color></size>",
+        "btn_no_slot": "Brak slotu",
+        "btn_no_parts": "Brak części",
+        "btn_assign": "Przydziel",
+        "btn_external": "ZNTK ▸"
+      }
+    },
+    "rescue": {
+      "phase": {
+        "inbound": "Jazda do miejsca awarii",
+        "returning": "Holowanie do depotu"
+      },
+      "vehicle_fallback_format": "loko#{0}",
+      "broken_vehicle_fallback_format": "vehicle#{0}",
+      "ongoing": {
+        "title_format": "<b>RESCUE W TOKU</b> — run#{0}",
+        "info_format": "Loko: <b>{0}</b>\nFaza: <color=#60C0FF>{1}</color>\nTrasa: {2} km\n\n<i>Pozostało: {3}m {4}s</i>"
+      },
+      "dispatch": {
+        "title_format": "<b>AWARIA</b> — run#{0} '{1}'",
+        "info_format": "Pojazd: <b>{0}</b>\nKomponent: <color=#FF6060>{1}</color>\nSelf-repair nieudany — wymagana rescue lokomotywa.",
+        "info_with_timer_format": "Pojazd: <b>{0}</b>\nKomponent: <color=#FF6060>{1}</color>\nSelf-repair nieudany.\n\n<i>Auto-dispatch za: {2}m {3}s</i>",
+        "no_candidates": "<i><color=#888>Brak wolnych lokomotyw — auto-dispatch niemożliwy. Kup lub zwolnij lokomotywę.</color></i>",
+        "candidate_format": "{0}-{1}  <size=12><color=#888>({2}, cond {3}%)</color></size>",
+        "candidates_label": "<b>Wolne lokomotywy:</b>"
+      }
+    },
+    "parts": {
+      "title": "<b>Magazyn części</b>    <size=14>(ESC aby zamknąć)</size>",
+      "list_header": "<b><size=16>Części 1:1 z komponentami</size></b>",
+      "service_inactive": "<i><color=#888>(PartInventoryService nieaktywny)</color></i>",
+      "close_btn": "✕",
+      "row_info_format": "<b>{0}</b>\n<size=11><color={1}>stan: {2} szt</color>  <color=#AAA>cena: {3} zł / szt  •  dostawa: {4} dni</color></size>",
+      "btn_format": "+{0}",
+      "pending": {
+        "title": "<b><size=16>Zamówienia w drodze</size></b>",
+        "empty": "<i><color=#888>(brak zamówień)</color></i>",
+        "row_format": "<color=#60C0FF>● {0}× {1}</color>",
+        "row_eta_format": "  <size=11><color=#888>dostawa za {0} dni  •  {1} zł</color></size>"
+      },
+      "history": {
+        "title": "<b><size=16>Historia zakupów</size></b>",
+        "empty": "<i><color=#888>(brak zakupów)</color></i>",
+        "row_format": "<size=12><color=#AAA>{0}</color>  {1}× {2}  <color=#FF6060>-{3} zł</color></size>"
+      }
+    }
+  },
+  "popup_station": {
+    "title_format": "<b>{0}</b>",
+    "type_label_station": "Stacja",
+    "type_label_halt": "Przystanek",
+    "type_format": "Typ: {0} ({1})",
+    "voivodeship_format": "Województwo: {0}",
+    "city_format": "Miasto: {0}",
+    "waiting_format": "Pasażerów czeka: <color={0}><b>{1}</b></color>",
+    "reputation_format": "Reputacja: <color={0}>{1}/100</color>",
+    "platforms_label_format": "<b>Perony ({0}):</b>",
+    "no_platforms": "  (brak danych o peronach)",
+    "platform_status_busy_format": "<color=#FF6060>zajęty</color> ({0})",
+    "platform_status_free": "<color=#60FF60>wolny</color>",
+    "platform_label_named_format": "Peron {0}",
+    "platform_label_track_format": "Peron przy torze {0}",
+    "platform_label_id_format": "Peron #{0}",
+    "platform_row_format": "  {0}: {1}",
+    "timetables_label": "<b>Rozkłady tu przejeżdżające:</b>",
+    "no_timetables": "  (żadne)",
+    "timetable_row_format": "  • {0}",
+    "timetable_more_format": "  … i {0} więcej",
+    "halt_activation_hint": "<color=#FFAA60><i>[TBD] Uruchomienie przystanku za opłatą (→ M6 Ekonomia)</i></color>",
+    "train_fallback_format": "#{0}",
+    "tt_name_format": "{0} {1}",
+    "close_btn": "✕"
+  },
+  "popup_train": {
+    "title_format": "<b>{0}</b> {1}",
+    "info_format": "Trasa: {0}\nKurs: {1}\nStan: {2}\nPrędkość: <b>{3} km/h</b>\nPozycja: {4} / {5} km\nOpóźnienie: {6}\nNastępny: <b>{7}</b> (za {8})",
+    "delay_dash": "—",
+    "delay_format": "<color=#FF6060>+{0}s</color>",
+    "delay_zero": "<color=#60FF60>0</color>",
+    "eta_format": "{0}m {1}s",
+    "state": {
+      "waiting": "Oczekuje na odjazd",
+      "running": "W ruchu",
+      "stopped": "Postój",
+      "blocked": "<color=#FF6060>Zablokowany</color>",
+      "completed": "Zakończony"
+    },
+    "close_btn": "✕",
+    "follow_btn": "Podążaj kamerą",
+    "stop_follow_btn": "Stop podąż"
+  },
+  "popup_room_type": {
+    "header_default": "Nowe pomieszczenie",
+    "header_format": "Nowe pomieszczenie ({0} m²)",
+    "size_format": "Rozmiar: {0}m x {1}m",
+    "min_size_format": "min. {0}x{1}m",
+    "selected_format": "Wybrany: {0}",
+    "select_prompt": "Wybierz typ pomieszczenia",
+    "btn_cancel": "Anuluj",
+    "btn_confirm": "Potwierdz",
+    "type": {
+      "hall": "Hala",
+      "storage": "Magazyn",
+      "dispatcher": "Dyspozytor",
+      "office": "Biuro",
+      "social": "Socjalny",
+      "supervisor": "Naczelnik",
+      "bathroom": "Lazienka",
+      "locker": "Szatnia",
+      "corridor": "Korytarz",
+      "traffic_controller": "Dyzurny ruchu"
+    }
+  },
+  "popup_building": {
+    "title_default": "Pomieszczenie",
+    "title_format": "Pomieszczenie #{0}",
+    "type_unassigned": "Nieprzypisane",
+    "type_format": "Typ: {0}",
+    "type_default": "Typ: —",
+    "size_format": "Rozmiar: {0}m x {1}m ({2} m²)",
+    "size_default": "Rozmiar: —",
+    "furniture_default": "Meble: brak",
+    "furniture_stub": "Meble: brak (jeszcze nie zaimplementowane)",
+    "btn_change_type": "Zmien typ",
+    "btn_demolish": "Wyburz",
+    "btn_close": "✕"
+  },
+  "popup_depot_track": {
+    "type_format": "Typ: {0}  |  Zajety: {1}",
+    "type": {
+      "parking": "Postojowy",
+      "entry": "Wjazdowy",
+      "exit": "Wyjazdowy",
+      "washing": "Myjni",
+      "workshop": "Warsztatowy",
+      "maneuver": "Manewrowy"
+    },
+    "occupied_yes": "Tak",
+    "occupied_no": "Nie",
+    "name_placeholder": "Nazwa toru...",
+    "length_label": "Dlugosc (m):",
+    "radius_label": "Promien (m):",
+    "radius_placeholder": "0 = prosta",
+    "angle_label": "Kat wyjsc. (°):",
+    "btn_apply": "Zastosuj parametry",
+    "btn_catenary": "Siec trakcyjna",
+    "btn_parallel": "Dodaj tory rownolegle",
+    "btn_rename": "Zmien",
+    "btn_delete": "Usun",
+    "btn_close": "X",
+    "turnout": {
+      "info_format": "Typ: {0}  |  Segmenty: {1}",
+      "type_crossover": "Krzyzowy",
+      "type_normal": "Zwykly",
+      "btn_delete": "Usun rozjazd",
+      "btn_close": "X"
+    },
+    "parallel": {
+      "title": "Tory rownolegle",
+      "left_label": "Po lewej:",
+      "right_label": "Po prawej:",
+      "spacing_label": "Odstep (m):",
+      "catenary_label": "Siec trakcyjna:",
+      "btn_generate": "Generuj",
+      "btn_cancel": "Anuluj"
+    }
+  },
+  "popup_depot_train": {
+    "track_format": "Tor: {0}",
+    "health_format": "Stan: {0}%",
+    "cleanliness_format": "Czystosc: {0}%",
+    "type": {
+      "electric_loco": "Lok. elektryczna",
+      "diesel_loco": "Lok. spalinowa",
+      "passenger_car": "Wagon osobowy",
+      "freight_car": "Wagon towarowy",
+      "tank_car": "Wagon cysterna",
+      "unknown": "Nieznany"
+    },
+    "traction": {
+      "electric": "Elektryczna",
+      "diesel": "Spalinowa",
+      "none": "Brak (wagon)",
+      "unknown": "?"
+    },
+    "state": {
+      "entering": "Wjezdza",
+      "parked": "Zaparkowany",
+      "moving": "W ruchu",
+      "washing": "W myjni",
+      "workshop": "W warsztacie",
+      "exiting": "Wyjezdza",
+      "unknown": "?"
+    },
+    "btn_exit": "Wyjazd",
+    "btn_close": "Zamknij"
+  },
+  "popup_consist": {
+    "title_format": "<b>Consist #{0}</b>",
+    "vehicles_format": "Pojazdów w składzie: {0}",
+    "track_format": "Tor: #{0}",
+    "state_format": "Stan: {0}",
+    "speed_format": "Prędkość: <b>{0} km/h</b>{1}",
+    "speed_reverse": " <i>(cofa)</i>",
+    "distance_format": "Dystans: {0}/{1} m",
+    "target_format": "<color=#FFDD60>Wybrany cel: tor #{0}</color>",
+    "hint_go": "<color=#60FF60><i>Kliknij \"Jedź\" żeby rozpocząć ruch</i></color>",
+    "hint_pick_target": "<color=#FFDD60><i>Kliknij tor docelowy (ESC/RMB = anuluj)</i></color>",
+    "btn_close": "✕",
+    "btn_go": "Jedź",
+    "btn_exit": "Wyjedź z depot"
+  },
+  "popup_couple": {
+    "title_format": "Połączyć <b>{0}</b> z <b>{1}</b>?",
+    "warn_circulation": "⚠ Skład w aktywnym obiegu — zmieni kompozycję kursu",
+    "btn_yes": "Połącz",
+    "btn_no": "Anuluj",
+    "consist_fallback": "Skład #{0}",
+    "btn_adjacent": "Połącz z sąsiednim"
+  },
+  "popup_decouple": {
+    "btn_open": "Rozprzęgnij",
+    "title": "Wybierz miejsce cięcia",
+    "hint": "Kliknij miejsce cięcia między pojazdami",
+    "status_format": "Przód: {0} poj. · tył: {1} poj.",
+    "btn_confirm": "Rozprzęgnij tutaj",
+    "btn_cancel": "Anuluj"
+  },
+  "popup_track": {
+    "title": "<b>Tor / linia</b>",
+    "edge_id_format": "Edge ID: #{0}",
+    "segment_format": "Segment: #{0}",
+    "length_format": "Długość: {0} m",
+    "vmax_format": "<b>Vmax: {0} km/h</b>",
+    "track_ref_format": "Tor (track_ref): {0}",
+    "line_ref_format": "Numer linii: {0}",
+    "electrified_format": "<color=#60FF60>Zelektryfikowana</color> ({0})",
+    "non_electrified": "<color=#AAAAAA>Niezelektryfikowana</color>",
+    "usage_format": "Klasyfikacja: {0}",
+    "service_format": "Rodzaj: {0}",
+    "status_inactive": "<color=#FF6060>Status: NIEAKTYWNA</color>",
+    "reactivate_hint": "<color=#FFAA60><i>[TBD] Reaktywacja za opłatą (→ M6 Ekonomia)</i></color>",
+    "status_active": "<color=#60FF60>Status: aktywna</color>",
+    "click_pos_format": "<i>Klik: ({0}, {1})</i>",
+    "close_btn": "✕",
+    "reactivate_btn": "Reaktywuj linię"
+  },
+  "pause_menu": {
+    "title": "Pauza",
+    "back_btn": "← Wróć",
+    "buttons": {
+      "save_state": "Zapisz stan",
+      "load_state": "Załaduj stan",
+      "settings": "Ustawienia",
+      "main_menu": "Do menu głównego",
+      "exit": "Wyjście z gry"
+    },
+    "confirm": {
+      "save_and_go": "Zapisz i wyjdź",
+      "no_save": "Wyjdź",
+      "cancel": "Anuluj",
+      "main_menu_msg": "Czy zapisać postęp przed powrotem\ndo menu głównego?",
+      "exit_msg": "Czy zapisać postęp przed\nwyjściem z gry?"
+    }
+  },
+  "save_load": {
+    "title_save": "Zapisz grę",
+    "title_load": "Wczytaj grę",
+    "close_btn": "Zamknij [ESC]",
+    "empty": "<i>Brak zapisanych gier.</i>",
+    "detail_select": "<i>Wybierz slot z listy</i>",
+    "detail_format": "<b>Typ:</b> {0}\n<b>Wersja gry:</b> {1}\n<b>Data w grze:</b> {2}\n<b>Zapisano:</b> {3}\n<b>Czas gry:</b> {4} min\n<b>Rozmiar:</b> {5}\n<b>Slot ID:</b> <color=#888>{6}</color>",
+    "type_manual": "manualny",
+    "type_auto": "auto",
+    "type_quick": "quick",
+    "type_exit": "wyjścia",
+    "type_test": "test",
+    "new_save_btn": "+ Nowy zapis",
+    "load_btn": "Wczytaj",
+    "delete_btn": "Usuń",
+    "new_save_title": "Nazwij ten zapis:",
+    "confirm_btn": "Zapisz",
+    "cancel_btn": "Anuluj",
+    "busy_save": "Zapisywanie...",
+    "busy_load": "Wczytywanie...",
+    "save_failed": "Zapis nie powiódł się.",
+    "load_failed": "Wczytanie nie powiodło się",
+    "not_found": "Wybrany slot nie istnieje.",
+    "newer_version": "Save pochodzi z nowszej wersji gry — nie można wczytać.",
+    "partial_load_msg": "Save uszkodzony w modułach: {0}. Zainicjalizowano je domyślnie.",
+    "modified_save_title": "Save został zmodyfikowany",
+    "modified_save_msg": "Plik tego zapisu został ręcznie zmodyfikowany (niepasujący HMAC). Wczytanie może skutkować błędami lub utratą postępu. Wczytać mimo to?",
+    "modified_save_load_anyway": "Wczytaj mimo to"
+  },
+  "loading": {
+    "default_title": "Ładowanie...",
+    "scene_format": "Ładowanie sceny: {0}",
+    "tips": {
+      "tip1": "Naciśnij F5 żeby quick-save w dowolnej chwili. F9 wczyta ostatni quick-save.",
+      "tip2": "Możesz zmienić język w Ustawieniach → Język. Dostępne: PL, EN, DE, CZ, JP.",
+      "tip3": "Każdy obieg taboru można edytować z poziomu zakładki Obiegi.",
+      "tip4": "Kondycja techniczna pojazdu spada z każdym kilometrem. Pamiętaj o przeglądach!",
+      "tip5": "Kategorie handlowe rozkładów wpływają na cenę biletu i klasyfikację IRJ.",
+      "tip6": "W trakcie pauzy (Spacja) możesz spokojnie zaplanować kolejny ruch.",
+      "tip7": "Auto-zapis działa co 5 minut czasu gry. Twój postęp jest bezpieczny."
+    }
+  },
+  "personnel": {
+    "title": "Personel",
+    "close_button": "Zamknij [ESC]",
+    "tabs": {
+      "my_staff": "Mój personel",
+      "recruit": "Rekrutacja",
+      "dispatch": "Dyspozytura",
+      "turnuses": "Turnusy",
+      "traffic": "Nastawnia",
+      "workshops": "Warsztaty",
+      "office": "Biuro+R&D",
+      "kasy": "Kasy"
+    },
+    "role": {
+      "driver": "Maszynista",
+      "conductor": "Konduktor",
+      "mechanic": "Mechanik",
+      "cleaner": "Sprzątacz",
+      "wash_bay": "Pracownik myjni",
+      "office": "Pracownik biurowy",
+      "research": "Badacz R&D",
+      "ticket_clerk": "Kasjer",
+      "dispatcher": "Dyspozytor",
+      "traffic_controller": "Dyżurny ruchu"
+    },
+    "status": {
+      "available": "Dostępny",
+      "on_shift": "Na zmianie",
+      "resting": "Wolny",
+      "sick": "Chory (L4)",
+      "long_sick": "Długo chory",
+      "training": "Szkolenie",
+      "retired": "Emeryt",
+      "fired": "Zwolniony"
+    },
+    "recruit": {
+      "info": "Rekrutacja to osobny panel pełnoekranowy.\n\nKliknij poniżej aby otworzyć rynek kandydatów.",
+      "open_btn": "Otwórz panel rekrutacji →",
+      "panel": {
+        "header": "Rekrutacja — Rynek pracy",
+        "close_btn": "Zamknij [ESC]",
+        "empty": "<i>Brak kandydatów. Refresh rynku co 7 dni gry.</i>",
+        "hire_btn": "Zatrudnij",
+        "posting_btn": "Nowe ogłoszenie…",
+        "footer_main_format": "Kandydatów: <b>{0}/{1}</b>  |  Aktywnych ogłoszeń: <b>{2}/{3}</b>",
+        "footer_active_format": "  <color=#9CA3AF>• #{0} {1} {2}★ — {3} dni</color>  ",
+        "candidate_main_format": "<b>{0} {1}</b>, {2} lat — <color=#FFC857>{3} {4}</color>",
+        "candidate_salary_format": "Pensja: <b>{0} zł/mies</b>",
+        "candidate_bonus_format": "  |  Bonus za zatrudnienie: <color=#4ADE80>{0} zł</color>",
+        "candidate_resume_format": "<i><color=#9CA3AF>{0}</color></i>"
+      },
+      "posting_modal": {
+        "title": "Nowe ogłoszenie rekrutacyjne",
+        "role_label": "Rola:",
+        "skill_label": "Min. skill:",
+        "skill_option_format": "{0}★",
+        "cost_format": "<b>Koszt: {0} zł</b>  (14 dni, max {1} aktywnych)",
+        "info": "Aktywne ogłoszenie przez 14 dni gry zwiększa 3× szansę\npojawienia się kandydatów tej roli przy refresh rynku.",
+        "confirm_btn": "Utwórz ogłoszenie",
+        "cancel_btn": "Anuluj"
+      }
+    },
+    "turnuses": {
+      "title": "<b><size=18>Turnusy pracownicze (M8-8)</size></b>",
+      "total_format": "Łącznie:  <b>{0}</b>  ·  Draft: <b>{1}</b>  ·  Aktywne: <color=#4ADE80><b>{2}</b></color>",
+      "roles_format": "Rola maszynistów: <b>{0}</b>  ·  Konduktorów: <b>{1}</b>",
+      "unassigned_format": "<color=#FBBF24>⚠ Nieprzypisanych pracownikom: {0}</color>",
+      "invalid_format": "<color=#F87171>✗ Z błędami walidacji: {0}</color>",
+      "all_ok": "<color=#4ADE80>✓ Wszystkie turnusy OK.</color>",
+      "footer": "<i>Pełne zarządzanie (edytor, walidator, multi-day, hotele) w osobnym panelu.</i>",
+      "open_btn": "Otwórz pełen panel turnusów →"
+    },
+    "traffic": {
+      "status": {
+        "normal": "Normalny — priority scheduling aktywny",
+        "queued": "Przeciążony — kolejka PendingTasks rośnie",
+        "critical_no_workers": "BRAK DYŻURNEGO — DepotMovementSim na FCFS (70% efficiency)",
+        "critical": "KRYTYCZNE — 25% tasks +50% czasu",
+        "unknown": "?"
+      },
+      "header_format": "<b><size=20>Nastawnia (Ruch zajezdni)</size></b>  —  <color={0}>{1}</color>\nDyżurnych: <b>{2}</b>  |  Pojemność: <b>{3}</b> manewrów  |  Aktywnych: <b>{4}</b>  |  Pending: <b>{5}</b>",
+      "capacity_format": "Obciążenie: <color={0}>{1}{2}</color>{3} <b>{4}%</b>",
+      "controllers_label": "<b>Aktywni dyżurni ruchu:</b>",
+      "controller_row_format": "#{0} <b>{1}</b> {2}  <color=#9CA3AF>cap {3}, shift {4}</color>",
+      "no_controllers": "<i><color=#F87171>Brak dyżurnych ruchu.</color></i>\n\nD35: dla nastawni 24/7 minimum 3 osoby\n(po jednej per zmiana Ranna/Popoł/Nocna).\n\nDepotMovementSim działa default FCFS +\nrandom ±20% delay (brak priorytetów).",
+      "warn_need_more_format": "<color=#FBBF24>⚠ Dla obsady 24/7 potrzeba {0} więcej ({1}/3).</color>",
+      "priorities_label": "<b>Priorytety manewrów (D34):</b>",
+      "pri_workshop": "Warsztat overdue:",
+      "pri_departure": "Wyjazd rozkładowy:",
+      "pri_wash_bay": "Myjnia planowa:",
+      "pri_parking": "Parking reshuffle:",
+      "apply_btn": "Zastosuj priorytety",
+      "reset_btn": "Reset do domyślnych",
+      "info_box": "<i>D28: Bez dyżurnego — DepotMovementSim działa FCFS (70% efficiency, brak priority).\nD35: Nastawnia musi być obsadzona 24/7 (min 3 dyżurnych po jednemu per zmiana).\nM8-11 MVP: provider infrastructure gotowa, pełna integracja sort w M9b polish.</i>"
+    },
+    "office": {
+      "research_label": "<b><size=14>Ścieżki badań R&D</size></b>",
+      "summary_title": "<b><size=18>Biuro + R&D</size></b>",
+      "clerks_format": "<b>Pracownicy biurowi:</b> <color=#4ADE80>{0}</color>",
+      "reduction_format": "Obniżka fixed costs: <b>{0}%</b> <color=#9CA3AF>(max {1}%)</color>",
+      "market_format": "Cykl refresh rynku pracy: <b>{0}</b> dni <color=#9CA3AF>(bazowy {1}d - biurowi × 1d)</color>",
+      "researchers_format": "<b>Badacze R&D:</b> <color=#4ADE80>{0}</color>",
+      "active_research_format": "<b>Aktywne badanie:</b> <color=#FFC857>{0}</color>  <color={1}>[{2}]</color>",
+      "progress_format": "Postęp: <b>{0}/{1}d</b> ({2}%) — wymaga {3}× ≥{4}★",
+      "no_research": "<i>Brak aktywnego badania. Wybierz ścieżkę poniżej.</i>",
+      "unlocks_label": "<b>✓ Odblokowane:</b>  ",
+      "unlock_item_format": "<color=#4ADE80>{0}={1}</color>  ",
+      "row_main_format": "<b>{0}</b>  <color=#9CA3AF>[{1}]</color>  <color=#FFC857>{2}× ≥{3}★</color>  <color=#9CA3AF>{4}d</color>",
+      "row_effect_format": "<color=#60A5FA>Efekt: {0} = {1}</color>",
+      "btn_start": "▶ Rozpocznij",
+      "btn_cancel": "✕ Anuluj",
+      "completed_text": "✓ UKOŃCZONE"
+    },
+    "kasy": {
+      "summary_title": "<b><size=18>Kasy stacyjne</size></b>",
+      "stats_format": "Kasjerzy aktywni: <color=#4ADE80><b>{0}</b></color>  |  Przypisani: <color=#4ADE80><b>{1}</b></color>  |  Wolni: <color=#FBBF24><b>{2}</b></color>",
+      "bonus_format": "<b>Revenue bonus per stacja:</b> +<color=#FFC857>{0}%</color> <color=#9CA3AF>(D19: kasjer tylko w popupie stacji, brak spawnu 3D)</color>",
+      "auto_assign_btn": "Auto-assign kasjerów do sample stacji (debug)",
+      "empty": "<i>Brak przypisań. Kliknij 'Auto-assign' lub przypisz ręcznie w popupach stacji (M9a polish).</i>",
+      "row_format": "<b>Stacja #{0}</b>   <color=#FFC857>{1}</color> {2}   <color=#9CA3AF>shift {3}, since {4}</color>",
+      "unknown_employee": "?",
+      "unassign_btn": "✕"
+    },
+    "workshops": {
+      "title_default": "<b><size=18>Warsztaty — przydział mechaników</size></b>",
+      "no_slots": "<b><size=18>Warsztaty</size></b>\n<i><color=#F87171>Brak slotów warsztatowych w zajezdni.</color></i>\nZbuduj hallę warsztatową (M7-4) aby przydzielić mechaników.",
+      "header_format": "<b><size=18>Warsztaty — przydział mechaników (M8-12)</size></b>\nSlotów: <b>{0}</b>  |  Mechanicy: <b>{1}</b> aktywnych  |  Przypisanych: <color=#4ADE80><b>{2}</b></color>, Wolnych: <color=#FBBF24><b>{3}</b></color>",
+      "slot_main_format": "<b>Slot #{0}</b>  <color=#FFC857>{1}</color>  ",
+      "slot_free": "<color=#9CA3AF>wolny</color>",
+      "slot_busy_format": "<color=#F87171>pojazd #{0} ({1})</color>",
+      "no_mechanics": "<color=#FBBF24>Brak mechaników — slot idle (czas ×1.0 gdyby ktoś był)</color>",
+      "mechanics_prefix_format": "Mechanicy ({0}/2): ",
+      "multiplier_format": "Mnożnik czasu: <color={0}><b>×{1}</b></color>",
+      "unassign_btn_format": "✕ {0}",
+      "assign_dd_prompt": "— Dodaj mechanika —",
+      "no_free_mechanics": "<i><color=#9CA3AF>brak wolnych mechaników</color></i>"
+    },
+    "dispatch": {
+      "status": {
+        "normal": "Normalny — auto-akcje instant",
+        "delayed": "Przeciążony — auto-akcje z delay 2-6h",
+        "critical_no_workers": "BRAK DYSPOZYTORÓW — wszystko manualne",
+        "critical": "KRYTYCZNE — 20% akcji missed",
+        "unknown": "?"
+      },
+      "header_format": "<b><size=20>Dyspozytura</size></b>  —  <color={0}>{1}</color>\nAktywnych: <b>{2}</b>  |  Pojemność: <b>{3}</b> pracowników  |  Obsługuje: <b>{4}</b> (bez dyspozytorów)  |  Pending: <b>{5}</b>",
+      "capacity_format": "Obciążenie: <color={0}>{1}{2}</color>{3} <b>{4}%</b>",
+      "dispatchers_label": "<b>Aktywni dyspozytorzy:</b>",
+      "no_dispatchers": "<i><color=#F87171>Brak zatrudnionych dyspozytorów.</color></i>\n\nZatrudnij 1-3 dyspozytorów (panel Rekrutacja)\naby uruchomić auto-akcje przy L4 i ad-hoc.\n\nD35: dla obsady 24/7 zajezdni min 3 osoby\n(po jednej per zmiana Ranna/Popoł/Nocna).",
+      "dispatcher_row_format": "#{0} <b>{1}</b> {2}  <color=#9CA3AF>cap {3}, shift {4}</color>",
+      "weights_format": "<color=#9CA3AF>Wagi score (D30): proximity {0}, skill {1}, rest {2}</color>",
+      "pending_label": "<b>Kolejka akcji:</b>",
+      "empty_pending": "<i>Brak pending akcji.</i>",
+      "pending_main_format": "<b>#{0}</b> [{1}]  ",
+      "pending_eta_format": "<color=#FBBF24>ETA {0}h</color>  ",
+      "pending_vacancy_format": "Vacancy: {0} ({1})  →  ",
+      "pending_replacement_format": "Replacement: <color=#4ADE80>{0} {1}</color>",
+      "pending_dispatcher_used_format": "  <color=#9CA3AF>(disp {0}★)</color>",
+      "cancel_btn": "Anuluj",
+      "unknown_employee": "?"
+    },
+    "schedule": {
+      "title": "Harmonogram pracownika",
+      "header_format": "<b>Harmonogram:</b> #{0} {1}  — <color=#FFC857>{2}</color>",
+      "close_btn": "Zamknij [ESC]",
+      "cycle_label": "Cykl:",
+      "cycle": {
+        "5_2": "5+2 (klasyczny)",
+        "4_2": "4+2",
+        "6_2": "6+2",
+        "7_7": "7+7 (dalekobieżny)",
+        "custom": "Custom"
+      },
+      "default_shift_label": "Domyślna zmiana:",
+      "shift": {
+        "morning": "Ranna (6-14)",
+        "afternoon": "Popołudniowa (14-22)",
+        "night": "Nocna (22-6)"
+      },
+      "vacation_remaining_format": "Urlop pozostały: {0}/{1}",
+      "month_header_format": "{0} {1}",
+      "month": {
+        "1": "Styczeń",
+        "2": "Luty",
+        "3": "Marzec",
+        "4": "Kwiecień",
+        "5": "Maj",
+        "6": "Czerwiec",
+        "7": "Lipiec",
+        "8": "Sierpień",
+        "9": "Wrzesień",
+        "10": "Październik",
+        "11": "Listopad",
+        "12": "Grudzień"
+      },
+      "nav_prev": "◄",
+      "nav_next": "►",
+      "legend": "<color=#4ADE80>■</color> Ranna  <color=#60A5FA>■</color> Popoł.  <color=#374151>■</color> Nocna  <color=#6B7280>■</color> Wolne  <color=#A855F7>■</color> Urlop  <color=#F87171>■</color> L4  <color=#F59E0B>■</color> Swap",
+      "day_format": "<b>{0}</b>\n<size=10>{1}</size>",
+      "day_label": {
+        "vacation": "Urlop",
+        "sick": "L4",
+        "training": "Szkol.",
+        "swap_format": "→{0}",
+        "extra": "Nadgodz.",
+        "free": "Wolne",
+        "morning": "Ranna",
+        "afternoon": "Popoł.",
+        "night": "Nocna"
+      },
+      "shift_short": {
+        "morning": "Ran",
+        "afternoon": "Pop",
+        "night": "Noc",
+        "unknown": "?"
+      },
+      "context": {
+        "title": "Wybierz akcję",
+        "vacation_1": "Urlop 1 dzień",
+        "vacation_7": "Urlop 7 dni (od tego dnia)",
+        "swap_morning": "Zmiana → Ranna",
+        "swap_afternoon": "Zmiana → Popołudniowa",
+        "swap_night": "Zmiana → Nocna",
+        "extra_duty": "Dodatkowy dzień pracy",
+        "free_day": "Dodatkowy dzień wolny",
+        "remove": "Usuń override z tego dnia",
+        "cancel": "Anuluj"
+      }
+    },
+    "hotel": {
+      "title": "Rezerwacja hotelu (Overnight)",
+      "city_label": "Miasto (stacja):",
+      "city_placeholder": "np. Olsztyn Głowny",
+      "city_default": "Nieznane miasto",
+      "nights_label": "Liczba nocy:",
+      "nights_1": "1 noc",
+      "nights_2": "2 noce",
+      "tier_label": "Klasa hotelu:",
+      "tier_basic": "Basic  (80 zł/noc, morale -1, regen -20%)",
+      "tier_standard": "Standard  (150 zł/noc, neutralny)",
+      "tier_premium": "Premium  (250 zł/noc, morale +2, regen +20%)",
+      "cost_format": "Koszt: <color=#FBBF24>{0} zł</color>",
+      "morale_format": "Morale pracownika: <color={0}>{1}</color>",
+      "info_format": "Default tier firmy (patrz Settings): <i>{0}</i>.\nD36: regionalne multiplikatory cen post-EA.",
+      "ok_btn": "Potwierdź",
+      "cancel_btn": "Anuluj"
+    },
+    "toast": {
+      "retirement_announced_format": "<b>{0}</b> ({1}, wiek {2}) ogłasza emeryturę. Odejdzie <b>{3}</b> (30 dni wypowiedzenia).",
+      "retirement_done_format": "<b>{0}</b> odszedł na emeryturę (odprawa {1} zł).",
+      "recovered_format": "<b>{0}</b> wrócił z L4.",
+      "vacancy_format": "<b>{0}</b> ({1}) — {2}.\nZastępstwo wymagane na dzień {3}.",
+      "reason": {
+        "sick_format": "L4 do {0}",
+        "vacation": "urlop",
+        "retirement": "emerytura",
+        "training": "szkolenie",
+        "other": "nieobecność"
+      },
+      "btn": {
+        "auto_dispatcher": "Auto-dyspozytor",
+        "manual": "Manual…",
+        "ignore": "Zignoruj",
+        "dismiss": "X"
+      },
+      "warn": {
+        "no_dispatcher": "Brak dyspozytora — zatrudnij lub kliknij Manual",
+        "no_candidate": "Brak kandydata — wszyscy niedostępni",
+        "overloaded": "Dyspozytor przeciążony — spróbuj ponownie lub Manual",
+        "format": "\n<color=#F87171>⚠ {0}</color>"
+      }
+    },
+    "crew_list": {
+      "title": "Turnusy pracownicze",
+      "close_btn": "Zamknij [ESC]",
+      "filter_role_all": "Wszystkie role",
+      "filter_status_all": "Wszystkie statusy",
+      "status": {
+        "draft": "Draft",
+        "active": "Active",
+        "paused": "Paused",
+        "archived": "Archived"
+      },
+      "count_format": "Turnusy: <b>{0}</b> / {1}",
+      "empty": "<i>Brak turnusów. Kliknij '+ Nowy turnus'.</i>",
+      "btn": {
+        "new": "+ Nowy",
+        "auto_gen": "⚙ Auto-generuj turnusy (M8-9)",
+        "edit": "Edytuj →",
+        "activate": "Aktywuj",
+        "delete": "Usuń"
+      },
+      "row": {
+        "no_employee": "<i>brak pracownika</i>",
+        "format": "<b>#{0} {1}</b>  <color={2}>[{3}]</color>\n{4} · {5} · {6} służb · {7}d"
+      },
+      "detail": {
+        "select_prompt": "<i>Wybierz turnus z listy</i>",
+        "no_employee": "<color=#9CA3AF>brak</color>",
+        "header_format": "<b><size=20>#{0} {1}</size></b>\n<color=#FFC857>{2}</color> · Pracownik: {3} · {4}d · Status: <b>{5}</b>",
+        "duties_label_format": "<b>Służby ({0}):</b>",
+        "no_duties": "<i>Brak. Klik 'Edytuj' aby dodać.</i>",
+        "duty_main_format": "  {0}. [{1}] dzień {2}  ",
+        "duty_route_format": "  {0}→{1}",
+        "validation_format": "<color={0}><b>Walidacja: {1}</b></color>"
+      },
+      "new_turnus_format": "Turnus {0}",
+      "unknown_employee": "?"
+    },
+    "crew_editor": {
+      "name_placeholder": "Nazwa turnusu",
+      "close_btn": "Zamknij [ESC]",
+      "status_format": "Status: <color={0}>{1}</color>  |  Rola: <color=#FFC857>{2}</color>",
+      "employee_label": "Pracownik:",
+      "employee_none": "— Brak —",
+      "employee_format": "#{0} {1} ({2}★ {3})",
+      "duration_label": "Długość:",
+      "duration_1": "1 dzień (dobowy)",
+      "duration_2": "2 dni (z noclegiem)",
+      "duration_3": "3 dni",
+      "no_duties": "<i>Brak służb. Dodaj pierwszą z prawej strony.</i>",
+      "btn_activate": "Aktywuj",
+      "btn_active_label": "AKTYWNY",
+      "btn_draft": "Do Draft",
+      "btn_archive": "Archiwum",
+      "btn_delete": "Usuń",
+      "form": {
+        "title": "Dodaj służbę",
+        "kind_label": "Typ:",
+        "kind": {
+          "service": "Service (prowadzenie)",
+          "break": "Break (przerwa)",
+          "deadhead": "Deadhead (powrót służbowy)",
+          "handover": "Handover (przekazanie)",
+          "overnight": "Overnight (nocleg)"
+        },
+        "day_label": "Dzień (0..N):",
+        "start_time_label": "Start (HH:MM:SS):",
+        "end_time_label": "Koniec (HH:MM:SS):",
+        "start_station_label": "Stacja startowa:",
+        "start_station_placeholder": "np. Olsztyn Głowny",
+        "end_station_label": "Stacja końcowa:",
+        "end_station_placeholder": "np. Gdynia Głowna",
+        "trainrun_label": "TrainRun ID:",
+        "trainrun_placeholder": "-1 (brak)",
+        "info": "<i>M8-11: pool TrainRun'ów z aktywnych obiegów taboru (M5) — klik zamiast wpisywania id.</i>",
+        "add_btn": "+ Dodaj służbę"
+      },
+      "duty_row": {
+        "main_format": "<b>#{0}</b> [{1}]  <color=#9CA3AF>dzień {2}</color>  ",
+        "route_format": "{0} → {1}  ",
+        "trainrun_format": "<color=#9CA3AF>TR#{0}</color>  ",
+        "hotel_format": "<color=#A855F7>Hotel {0} w {1}</color>",
+        "no_hotel": "<color=#F87171>BRAK HOTELU</color>",
+        "btn_up": "↑",
+        "btn_down": "↓",
+        "btn_hotel": "Hotel…",
+        "btn_delete": "✕"
+      },
+      "validation_summary_format": "<color={0}><b>Walidacja: {1}</b></color>",
+      "validation_error_format": "  <color=#F87171>✗</color> {0}",
+      "validation_warning_format": "  <color=#FBBF24>⚠</color> {0}"
+    },
+    "crew_autogen": {
+      "title": "Auto-generator turnusów pracowniczych (M8-9)",
+      "btn_generate": "Generuj podgląd",
+      "btn_commit": "Zatwierdź (commit)",
+      "btn_commit_format": "Zatwierdź {0} turnusów",
+      "btn_commit_disabled": "Zatwierdź (najpierw podgląd)",
+      "btn_cancel": "Anuluj [ESC]",
+      "preview_header": "Podgląd",
+      "preview_prompt": "<i>Kliknij 'Generuj podgląd' po ustawieniu parametrów.</i>",
+      "preview_no_input": "<color=#F87171>Brak TrainRun'ów na wejściu.\n\nWłącz 'Użyj fake timetable' w M8-9 — adapter do M5 w M8-11.</color>",
+      "preview_summary_format": "<b><color=#4ADE80>Wygenerowano {0} turnusów</color></b> ({1} duties, {2} deadheads)",
+      "preview_warnings_label": "<color=#FBBF24><b>Ostrzeżenia:</b></color>",
+      "preview_warning_format": "  ⚠ {0}",
+      "preview_circ_format": "<b>#{0} {1}</b> <color=#FFC857>({2})</color>",
+      "preview_duty_format": "  <color={0}>[{1}]</color> ",
+      "preview_route_format": "  {0}→{1}",
+      "preview_trainrun_format": " <color=#9CA3AF>TR#{0}</color>",
+      "settings": {
+        "title": "Parametry:",
+        "min_gap_label": "Min. przerwa [min]:",
+        "max_hours_label": "Max pracy / dobę [h]:",
+        "role_label": "Rola:",
+        "role_drivers": "Tylko maszyniści",
+        "role_conductors": "Tylko konduktorzy",
+        "role_both": "Obie role",
+        "deadhead_toggle": "Auto-Deadhead powrót (jeśli koniec ≠ home)",
+        "multiday_toggle": "Multi-day turnusy (wymaga M8-11)",
+        "fake_toggle": "Użyj fake timetable (5 TR)",
+        "prefix_label": "Prefix nazwy:",
+        "info": "<i>M8-9 prototyp:\nPool TrainRun = fake timetable debug.\nAdapter do M5 Circulation w M8-11.</i>"
+      }
+    },
+    "details": {
+      "close_btn": "Zamknij [ESC]",
+      "header_main_format": "<b><size=22>#{0} {1}</size></b>\n<color=#FFC857>{2} {3}</color>  |  Wiek: {4}  |  Staż: {5}  |  Status: <color=#4ADE80>{6}</color>",
+      "tenure_days_format": "{0} dni",
+      "tenure_months_format": "{0}m {1}d",
+      "tenure_years_format": "{0}lat {1}m",
+      "stats": {
+        "morale_format": "<b>Morale:</b> {0} {1}/100",
+        "fatigue_format": "<b>Zmęczenie:</b> {0} {1}/100",
+        "shift_format": "<b>Zmiana:</b> {0}",
+        "vacation_format": "<b>Urlop:</b> {0}/{1} dni",
+        "hire_format": "<b>Zatrudniony:</b> {0}",
+        "sick_until_format": "<color=#F87171><b>L4 do:</b> {0}</color>"
+      },
+      "salary": {
+        "current_format": "<b>Pensja aktualna:</b> {0} zł/mies",
+        "market_format": "<b>Stawka rynkowa:</b> {0} zł/mies",
+        "diff_format": "<b>Różnica:</b> <color={0}>{1}%</color>",
+        "missed_format": "  <color=#F87171>(opóźnione: {0}×)</color>"
+      },
+      "buttons": {
+        "raise10": "Podwyżka +10%",
+        "bonus_1k": "Premia 1 000 zł",
+        "bonus_5k": "Premia 5 000 zł",
+        "bonus_10k": "Premia 10 000 zł",
+        "shift_label": "Ustaw zmianę:",
+        "shift_morning": "Ranna 6-14",
+        "shift_afternoon": "Popołudniowa 14-22",
+        "shift_night": "Nocna 22-6",
+        "edit_schedule": "Edytuj harmonogram (urlopy, shift swap) →",
+        "qualifications": "Uprawnienia →",
+        "vacation_7": "Udziel urlopu 7 dni (od jutra)",
+        "fire": "Zwolnij",
+        "fire_confirm": "KLIKNIJ PONOWNIE — POTWIERDŹ"
+      },
+      "severance_format": "Odprawa przy zwolnieniu: <b>{0} zł</b> (staż {1}d)",
+      "cant_fire_format": "<i>Pracownik {0} — nie można zwolnić</i>",
+      "bonus_label": "Jednorazowa"
+    },
+    "qualifications": {
+      "title_format": "Uprawnienia: {0}",
+      "disclaimer": "Early Access: pracownicy nie wymagają żadnych kwalifikacji. W pełnej wersji każda lokomotywa i kategoria pociągu będzie wymagać konkretnego uprawnienia (zdobywanego przez szkolenia).",
+      "traction": {
+        "title": "Uprawnienia trakcyjne"
+      },
+      "category": {
+        "title": "Kategorie pociągów"
+      },
+      "none": "(brak — wszystkie dozwolone w EA)",
+      "close": "Zamknij"
+    },
+    "my_staff": {
+      "filter_role_all": "Wszystkie role",
+      "filter_status": {
+        "all": "Wszyscy",
+        "active": "Aktywni",
+        "fired": "Zwolnieni",
+        "retired": "Emeryci",
+        "sick": "Chorzy"
+      },
+      "count_default": "Pracowników: 0",
+      "count_format": "Pracowników: <b>{0}</b> / {1}",
+      "empty": "<i>Brak pracowników spełniających filtry.</i>",
+      "details_btn": "Szczegóły",
+      "row_main_format": "<b>#{0} {1}</b>, {2} lat  <color=#FFC857>{3} {4}</color>  <color={5}>[{6}]</color>",
+      "row_stats_format": "Zmiana: {0}  |  Morale: {1}  |  Fatigue: {2}  |  Pensja: {3}zł/mies"
+    }
+  },
+  "top_bar": {
+    "scene_button": {
+      "depot": "Zajezdnia",
+      "map": "Mapa 2D"
+    },
+    "depot_name_placeholder": "Nazwa zajezdni...",
+    "reputation_format": "Rep {0}/100"
+  },
+  "game_creator": {
+    "title": {
+      "single_player": "Nowa gra jednoosobowa",
+      "multiplayer": "Nowa gra wieloosobowa"
+    },
+    "tabs": {
+      "general": "Ogólnie",
+      "gameplay": "Rozgrywka",
+      "server": "Serwer"
+    },
+    "bottom": {
+      "cancel": "Anuluj",
+      "start_game": "Zacznij grę",
+      "create_server": "Utwórz serwer"
+    },
+    "general": {
+      "game_name": "Nazwa gry",
+      "assistant_name": "Imię asystenta (zastępcy)",
+      "server_name": "Nazwa serwera",
+      "max_players": "Maks. graczy",
+      "password": "Hasło (opcjonalne)",
+      "visibility": "Widoczność serwera"
+    },
+    "gameplay": {
+      "pause_on_start": "Pauza na start",
+      "autosave": "Autozapis",
+      "autosave_interval": "Interwał autozapisu",
+      "seed": "Ziarno losowe (seed)"
+    },
+    "placeholder": {
+      "game_name": "Moja gra",
+      "assistant_name": "pan Tadeusz",
+      "server_name": "Mój serwer",
+      "seed": "0 = deterministyczne (testowanie, MP)"
+    },
+    "options": {
+      "autosave_interval": {
+        "5min": "5 min",
+        "10min": "10 min",
+        "15min": "15 min",
+        "30min": "30 min"
+      },
+      "visibility": {
+        "public": "Publiczny",
+        "private": "Prywatny",
+        "hidden": "Ukryty"
+      },
+      "max_players": {
+        "2": "2",
+        "4": "4",
+        "6": "6",
+        "8": "8",
+        "12": "12",
+        "16": "16"
+      }
+    },
+    "cancel_confirm": {
+      "title": "Anulować nową grę?",
+      "body": "Stracisz wszystkie wybrane ustawienia (trudność, modyfikatory, reguły). Ta operacja nie zapisuje stanu konfiguracji.",
+      "yes": "Tak, wróć do menu",
+      "no": "Nie, kontynuuj"
+    }
+  },
+  "main_menu": {
+    "title": "Railway Manager",
+    "version_format": "Wersja {0}",
+    "buttons": {
+      "new_game": "Nowa gra",
+      "continue": "Kontynuuj",
+      "load": "Załaduj",
+      "new_single_player": "Nowa gra jednoosobowa",
+      "multiplayer": "Gra wieloosobowa",
+      "settings": "Ustawienia",
+      "mods": "Dodatki",
+      "credits": "O grze",
+      "help": "Pomoc",
+      "exit": "Wyjście",
+      "quit": "Wyjdź"
+    }
+  },
+  "load_game": {
+    "title": "Załaduj grę",
+    "toggle": {
+      "show_autosaves": "Pokaż autozapisy"
+    },
+    "section": {
+      "last_game": "Ostatnia gra",
+      "other_saves": "Inne zapisy"
+    },
+    "tag": {
+      "auto": "[Auto]"
+    },
+    "action": {
+      "open_save": "Otwórz zapis"
+    },
+    "status": {
+      "loading": "Wczytywanie listy zapisów...",
+      "empty": "Brak zapisów. Rozpocznij nową grę.",
+      "error": "Błąd wczytywania listy zapisów"
+    }
+  },
+  "credits": {
+    "title": "O grze",
+    "team_name": "Railway Manager Team",
+    "section": {
+      "railway_manager": "Railway Manager",
+      "developers": "Twórcy",
+      "technologies": "Technologie",
+      "version": "Wersja",
+      "data_sources": "Źródła danych"
+    },
+    "body": {
+      "railway_manager": "Gra strategiczna o zarządzaniu siecią kolejową i zajezdnią.\nPlanuj trasy, zarządzaj flotą i rozbudowuj infrastrukturę.",
+      "copyright": "© 2026 Railway Manager Team. Wszelkie prawa zastrzeżone.",
+      "openstreetmap": "Dane mapy © OpenStreetMap contributors, dostępne na licencji Open Database License (ODbL) 1.0."
+    },
+    "role": {
+      "design_programming": "Projekt i programowanie",
+      "graphics_ui": "Grafika i UI",
+      "sound_music": "Dźwięk i muzyka",
+      "translation": "Tłumaczenie (PL/EN)"
+    },
+    "tech": {
+      "engine": "Silnik",
+      "language": "Język",
+      "ui": "Interfejs"
+    },
+    "field": {
+      "build": "Build",
+      "date": "Data"
+    },
+    "action": {
+      "osm_copyright": "OpenStreetMap — prawa autorskie i licencja"
+    }
+  },
+  "mods": {
+    "title": "Dodatki",
+    "button": {
+      "open_folder": "Otwórz folder modów",
+      "workshop": "Steam Workshop"
+    },
+    "empty": "Brak zainstalowanych modów.\nUmieść foldery modów w katalogu Mods obok pliku gry.",
+    "tag": {
+      "enabled": "Aktywny",
+      "disabled": "Wyłączony"
+    },
+    "intro": {
+      "eyebrow": "WORKSHOP I MODY",
+      "title": "Jedno miejsce dla dodatków lokalnych i Steam Workshop.",
+      "body": "Gdy loader modów będzie gotowy, tutaj zobaczysz listę aktywnych dodatków, ich wersje i szybkie przejście do zarządzania."
+    },
+    "empty_state": {
+      "eyebrow": "AKTUALNIE PUSTO",
+      "hint": "Możesz już teraz otworzyć lokalny folder Mods albo przejść do strony Workshop z dolnego paska."
+    }
+  },
+  "multiplayer": {
+    "title": "Gra wieloosobowa",
+    "search": {
+      "placeholder": "Szukaj serwera..."
+    },
+    "empty": "Brak serwerów spełniających kryteria wyszukiwania.",
+    "server_count_format": "Serwery: {0}",
+    "action": {
+      "join": "Dołącz",
+      "full": "Pełny",
+      "create_game": "Utwórz grę",
+      "refresh": "Odśwież"
+    }
+  },
+  "rebind": {
+    "modal": {
+      "title_format": "Zmiana: {0}",
+      "prompt": "Naciśnij klawisz...",
+      "cancel": "Anuluj (Esc)",
+      "timeout_format": "Auto-anuluj za: {0}s  •  Esc = anuluj"
+    }
+  },
+  "help": {
+    "title": "Pomoc",
+    "topics": {
+      "navigation": {
+        "header": "Nawigacja po zajezdni",
+        "body": "PPM + przeciąganie — obrót kamery\nScroll — zoom\nŚrodkowy przycisk myszy + przeciąganie — przesuwanie widoku"
+      },
+      "build_modes": {
+        "header": "Tryby budowania",
+        "body": "Pasek narzędzi na dole ekranu pozwala przełączać tryby:\n• Tor — budowanie odcinków torów i rozjazdów\n• Sieć trakcyjna — dodawanie podwieszenia sieci elektrycznej\n• Ściana / Drzwi / Okno — elementy budynku hali"
+      },
+      "train_management": {
+        "header": "Zarządzanie pociągami",
+        "body": "Kliknij pociąg w trybie Wybierz, aby zobaczyć jego stan techniczny, czystość i trasę.\nLista pociągów jest dostępna po lewej stronie ekranu."
+      },
+      "keybindings": {
+        "header": "Skróty klawiszowe",
+        "body": "[Esc] — zamknij popup / wróć do menu\n[Spacja] — pauza / wznowienie czasu\n[1] [2] [3] — prędkość symulacji ×1 / ×2 / ×3\n[Del] — wyburzanie zaznaczonego elementu"
+      },
+      "save_load": {
+        "header": "Zapis i wczytywanie",
+        "body": "Gra wykonuje autozapis co kilka minut.\nRęczny zapis dostępny jest z menu pauzy.\nZapisy można wczytać z poziomu menu głównego → Załaduj."
+      }
+    }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "tabs": {
+      "controls": "Sterowanie",
+      "graphics": "Grafika",
+      "audio": "Dźwięk",
+      "language": "Język",
+      "general": "Ogólne"
+    },
+    "assistant": {
+      "info": "Dotyczy bieżącej gry, działa od razu (bez Zastosuj). Pominięcie wycisza tylko ścieżkę startową — advisor i delegacja działają dalej.",
+      "skip_onboarding": "Pomiń podpowiedzi startowe asystenta",
+      "restart_onboarding": "Ścieżka startowa asystenta",
+      "restart_button": "Restartuj"
+    },
+    "headings": {
+      "assistant": "Asystent",
+      "gameplay": "Rozgrywka",
+      "interface": "Interfejs",
+      "key_bindings": "Klawiszologia",
+      "rebind_maps": {
+        "camera_depot": "Kamera (Zajezdnia)",
+        "camera_map": "Kamera (Mapa)",
+        "tool_build": "Narzędzia (Budowa)",
+        "tool_turnout": "Narzędzia (Rozjazdy)",
+        "vehicle": "Pojazdy",
+        "ui_popup": "Interfejs (Popup)",
+        "ui_pause": "Interfejs (Pauza)"
+      }
+    },
+    "bottom": {
+      "apply": "Zastosuj",
+      "cancel": "Anuluj",
+      "reset_section": "Resetuj sekcję",
+      "reset_all": "Resetuj wszystko"
+    },
+    "rebind": {
+      "change": "Zmień..."
+    },
+    "info": {
+      "key_rebind_restart": "Niektóre zmiany klawiszy mogą wymagać restartu sceny aby zadziałały w aktywnych systemach.",
+      "rebind_coming": "Rebindowanie klawiszy — wkrótce w aktualizacji",
+      "audio_mixer_pending": "Mikser audio zostanie podłączony w aktualizacji M12 Polish.",
+      "i18n_partial": "Pełen system tłumaczeń pojawi się w aktualizacji M13-3 (i18n framework).",
+      "language_autodetect": "Domyślny język = autodetect z ustawień Steam (jeśli aktywny) lub systemu operacyjnego.",
+      "color_blind_pending": "Pełen rollout trybów dla osób z dysfunkcją kolorów planowany po EA.",
+      "ui_scale_pending": "Skala UI: 100% — więcej opcji dostępne w wersji 1.0."
+    },
+    "controls": {
+      "mouse_sensitivity": "Czułość myszy",
+      "scroll_sensitivity": "Czułość scrolla",
+      "pan_speed": "Prędkość przesuwania",
+      "invert_camera_scroll": "Odwróć scroll kamery",
+      "invert_mouse_y": "Odwróć oś Y myszy",
+      "rebind_button": "Zmień...",
+      "rebind_reset": "Reset"
+    },
+    "graphics": {
+      "window_mode": "Tryb okna",
+      "vsync": "Synchronizacja pionowa (VSync)",
+      "quality_preset": "Preset jakości",
+      "shadows": "Cienie",
+      "textures": "Tekstury",
+      "lod_distance": "Odległość LOD",
+      "antialiasing": "Antyaliasing",
+      "post_processing": "Efekty postprocesu (Bloom)"
+    },
+    "audio": {
+      "master_volume": "Głośność ogólna",
+      "music_volume": "Głośność muzyki",
+      "sfx_volume": "Głośność efektów",
+      "voice_volume": "Głośność komunikatów",
+      "mute_when_unfocused": "Wycisz gdy okno nieaktywne"
+    },
+    "language": {
+      "preference": "Język interfejsu",
+      "currency": "Waluta"
+    },
+    "general": {
+      "default_time_speed": "Domyślna prędkość czasu",
+      "fps_limit": "Limit FPS",
+      "auto_pause": {
+        "breakdown": "Auto-pauza: awaria pociągu",
+        "infrastructure": "Auto-pauza: awaria infrastruktury",
+        "critical_decision": "Auto-pauza: krytyczna decyzja",
+        "collision": "Auto-pauza: kolizja"
+      },
+      "show_tutorial": "Pokaż tutorial przy nowej grze",
+      "random_event_frequency": "Częstotliwość losowych zdarzeń",
+      "notify": {
+        "delays": "Powiadomienia: opóźnienia",
+        "money": "Powiadomienia: finanse",
+        "personnel": "Powiadomienia: personel",
+        "other": "Powiadomienia: pozostałe"
+      },
+      "max_undos": "Maks. liczba cofnięć (Ctrl+Z)"
+    },
+    "interface_section": {
+      "ui_scale": "Skala interfejsu",
+      "tooltips_delay": "Opóźnienie podpowiedzi (s)",
+      "show_keybinds_in_tooltips": "Pokaż skróty klawiszowe w podpowiedziach",
+      "color_blind_mode": "Tryb dla osób z dysfunkcją kolorów"
+    },
+    "options": {
+      "window": {
+        "fullscreen": "Pełny ekran",
+        "borderless": "Bez ramki",
+        "windowed": "Okienkowy"
+      },
+      "time_speed": {
+        "x1": "x1",
+        "x5": "x5",
+        "x25": "x25",
+        "x150": "x150",
+        "x500": "x500"
+      },
+      "event_frequency": {
+        "off": "Wył.",
+        "rare": "Rzadko",
+        "normal": "Normalnie",
+        "often": "Często"
+      },
+      "color_blind": {
+        "none": "Wył.",
+        "protanopia": "Protanopia",
+        "deuteranopia": "Deuteranopia",
+        "tritanopia": "Tritanopia"
+      },
+      "language": {
+        "auto_steam": "Auto (Steam)",
+        "pl": "Polski",
+        "en": "English",
+        "de": "Deutsch",
+        "cz": "Čeština",
+        "jp": "日本語",
+        "ru_alpha": "Русский (alpha)",
+        "uk_alpha": "Українська (alpha)"
+      },
+      "currency": {
+        "pln": "PLN — zł",
+        "eur": "EUR — €",
+        "usd": "USD — $",
+        "czk": "CZK — Kč"
+      },
+      "ui_scale": {
+        "100_only": "100% (więcej opcji wkrótce)"
+      },
+      "antialiasing": {
+        "off": "Wył.",
+        "fxaa": "FXAA",
+        "smaa": "SMAA",
+        "taa": "TAA"
+      },
+      "vsync": {
+        "off": "Wył.",
+        "on": "Wł."
+      },
+      "fps_limit": {
+        "unlimited": "Bez limitu",
+        "30": "30",
+        "60": "60",
+        "120": "120",
+        "144": "144"
+      },
+      "quality": {
+        "low": "Niska",
+        "medium": "Średnia",
+        "high": "Wysoka",
+        "ultra": "Ultra"
+      },
+      "shadows": {
+        "off": "Wył.",
+        "low": "Niskie",
+        "medium": "Średnie",
+        "high": "Wysokie"
+      },
+      "textures": {
+        "low": "Niskie",
+        "medium": "Średnie",
+        "high": "Wysokie",
+        "ultra": "Ultra"
+      }
+    }
+  },
+  "difficulty": {
+    "preset": {
+      "easy": "Łatwy",
+      "normal": "Normalny",
+      "hard": "Trudny",
+      "realistic": "Realistyczny",
+      "custom": "Własny"
+    },
+    "preset_desc": {
+      "easy": "Więcej kasy startowej, mniej awarii, hojniejsze dotacje. Dla początkujących lub do nauki systemów.",
+      "normal": "Wyważone wartości — domyślny tryb gry. Polecany na pierwszy run.",
+      "hard": "Mniej kasy, więcej awarii, ostrzejsze koszty. Dla doświadczonych zarządców.",
+      "realistic": "Symulacja realnych warunków rynkowych. Stary tabor awariuje, dotacje wymagają walki, pasażerowie wybredni.",
+      "custom": "Dostosuj każdy modyfikator suwakami."
+    },
+    "modifier": {
+      "start_budget": "Kasa startowa",
+      "operational_cost": "Koszty operacyjne",
+      "breakdown_chance": "Awarie taboru",
+      "passenger_demand": "Popyt pasażerski",
+      "salary": "Pensje",
+      "subsidy": "Dotacje",
+      "delay_propagation": "Propagacja opóźnień",
+      "event_frequency": "Częstotliwość eventów",
+      "hotel_cost": "Koszt hoteli",
+      "ticket_price_tolerance": "Tolerancja cenowa pasażerów"
+    },
+    "section_title": "Poziom trudności",
+    "modifiers_title": "Modyfikatory (Custom)",
+    "info_locked": "Trudność wybierasz raz przy starcie nowej gry — nie można zmienić mid-game.",
+    "preset_subtitle": {
+      "easy": "dla początkujących",
+      "normal": "polecany na pierwszy run",
+      "hard": "dla doświadczonych zarządców",
+      "realistic": "symulacja realnych warunków",
+      "custom": "pełna kontrola modyfikatorów"
+    },
+    "group": {
+      "economy": "Ekonomia",
+      "fleet": "Tabor",
+      "passengers": "Pasażerowie",
+      "personnel": "Personel",
+      "events": "Wydarzenia"
+    },
+    "tooltip": {
+      "start_budget": "Kasa startowa firmy. Wartość bazowa = 150 000 PLN. Wyższa daje więcej buforu na pierwsze inwestycje.",
+      "operational_cost": "Mnożnik dziennych kosztów operacyjnych: paliwo, energia trakcyjna, opłaty infrastrukturalne, koszty serwisowe.",
+      "breakdown_chance": "Prawdopodobieństwo awarii pojazdu (M7 BreakdownService). 0.0 = soft-off, awarie nigdy nie wystąpią. Działa razem z regułą „Awarie taboru”.",
+      "passenger_demand": "Mnożnik liczby pasażerów oczekujących na peronach (M6). Wyższy = więcej kasy z biletów ale też więcej presji.",
+      "salary": "Mnożnik pensji wszystkich pracowników (M8). Niższy = niższe stałe koszty firmy.",
+      "subsidy": "Mnożnik dotacji wojewódzkich za świadczenie usług publicznych. 0.0 = soft-off (brak dotacji).",
+      "delay_propagation": "Jak mocno opóźnienia kaskadują się przez sieć (M9). 0.0 = każdy pociąg niezależny, 2.5 = realny efekt domina.",
+      "event_frequency": "Częstotliwość losowych zdarzeń: pogoda, awarie sieci, strajki (M12d). 0.0 = soft-off.",
+      "hotel_cost": "Mnożnik kosztów noclegów dla pracowników w turnusach wielodniowych (M8).",
+      "ticket_price_tolerance": "Tolerancja pasażerów na wyższe ceny biletów (M6.5). Wyższa = mogą zaakceptować wyższe ceny bez utraty popytu."
+    },
+    "preview": {
+      "title": "<b>Po zatwierdzeniu otrzymasz:</b>",
+      "start_budget_format": "• Kasa startowa: <color=#FFC857>{0} PLN</color>",
+      "salary_format": "• Średnia pensja maszynisty: <color=#FFC857>~{0} PLN/mies</color>",
+      "breakdown_format": "• Awarie taboru: {0}× (~co {1} km)",
+      "breakdown_disabled": "• Awarie taboru: <color=#60FF60>wyłączone</color>",
+      "subsidy_format": "• Dotacja wojewódzka: <color=#60C0FF>{0}%</color>",
+      "subsidy_disabled": "• Dotacje wojewódzkie: <color=#FF6060>wyłączone</color>"
+    }
+  },
+  "game_rules": {
+    "section_title": "Reguły gry",
+    "info_locked": "Reguły wybierasz raz przy starcie nowej gry — nie można zmienić mid-game.",
+    "rule": {
+      "vehicle_breakdowns": "Awarie taboru",
+      "assistant_proactivity": "Asystent prowadzi (podpowiedzi)",
+      "random_events": "Losowe zdarzenia",
+      "voivodeship_subsidies": "Dotacje wojewódzkie",
+      "maintenance_decay": "Degradacja komponentów",
+      "employee_morale": "Morale pracowników",
+      "weather_impact": "Wpływ pogody"
+    },
+    "rule_desc": {
+      "vehicle_breakdowns": "Włącza system awarii (M7). Wyłącz dla casual mode bez maintenance.",
+      "assistant_proactivity": "Asystent sam podpowiada kolejne kroki i reaguje gdy utkniesz. Wył. = odzywa się tylko na życzenie (panel działa zawsze).",
+      "random_events": "Pogoda, awarie sieci trakcyjnej, strajki personelu, opóźnienia infrastruktury.",
+      "voivodeship_subsidies": "Dochody z dotacji UM. Wyłącz dla hard-mode (musisz zarobić wszystko biletami)."
+    },
+    "tooltip": {
+      "vehicle_breakdowns": "Aktywuje system awarii (M7). Wyłącz dla casual mode bez maintenance gameplay.",
+      "assistant_proactivity": "Onboarding + proaktywne podpowiedzi advisora. Wyłączone: asystent milczy, dopóki go nie poprosisz — delegowanie zadań przez panel działa zawsze. Domyślnie wł. dla Łatwy/Normalny, wył. dla Trudny/Realistyczny.",
+      "random_events": "Pogoda, awarie sieci trakcyjnej, strajki personelu, infrastrukturne zdarzenia. Off = nigdy nie wystąpią.",
+      "voivodeship_subsidies": "Dochody z dotacji UM. Off = brak dotacji, hard-mode (musisz zarobić wszystko biletami).",
+      "maintenance_decay": "Degradacja komponentów per kilometr (M7). Off = wszystkie komponenty zawsze 100%. Łącz z 'Awarie taboru'=Off dla pełnego casual mode.",
+      "employee_morale": "Morale wpływa na produktywność (M8). Off = produktywność 100% zawsze. Pracownicy nigdy nie strajkują ani nie zwalniają się sami.",
+      "weather_impact": "Pogoda zwiększa breakdown chance i delay propagation. Off = pogoda neutralna (brak 'marznący deszcz +30% awarii' eventów)."
+    }
+  }
+}

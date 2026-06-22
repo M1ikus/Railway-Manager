@@ -1,0 +1,92 @@
+{
+  "presets": [
+    {
+      "id": "horizontalSingle",
+      "displayName": "Pojedynczy pasek",
+      "description": "Jeden gruby pasek poziomy w środku pudła.",
+      "positionY": 0.5,
+      "thickness": 0.15,
+      "mode": 0,
+      "defaultColor": "#FFFFFF",
+      "isCompound": false
+    },
+    {
+      "id": "topStripe",
+      "displayName": "Pasek górny",
+      "description": "Cienki pasek pod krawędzią dachu.",
+      "positionY": 0.15,
+      "thickness": 0.05,
+      "mode": 0,
+      "defaultColor": "#FFFFFF",
+      "isCompound": false
+    },
+    {
+      "id": "bottomStripe",
+      "displayName": "Pasek dolny (fartuszek)",
+      "description": "Cienki pasek nad podwoziem — klasyczny fartuszek PKP.",
+      "positionY": 0.85,
+      "thickness": 0.05,
+      "mode": 0,
+      "defaultColor": "#000000",
+      "isCompound": false
+    },
+    {
+      "id": "windowBand",
+      "displayName": "Pas okienny",
+      "description": "Szeroki pas wzdłuż okien (typowy PKP IC).",
+      "positionY": 0.4,
+      "thickness": 0.30,
+      "mode": 0,
+      "defaultColor": "#103090",
+      "isCompound": false
+    },
+    {
+      "id": "thinStripe",
+      "displayName": "Cienka linia",
+      "description": "Bardzo cienki pasek poziomy — element akcentu.",
+      "positionY": 0.5,
+      "thickness": 0.02,
+      "mode": 0,
+      "defaultColor": "#DC0000",
+      "isCompound": false
+    },
+    {
+      "id": "dashedAccent",
+      "displayName": "Linia przerywana",
+      "description": "Cienki pasek przerywany — dynamiczny look.",
+      "positionY": 0.5,
+      "thickness": 0.03,
+      "mode": 1,
+      "defaultColor": "#FFFFFF",
+      "isCompound": false
+    },
+    {
+      "id": "doubleStripe",
+      "displayName": "Dwa paski (góra+dół)",
+      "description": "Dwa cienkie paski po obu krawędziach pudła.",
+      "positionY": 0.0,
+      "thickness": 0.0,
+      "mode": 0,
+      "defaultColor": "#FFFFFF",
+      "isCompound": true,
+      "compoundParts": [
+        { "positionY": 0.15, "thickness": 0.04, "mode": 0, "defaultColor": "#FFFFFF" },
+        { "positionY": 0.85, "thickness": 0.04, "mode": 0, "defaultColor": "#FFFFFF" }
+      ]
+    },
+    {
+      "id": "skirtAndAccent",
+      "displayName": "Fartuszek + akcent",
+      "description": "Fartuszek dolny + cienki akcent przy oknach.",
+      "positionY": 0.0,
+      "thickness": 0.0,
+      "mode": 0,
+      "defaultColor": "#000000",
+      "isCompound": true,
+      "compoundParts": [
+        { "positionY": 0.85, "thickness": 0.10, "mode": 0, "defaultColor": "#000000" },
+        { "positionY": 0.45, "thickness": 0.02, "mode": 0, "defaultColor": "#FFFFFF" }
+      ]
+    }
+  ]
+}

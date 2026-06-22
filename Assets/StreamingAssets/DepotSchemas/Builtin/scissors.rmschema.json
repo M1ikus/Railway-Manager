@@ -1,0 +1,23 @@
+{
+    "schemaFormatVersion": 1,
+    "id": "builtin_scissors",
+    "name": "Rozjazd nożycowy R190 (X)",
+    "description": "Klasyczny PKP scissors crossing X-pattern — 4 rozjazdy R190 w 4 rogach + 2 krótkie diagonale (inserty) krzyżujące się w środku. W realu PKP w środku byłaby krzyżownica (diamond crossing). Tylko międzytorze wybieralne, ilość torów stała = 2.",
+    "category": "Scissors",
+    "type": "generative",
+    "author": "Built-in",
+    "tags": ["scissors", "standard", "x-pattern", "r190"],
+    "version": "1.0",
+    "createdAt": "2026-05-01T00:00:00Z",
+    "modifiedAt": "2026-05-02T00:00:00Z",
+    "workshopId": 0,
+    "previewPngBase64": "",
+    "parameters": {
+        "trackCount": 2,
+        "trackSpacing": 5.0,
+        "trackSpacings": [],
+        "turnoutType": "R190",
+        "turnoutTypes": [],
+        "mirror": false
+    }
+}

@@ -1,0 +1,127 @@
+{
+  "_comment": "M6.5-6: Dotacje wojewódzkie per województwo. Stawki kalibrowane do real PSC contracts (Polregio Łódzkie 20.92 zł/pociągokm jako reference). Peryferyjne województwa = wyższe stawki (utrzymanie połączeń społecznych). Centralne/metropolitalne = niższe (większy popyt naturalny). Warunki kwalifikacji uniform (M-Balance: differentiate per województwo gdy gameplay wymaga).",
+  "_source": "docs/design/m6-5-economy-research.md sekcja 4 + section 5.3 decyzja 8 (Dotacje real PSC model)",
+  "_dlc_note": "W EA wszystkie 16 województw PL. Post-EA DLC dorzuci kraje (DE Bundesländer / CZ kraje). Per-kraj subsidy_rules_DE.json / subsidy_rules_CZ.json + resolver wg countryCode depotu.",
+
+  "globalDefaults": {
+    "minRunsPerDayForFullSubsidy": 4,
+    "maxAvgTicketPriceGroszy": 4000,
+    "punctualityKpiThreshold": 0.80,
+    "_comment_punctuality": "TD-007 ✅ DONE 2026-05-06 — punctuality tracking aktywny w SubsidyCalculator.PunctualityMultiplier. Curve: ≥80% on-time → 1.0×, 60-80% → 0.5×, <60% → 0× (gracz traci dotację). Threshold ±5min na klasyfikację on-time/late w EconomyManager.OnRunDespawned. UI breakdown w SubsidyCalculator.Explain. Field punctualityKpiThreshold tutaj informacyjny (faktyczne stałe w SubsidyCalculator.cs)."
+  },
+
+  "voivodeships": [
+    {
+      "code": "MZ",
+      "displayName": "Mazowieckie",
+      "tier": "centralne",
+      "subsidyPerRunGroszy": 80000,
+      "_comment": "800 zł/run — najniższa stawka, duży popyt naturalny (Warszawa metro), Mazowieckie ma KM jako głównego operatora regionalnego z relatywnie samodzielną rentownością"
+    },
+    {
+      "code": "MA",
+      "displayName": "Małopolskie",
+      "tier": "metropolitalne",
+      "subsidyPerRunGroszy": 120000,
+      "_comment": "1200 zł/run — Kraków metro + KMŁ, średni popyt"
+    },
+    {
+      "code": "WP",
+      "displayName": "Wielkopolskie",
+      "tier": "metropolitalne",
+      "subsidyPerRunGroszy": 120000,
+      "_comment": "1200 zł/run — Poznań metro, Kolei Wielkopolskie"
+    },
+    {
+      "code": "PM",
+      "displayName": "Pomorskie",
+      "tier": "metropolitalne",
+      "subsidyPerRunGroszy": 120000,
+      "_comment": "1200 zł/run — Trójmiasto SKM samodzielne, ale poza-Trójmiasto wymaga dopłaty"
+    },
+    {
+      "code": "SL",
+      "displayName": "Śląskie",
+      "tier": "metropolitalne",
+      "subsidyPerRunGroszy": 120000,
+      "_comment": "1200 zł/run — Konurbacja śląska, Koleje Śląskie, duża sieć"
+    },
+    {
+      "code": "DS",
+      "displayName": "Dolnośląskie",
+      "tier": "metropolitalne",
+      "subsidyPerRunGroszy": 120000,
+      "_comment": "1200 zł/run — Wrocław metro, Koleje Dolnośląskie"
+    },
+    {
+      "code": "LD",
+      "displayName": "Łódzkie",
+      "tier": "srednie",
+      "subsidyPerRunGroszy": 180000,
+      "_comment": "1800 zł/run — Polregio Łódzkie real reference: 20.92 zł/pociągokm × 100km śr. = ~2100 zł/run. ŁKA + Polregio mix"
+    },
+    {
+      "code": "KP",
+      "displayName": "Kujawsko-Pomorskie",
+      "tier": "srednie",
+      "subsidyPerRunGroszy": 180000,
+      "_comment": "1800 zł/run — Bydgoszcz/Toruń, średnia gęstość"
+    },
+    {
+      "code": "ZP",
+      "displayName": "Zachodniopomorskie",
+      "tier": "srednie",
+      "subsidyPerRunGroszy": 180000,
+      "_comment": "1800 zł/run — Szczecin metro + peryferyjne"
+    },
+    {
+      "code": "OP",
+      "displayName": "Opolskie",
+      "tier": "srednie",
+      "subsidyPerRunGroszy": 180000,
+      "_comment": "1800 zł/run — najmniejsze województwo, Opole + okolice"
+    },
+    {
+      "code": "PK",
+      "displayName": "Podkarpackie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, słabo zaludnione tereny górskie, połączenia społeczne kluczowe"
+    },
+    {
+      "code": "SK",
+      "displayName": "Świętokrzyskie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, Kielce + okolice"
+    },
+    {
+      "code": "LU",
+      "displayName": "Lubelskie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, Lublin + tereny wiejskie"
+    },
+    {
+      "code": "PD",
+      "displayName": "Podlaskie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, najbardziej wschodnie, mała gęstość"
+    },
+    {
+      "code": "WM",
+      "displayName": "Warmińsko-Mazurskie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, jeziora + tereny rolne, Olsztyn jedyny ośrodek"
+    },
+    {
+      "code": "LB",
+      "displayName": "Lubuskie",
+      "tier": "peryferyjne",
+      "subsidyPerRunGroszy": 250000,
+      "_comment": "2500 zł/run — peryferyjne, Zielona Góra + Gorzów, mała gęstość"
+    }
+  ]
+}

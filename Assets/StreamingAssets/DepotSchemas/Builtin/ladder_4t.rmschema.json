@@ -1,0 +1,23 @@
+{
+    "schemaFormatVersion": 1,
+    "id": "builtin_ladder_4t",
+    "name": "Drabinka 4-torowa R190",
+    "description": "Standardowa drabinka 4-torowa dla średniej zajezdni. R190 1:9, międzytorze 5.0m.",
+    "category": "Ladder",
+    "type": "generative",
+    "author": "Built-in",
+    "tags": ["ladder", "standard", "medium-depot"],
+    "version": "1.0",
+    "createdAt": "2026-05-01T00:00:00Z",
+    "modifiedAt": "2026-05-01T00:00:00Z",
+    "workshopId": 0,
+    "previewPngBase64": "",
+    "parameters": {
+        "trackCount": 4,
+        "trackSpacing": 5.0,
+        "trackSpacings": [],
+        "turnoutType": "R190",
+        "turnoutTypes": [],
+        "mirror": false
+    }
+}

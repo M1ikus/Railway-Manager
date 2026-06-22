@@ -1,0 +1,20 @@
+{
+    "name": "RailwayManager.GameCreator",
+    "rootNamespace": "RailwayManager.GameCreator",
+    "references": [
+        "RailwayManager.Core",
+        "RailwayManager.MainMenu",
+        "RailwayManager.SharedUI",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

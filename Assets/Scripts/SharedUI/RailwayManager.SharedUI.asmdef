@@ -1,0 +1,17 @@
+{
+    "name": "RailwayManager.SharedUI",
+    "rootNamespace": "RailwayManager.SharedUI",
+    "references": [
+        "RailwayManager.Core",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

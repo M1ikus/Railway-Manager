@@ -1,0 +1,102 @@
+{
+  "workshops": [
+    {
+      "id": "ZNTK_MINSK_MAZ",
+      "name": "ZNTK Mińsk Mazowiecki",
+      "locationStationName": "Mińsk Mazowiecki",
+      "canPerform": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "specializations": [
+        "ElectricLocomotive",
+        "EMU"
+      ],
+      "priceMultiplier": 1.0,
+      "durationMultiplier": 1.1,
+      "modernizationAvailable": false,
+      "paintCostPln": 50000,
+      "paintTimeDays": 7
+    },
+    {
+      "id": "NEWAG_NOWY_SACZ",
+      "name": "NEWAG — Nowy Sącz",
+      "locationStationName": "Nowy Sącz",
+      "canPerform": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "specializations": [
+        "EMU",
+        "ElectricLocomotive",
+        "PassengerCar"
+      ],
+      "priceMultiplier": 1.15,
+      "durationMultiplier": 0.9,
+      "modernizationAvailable": true,
+      "paintCostPln": 200000,
+      "paintTimeDays": 3
+    },
+    {
+      "id": "PESA_BYDGOSZCZ",
+      "name": "PESA — Bydgoszcz",
+      "locationStationName": "Bydgoszcz",
+      "canPerform": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "specializations": [
+        "EMU",
+        "DMU"
+      ],
+      "priceMultiplier": 1.15,
+      "durationMultiplier": 0.9,
+      "modernizationAvailable": true,
+      "paintCostPln": 180000,
+      "paintTimeDays": 4
+    },
+    {
+      "id": "ZNTK_POZNAN",
+      "name": "ZNTK Poznań",
+      "locationStationName": "Poznań Franowo",
+      "canPerform": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "specializations": [
+        "PassengerCar",
+        "DieselLocomotive"
+      ],
+      "priceMultiplier": 0.95,
+      "durationMultiplier": 1.1,
+      "modernizationAvailable": false,
+      "paintCostPln": 80000,
+      "paintTimeDays": 6
+    },
+    {
+      "id": "CEGIELSKI_POZNAN",
+      "name": "H. Cegielski — Poznań",
+      "locationStationName": "Poznań Główny",
+      "canPerform": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "specializations": [
+        "PassengerCar"
+      ],
+      "priceMultiplier": 1.1,
+      "durationMultiplier": 1.0,
+      "modernizationAvailable": false,
+      "paintCostPln": 100000,
+      "paintTimeDays": 5
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+# Domyslna normalizacja: wszystkie pliki tekstowe trzymane jako LF w repo,
+# konwertowane do natywnego EOL przy checkout. Eliminuje warningi CRLF/LF.
+* text=auto eol=lf
+
+# === Kod ===
+*.cs       text diff=csharp
+*.shader   text
+*.shadergraph text
+*.shadersubgraph text
+*.compute  text
+*.cginc    text
+*.hlsl     text
+*.glsl     text
+
+# === Unity YAML (sceny, prefaby, materialy, animacje) ===
+# merge=unityyamlmerge wymaga konfiguracji w .git/config (patrz docs/setup/git-smartmerge.md)
+*.unity        text merge=unityyamlmerge
+*.prefab       text merge=unityyamlmerge
+*.asset        text merge=unityyamlmerge
+*.mat          text merge=unityyamlmerge
+*.anim         text merge=unityyamlmerge
+*.controller   text merge=unityyamlmerge
+*.overrideController text merge=unityyamlmerge
+*.physicMaterial  text
+*.physicsMaterial text
+*.physicMaterial2D text
+*.lighting     text
+*.giparams     text
+*.preset       text merge=unityyamlmerge
+*.mask         text
+*.brush        text
+*.flare        text
+*.fontsettings text
+*.guiskin      text
+*.mixer        text
+*.terrainlayer text
+*.spriteatlas  text
+
+# === Unity meta ===
+*.meta     text
+
+# === UI Toolkit ===
+*.uxml     text
+*.uss      text
+*.tss      text
+
+# === Konfiguracja i dane ===
+*.json     text
+*.xml      text
+*.yaml     text
+*.yml      text
+*.toml     text
+*.md       text
+*.txt      text
+*.csv      text
+*.ini      text
+*.cfg      text
+.gitattributes text
+.gitignore text
+.editorconfig text
+
+# === Skrypty buildowe ===
+*.sh       text eol=lf
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+*.ps1      text eol=crlf
+
+# === Modele 3D ===
+*.fbx      binary
+*.obj      binary
+*.blend    binary
+*.dae      binary
+*.3ds      binary
+*.max      binary
+*.ma       binary
+*.mb       binary
+*.c4d      binary
+
+# === Tekstury ===
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.bmp      binary
+*.tga      binary
+*.tif      binary
+*.tiff     binary
+*.psd      binary
+*.exr      binary
+*.hdr      binary
+*.ico      binary
+*.webp     binary
+
+# === Audio ===
+*.wav      binary
+*.mp3      binary
+*.ogg      binary
+*.aif      binary
+*.aiff     binary
+*.flac     binary
+*.m4a      binary
+*.xma      binary
+
+# === Wideo ===
+*.mp4      binary
+*.mov      binary
+*.avi      binary
+*.webm     binary
+*.mkv      binary
+
+# === Czcionki ===
+*.ttf      binary
+*.otf      binary
+*.woff     binary
+*.woff2    binary
+
+# === Binarki kompilowane ===
+*.dll      binary
+*.so       binary
+*.dylib    binary
+*.pdb      binary
+*.exe      binary
+*.lib      binary
+*.a        binary
+*.bundle   binary
+
+# === Archiwa ===
+*.zip      binary
+*.7z       binary
+*.rar      binary
+*.tar      binary
+*.gz       binary
+*.bz2      binary
+*.unitypackage binary
+
+# === Inne binarne projektowe ===
+*.pfx      binary
+*.cer      binary
+*.crt      binary
+*.bin      binary
+*.bytes    binary
+*.dat      binary
+*.pbf      binary

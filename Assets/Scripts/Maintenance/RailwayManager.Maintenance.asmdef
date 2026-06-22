@@ -1,0 +1,23 @@
+{
+    "name": "RailwayManager.Maintenance",
+    "rootNamespace": "",
+    "references": [
+        "RailwayManager.Core",
+        "RailwayManager.Depot",
+        "RailwayManager.Fleet",
+        "RailwayManager.Map",
+        "RailwayManager.SharedUI",
+        "RailwayManager.Timetable",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

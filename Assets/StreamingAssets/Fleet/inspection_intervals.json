@@ -1,0 +1,224 @@
+{
+  "intervals": [
+    {
+      "seriesId": "EN57",
+      "p1LimitHours": 48,
+      "p2LimitDays": 14,
+      "p3LimitKm": 150000,
+      "p4LimitKm": 400000,
+      "p4LimitYears": 4,
+      "p5LimitKm": 2000000,
+      "p5LimitYears": 20
+    },
+    {
+      "seriesId": "EN71",
+      "p1LimitHours": 48,
+      "p2LimitDays": 14,
+      "p3LimitKm": 150000,
+      "p4LimitKm": 400000,
+      "p4LimitYears": 4,
+      "p5LimitKm": 2000000,
+      "p5LimitYears": 20
+    },
+    {
+      "seriesId": "EU07",
+      "p1LimitHours": 60,
+      "p2LimitDays": 21,
+      "p3LimitKm": 200000,
+      "p4LimitKm": 450000,
+      "p4LimitYears": 5,
+      "p5LimitKm": 2500000,
+      "p5LimitYears": 25
+    },
+    {
+      "seriesId": "EP07",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 250000,
+      "p4LimitKm": 500000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2800000,
+      "p5LimitYears": 28
+    },
+    {
+      "seriesId": "EP08",
+      "p1LimitHours": 60,
+      "p2LimitDays": 21,
+      "p3LimitKm": 200000,
+      "p4LimitKm": 450000,
+      "p4LimitYears": 5,
+      "p5LimitKm": 2500000,
+      "p5LimitYears": 25
+    },
+    {
+      "seriesId": "EU160_Griffin",
+      "p1LimitHours": 120,
+      "p2LimitDays": 42,
+      "p3LimitKm": 400000,
+      "p4LimitKm": 800000,
+      "p4LimitYears": 8,
+      "p5LimitKm": 4000000,
+      "p5LimitYears": 40
+    },
+    {
+      "seriesId": "754_Brejlovec",
+      "p1LimitHours": 48,
+      "p2LimitDays": 14,
+      "p3LimitKm": 150000,
+      "p4LimitKm": 400000,
+      "p4LimitYears": 4,
+      "p5LimitKm": 2000000,
+      "p5LimitYears": 20
+    },
+    {
+      "seriesId": "SM42",
+      "p1LimitHours": 72,
+      "p2LimitDays": 21,
+      "p3LimitKm": 150000,
+      "p4LimitKm": 350000,
+      "p4LimitYears": 5,
+      "p5LimitKm": 1800000,
+      "p5LimitYears": 25
+    },
+    {
+      "seriesId": "FLIRT_L4268",
+      "p1LimitHours": 120,
+      "p2LimitDays": 42,
+      "p3LimitKm": 350000,
+      "p4LimitKm": 700000,
+      "p4LimitYears": 8,
+      "p5LimitKm": 4000000,
+      "p5LimitYears": 40
+    },
+    {
+      "seriesId": "FLIRT_LM4268",
+      "p1LimitHours": 120,
+      "p2LimitDays": 42,
+      "p3LimitKm": 350000,
+      "p4LimitKm": 700000,
+      "p4LimitYears": 8,
+      "p5LimitKm": 4000000,
+      "p5LimitYears": 40
+    },
+    {
+      "seriesId": "FLIRT_ER160",
+      "p1LimitHours": 120,
+      "p2LimitDays": 42,
+      "p3LimitKm": 350000,
+      "p4LimitKm": 700000,
+      "p4LimitYears": 8,
+      "p5LimitKm": 4000000,
+      "p5LimitYears": 40
+    },
+    {
+      "seriesId": "FLIRT_ED160",
+      "p1LimitHours": 144,
+      "p2LimitDays": 50,
+      "p3LimitKm": 400000,
+      "p4LimitKm": 800000,
+      "p4LimitYears": 10,
+      "p5LimitKm": 4500000,
+      "p5LimitYears": 45
+    },
+    {
+      "seriesId": "SA134",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 200000,
+      "p4LimitKm": 450000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2400000,
+      "p5LimitYears": 25
+    },
+    {
+      "seriesId": "SA135",
+      "p1LimitHours": 60,
+      "p2LimitDays": 21,
+      "p3LimitKm": 180000,
+      "p4LimitKm": 400000,
+      "p4LimitYears": 5,
+      "p5LimitKm": 2200000,
+      "p5LimitYears": 22
+    },
+    {
+      "seriesId": "SA136",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 200000,
+      "p4LimitKm": 450000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2400000,
+      "p5LimitYears": 25
+    },
+    {
+      "seriesId": "SA137",
+      "p1LimitHours": 96,
+      "p2LimitDays": 35,
+      "p3LimitKm": 300000,
+      "p4LimitKm": 600000,
+      "p4LimitYears": 7,
+      "p5LimitKm": 3200000,
+      "p5LimitYears": 32
+    },
+    {
+      "seriesId": "SA138",
+      "p1LimitHours": 96,
+      "p2LimitDays": 35,
+      "p3LimitKm": 300000,
+      "p4LimitKm": 600000,
+      "p4LimitYears": 7,
+      "p5LimitKm": 3200000,
+      "p5LimitYears": 32
+    },
+    {
+      "seriesId": "Coach_111A",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 200000,
+      "p4LimitKm": 450000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2400000,
+      "p5LimitYears": 24
+    },
+    {
+      "seriesId": "Coach_112A",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 250000,
+      "p4LimitKm": 500000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2800000,
+      "p5LimitYears": 28
+    },
+    {
+      "seriesId": "Coach_152A",
+      "p1LimitHours": 72,
+      "p2LimitDays": 28,
+      "p3LimitKm": 250000,
+      "p4LimitKm": 500000,
+      "p4LimitYears": 6,
+      "p5LimitKm": 2800000,
+      "p5LimitYears": 28
+    },
+    {
+      "seriesId": "Coach_156A",
+      "p1LimitHours": 96,
+      "p2LimitDays": 35,
+      "p3LimitKm": 300000,
+      "p4LimitKm": 600000,
+      "p4LimitYears": 7,
+      "p5LimitKm": 3200000,
+      "p5LimitYears": 32
+    },
+    {
+      "seriesId": "Coach_264_Universal",
+      "p1LimitHours": 120,
+      "p2LimitDays": 42,
+      "p3LimitKm": 350000,
+      "p4LimitKm": 700000,
+      "p4LimitYears": 8,
+      "p5LimitKm": 4000000,
+      "p5LimitYears": 40
+    }
+  ]
+}

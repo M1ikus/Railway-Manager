@@ -1,0 +1,24 @@
+{
+    "name": "RailwayManager.SaveLoad",
+    "rootNamespace": "RailwayManager.SaveLoad",
+    "references": [
+        "RailwayManager.Core",
+        "RailwayManager.SharedUI",
+        "RailwayManager.Fleet",
+        "RailwayManager.Timetable",
+        "RailwayManager.Maintenance",
+        "RailwayManager.Personnel",
+        "RailwayManager.Depot",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,2065 @@
+{
+  "assistant": {
+    "panel": {
+      "title_format": "Váš zástupce — {0}",
+      "suggestion_header": "Návrh",
+      "no_suggestion": "Nic naléhavého, šéfe.",
+      "capabilities_header": "S čím mohu pomoci",
+      "history_header": "Poslední akce",
+      "history_empty": "Zatím jsem nic neudělal.",
+      "show_how": "Ukaž mi jak",
+      "propose": "Připravit plán",
+      "auto_format": "Auto: {0}"
+    },
+    "whisper": {
+      "test": "Šéfe, jsem ve službě. Toto je zkušební zpráva — klikněte pro otevření panelu.",
+      "intro_format": "Vítejte ve službě, šéfe! Jsem {0} — budu napovídat. Klik na můj portrét otevře panel nápovědy.",
+      "auto_done_format": "Hotovo na pozadí: {0}. Klikněte pro podrobnosti v panelu."
+    },
+    "rule": {
+      "ob_track": "Šéfe, depo zatím nemá koleje. Klikněte — ukážu, jak je položit.",
+      "ob_vehicle": "Koleje hotové. Čas na první vozidlo — ukážu, kde nakoupit.",
+      "ob_deliver": "Vozidlo je na cestě do depa — stav dodávky v záložce Vozidla.",
+      "ob_timetable": "Vozidla máme — sestavme první jízdní řád. Klikněte, provedu vás.",
+      "ob_circulation": "Jízdní řád je. Mohu ho za vás spojit do oběhu — klikněte.",
+      "ob_crew": "Chybí strojvedoucí — bez posádky nic nepojede. Ukážu nábor.",
+      "emu_trap": "Pozor, šéfe: máme elektrické vozidlo, ale koleje depa jsou bez troleje — nevyjede. Elektrifikace, nebo plán B.",
+      "crew_missing": "Oběhy jsou, ale posádky nemají rozpisy — mohu sestavit turnusy. Klikněte.",
+      "broken_down": "Šéfe, máme porouchaná nebo zanedbaná vozidla. Mohu je odstavit do dílny — klikněte.",
+      "vehicle_idle": "Část vozidel stojí bez přiřazení k oběhu. Zapřáhneme je do práce? Klikněte.",
+      "orphan_timetable": "Některé jízdní řády nejsou v žádném oběhu — nikdo je neodjede. Mohu je spojit.",
+      "line_unprofitable": "Některá linka už několik dní prodělává. Podívejme se do financí.",
+      "no_desk": "Část personálu nemá své pracoviště — postavme chybějící stoly.",
+      "bored": "Vše šlape jako hodinky, šéfe. Čas na novou linku? Klikněte — spočítám."
+    },
+    "stuck": {
+      "offer_help": "Šéfe, vidím, že to drhne — mohu to připravit. Klikněte sem."
+    },
+    "plan": {
+      "nothing": "Momentálně nemám co navrhnout, šéfe.",
+      "circulation_autogen": {
+        "title_format": "Oběhy k vytvoření: {0}",
+        "effect": "Spojím volné jízdní řády do oběhů a přiřadím nejlepší dostupná vozidla.",
+        "orphans_format": "Bez přiřazení: {0} jízdních řádů (zůstanou volné)."
+      },
+      "crew_autogen": {
+        "title_format": "Turnusy posádek k vytvoření: {0}",
+        "effect": "Sestavím turnusy posádek pro dnešní spoje (přestávky a limity práce dle nastavení)."
+      },
+      "workshop": {
+        "title_format": "Do dílny: {0} vozidel",
+        "effect": "Zarezervuji stání a pošlu vozidla na prohlídku (přesun po kolejích depa).",
+        "line_format": "{0} {1}: prohlídka {2} → stání #{3}",
+        "no_slot_format": "{0} {1}: žádné volné stání pro {2} (zvažte externí dílny)"
+      }
+    },
+    "capability": {
+      "circulation": {
+        "autogen": "Generování oběhů z jízdních řádů"
+      },
+      "depot": {
+        "buildTrack": "Stavba kolejí v depu",
+        "placeDesk": "Pracoviště pro personál"
+      },
+      "maintenance": {
+        "workshop": "Odstavení vozidel do dílny"
+      },
+      "economy": {
+        "review": "Kontrola rentability linek"
+      },
+      "fleet": {
+        "buy": "Nákup vozidel",
+        "deliver": "Dodání vozidla do depa"
+      },
+      "timetable": {
+        "create": "Vytvoření jízdního řádu"
+      },
+      "personnel": {
+        "hire": "Najmutí strojvedoucího"
+      },
+      "crew": {
+        "autogen": "Generování rozpisů posádek (turnusy)"
+      }
+    },
+    "preview": {
+      "title_fallback": "Návrh",
+      "effect_header": "Efekt",
+      "cost_format": "Cena: {0}",
+      "accept": "Schválit",
+      "cancel": "Zrušit",
+      "more_lines_format": "… (+{0} dalších)"
+    },
+    "planner": {
+      "reject": {
+        "no_route": "trasa v síti neexistuje",
+        "composition_unsupported": "lokomotiva+vozy — sestavte ručně (planner vybírá jednotky)",
+        "unavailable": "nedostupné (oprava/stav)",
+        "not_electrified": "trať bez troleje",
+        "range": "malý dojezd na palivo (návrat k tankování)",
+        "no_seats": "žádná místa k sezení"
+      },
+      "ui": {
+        "title": "Plánovač spojení",
+        "from_label": "Odkud",
+        "to_label": "Kam",
+        "station_placeholder": "Zadejte název stanice (min. 2 znaky)…",
+        "compute": "Spočítat spojení",
+        "not_ready": "Mapa se ještě načítá, šéfe — zkuste za chvíli.",
+        "pick_both": "Vyberte obě stanice (různé).",
+        "facts_format": "Trasa: {0} km · {1} · poptávka ~{2} os./den · {3}",
+        "electrified_yes": "pod trolejí",
+        "electrified_no": "BEZ troleje",
+        "archetype": {
+          "agglomeration": "aglomerační",
+          "regional": "regionální",
+          "interregional": "meziregionální"
+        },
+        "candidates_header": "Vozidla (nejlepší shoda):",
+        "rejected_header_format": "Odmítnuto ({0}):",
+        "no_candidates": "Žádné vozidlo flotily tuto relaci neobslouží — důvody níže.",
+        "variants_header_format": "Varianty pro: {0}",
+        "variant": {
+          "economic": "Úsporná",
+          "balanced": "Vyvážená",
+          "comfort": "Komfortní"
+        },
+        "variant_line_format": "{0} spojů/den · interval {1} min · obsazenost ~{2}%",
+        "net_format": "denní bilance: {0}",
+        "subsidy_hint": "· nárok na dotaci",
+        "create": "Vytvořit",
+        "created_format": "Vytvořil jsem jízdní řád \"{0}\", šéfe. Připomenu spojení do oběhu.",
+        "create_failed": "Jízdní řád se nepodařilo vytvořit (graf/kategorie) — viz log.",
+        "history_format": "Jízdní řád \"{0}\" (plánovač spojení)"
+      }
+    },
+    "guidance": {
+      "fallback": "Provedu vás krok za krokem, jakmile modul dodá pokyny.",
+      "circulation_autogen": {
+        "step1": "Otevřete seznam oběhů — záložka Oběhy u jízdních řádů.",
+        "step2": "Použijte [Auto-generovat] nebo přetáhněte jízdní řády do oběhu ručně."
+      },
+      "depot_buildtrack": {
+        "step1": "Klikněte na záložku STAVBA v levém panelu.",
+        "step2": "Vyberte nástroj KOLEJ a veďte kolej od stávajícího bodu."
+      },
+      "fleet_buy": {
+        "warn_no_catenary": "Než koupíte: depo nemá trolej — elektrické vozidlo nevyjede. Zvažte dieselové, nebo nejdřív elektrifikujte.",
+        "step1": "Otevřete záložku VOZIDLA v levém panelu.",
+        "step2": "V záložce Trh vyberte vozidlo a přidejte do košíku."
+      },
+      "fleet_deliver": {
+        "step1": "Vozidlo míří do depa — stav dodávky najdete ve VOZIDLA → Můj park."
+      },
+      "timetable_create": {
+        "step1": "Otevírám plánovač spojení — vyberte, kudy chcete jezdit.",
+        "step2": "Raději ručně? Záložka JÍZDNÍ ŘÁDY → Nový jízdní řád."
+      },
+      "personnel_hire": {
+        "step1": "Otevřete záložku PERSONÁL v levém panelu.",
+        "step2": "V záložce Nábor najměte strojvedoucího."
+      },
+      "crew_autogen": {
+        "step1": "Otevřete PERSONÁL → záložka Turnusy.",
+        "step2": "Použijte Auto-generátor turnusů (nastavení + náhled před potvrzením)."
+      },
+      "maintenance_workshop": {
+        "step1": "Otevírám panel Dílny — zde vidíte stání a frontu prohlídek.",
+        "step2": "Vyberte vozidlo a stání (úroveň prohlídky musí odpovídat). Není místo? Zvažte externí dílny v záložce Externí."
+      },
+      "economy_review": {
+        "step1": "Otevírám Finance — sekce po linkách ukáže, která prodělává.",
+        "step2": "Zvažte: jiný interval, jinou kategorii, krajskou dotaci nebo pozastavení oběhu."
+      },
+      "depot_placedesk": {
+        "step1": "Klikněte na záložku STAVBA v levém panelu.",
+        "step2": "V nástroji místností vyberte místnost a postavte stůl v sekci \"Dostupné akce\" — zaměstnanec si ho sám zabere."
+      }
+    }
+  },
+  "dispatch": {
+    "policy": {
+      "label": "Dispečink (mapa OSM)",
+      "off": "Vypnuto (klasická návěstidla)",
+      "balanced": "Vyvážené",
+      "punctuality": "Priorita přesnosti"
+    }
+  },
+  "_meta": {
+    "language": "Čeština",
+    "code": "cz",
+    "completion_percent": 100,
+    "_comment": "M13-5 zamknięte: pełne tłumaczenie wszystkich sekcji (CZ). Native speaker review post-EA/M-Balance."
+  },
+  "common": {
+    "yes": "Ano",
+    "no": "Ne",
+    "confirm": "Potvrdit",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "back": "Zpět",
+    "save": "Uložit",
+    "load": "Načíst",
+    "delete": "Smazat",
+    "rename": "Přejmenovat",
+    "off": "Vyp.",
+    "on": "Zap.",
+    "low": "Nízká",
+    "medium": "Střední",
+    "high": "Vysoká",
+    "ultra": "Ultra",
+    "unlimited": "Bez limitu"
+  },
+  "main_menu": {
+    "title": "Railway Manager",
+    "version_format": "Verze {0}",
+    "buttons": {
+      "new_game": "Nová hra",
+      "continue": "Pokračovat",
+      "load": "Načíst",
+      "new_single_player": "Nová hra pro jednoho hráče",
+      "multiplayer": "Hra pro více hráčů",
+      "settings": "Nastavení",
+      "mods": "Modifikace",
+      "credits": "O hře",
+      "help": "Nápověda",
+      "exit": "Konec",
+      "quit": "Ukončit"
+    }
+  },
+  "load_game": {
+    "title": "Načíst hru",
+    "toggle": {
+      "show_autosaves": "Zobrazit automatické uložení"
+    },
+    "section": {
+      "last_game": "Poslední hra",
+      "other_saves": "Ostatní uložení"
+    },
+    "tag": {
+      "auto": "[Auto]"
+    },
+    "action": {
+      "open_save": "Otevřít uložení"
+    },
+    "status": {
+      "loading": "Načítání seznamu uložení...",
+      "empty": "Žádná uložení. Začni novou hru.",
+      "error": "Chyba při načítání seznamu uložení"
+    }
+  },
+  "credits": {
+    "title": "O hře",
+    "team_name": "Railway Manager Team",
+    "section": {
+      "railway_manager": "Railway Manager",
+      "developers": "Tvůrci",
+      "technologies": "Technologie",
+      "version": "Verze",
+      "data_sources": "Zdroje dat"
+    },
+    "body": {
+      "railway_manager": "Strategická hra o správě železniční sítě a depa.\nPlánuj trasy, spravuj svou flotilu a rozšiřuj infrastrukturu.",
+      "copyright": "© 2026 Railway Manager Team. Všechna práva vyhrazena.",
+      "openstreetmap": "Mapová data © OpenStreetMap contributors, dostupná pod licencí Open Database License (ODbL) 1.0."
+    },
+    "action": {
+      "osm_copyright": "OpenStreetMap — autorská práva a licence"
+    },
+    "role": {
+      "design_programming": "Design a programování",
+      "graphics_ui": "Grafika a UI",
+      "sound_music": "Zvuk a hudba",
+      "translation": "Překlad (PL/EN)"
+    },
+    "tech": {
+      "engine": "Engine",
+      "language": "Jazyk",
+      "ui": "UI"
+    },
+    "field": {
+      "build": "Build",
+      "date": "Datum"
+    }
+  },
+  "mods": {
+    "title": "Modifikace",
+    "button": {
+      "open_folder": "Otevřít složku modů",
+      "workshop": "Steam Workshop"
+    },
+    "empty": "Žádné modifikace nainstalovány.\nUmísti složky modů do adresáře Mods vedle souboru hry.",
+    "tag": {
+      "enabled": "Aktivní",
+      "disabled": "Vypnutá"
+    },
+    "intro": {
+      "eyebrow": "WORKSHOP A MODY",
+      "title": "Jedno místo pro lokální doplňky a Steam Workshop.",
+      "body": "Až bude loader modů hotový, uvidíte zde seznam aktivních doplňků, jejich verze a rychlý přístup ke správě."
+    },
+    "empty_state": {
+      "eyebrow": "AKTUÁLNĚ PRÁZDNÉ",
+      "hint": "Můžete již nyní otevřít lokální složku Mods nebo přejít na stránku Workshop ze spodní lišty."
+    }
+  },
+  "multiplayer": {
+    "title": "Hra pro více hráčů",
+    "search": {
+      "placeholder": "Hledat server..."
+    },
+    "empty": "Žádné servery neodpovídají vyhledávání.",
+    "server_count_format": "Servery: {0}",
+    "action": {
+      "join": "Připojit se",
+      "full": "Plný",
+      "create_game": "Vytvořit hru",
+      "refresh": "Obnovit"
+    }
+  },
+  "rebind": {
+    "modal": {
+      "title_format": "Změna: {0}",
+      "prompt": "Stiskněte klávesu...",
+      "cancel": "Zrušit (Esc)",
+      "timeout_format": "Auto-zrušení za: {0}s  •  Esc = zrušit"
+    }
+  },
+  "help": {
+    "title": "Nápověda",
+    "topics": {
+      "navigation": {
+        "header": "Navigace v depu",
+        "body": "Pravé tlačítko myši + tažení — otáčení kamery\nScroll — zoom\nProstřední tlačítko myši + tažení — posun pohledu"
+      },
+      "build_modes": {
+        "header": "Režimy stavby",
+        "body": "Panel nástrojů ve spodní části obrazovky umožňuje přepínat režimy:\n• Kolej — stavba kolejových úseků a výhybek\n• Trolejové vedení — přidání elektrického trolejového vedení\n• Stěna / Dveře / Okno — prvky budovy haly"
+      },
+      "train_management": {
+        "header": "Správa vlaků",
+        "body": "Klikni na vlak v režimu Vybrat, abys viděl jeho technický stav, čistotu a trasu.\nSeznam vlaků je dostupný na levé straně obrazovky."
+      },
+      "keybindings": {
+        "header": "Klávesové zkratky",
+        "body": "[Esc] — zavřít popup / zpět do menu\n[Mezerník] — pauza / pokračování času\n[1] [2] [3] — rychlost simulace ×1 / ×2 / ×3\n[Del] — odstranění vybraného prvku"
+      },
+      "save_load": {
+        "header": "Uložení a načtení",
+        "body": "Hra automaticky ukládá každých několik minut.\nManuální uložení je dostupné v menu pauzy.\nUložení lze načíst z hlavního menu → Načíst."
+      }
+    }
+  },
+  "settings": {
+    "title": "Nastavení",
+    "tabs": {
+      "controls": "Ovládání",
+      "graphics": "Grafika",
+      "audio": "Zvuk",
+      "language": "Jazyk",
+      "general": "Obecné"
+    },
+    "assistant": {
+      "info": "Platí pro aktuální hru, účinkuje okamžitě (bez Použít). Přeskočení ztiší jen úvodní cestu — poradce a delegování fungují dál.",
+      "skip_onboarding": "Přeskočit úvodní nápovědy asistenta",
+      "restart_onboarding": "Úvodní cesta asistenta",
+      "restart_button": "Restartovat"
+    },
+    "headings": {
+      "assistant": "Asistent",
+      "gameplay": "Hratelnost",
+      "interface": "Rozhraní",
+      "key_bindings": "Klávesové zkratky",
+      "rebind_maps": {
+        "camera_depot": "Kamera (Depo)",
+        "camera_map": "Kamera (Mapa)",
+        "tool_build": "Nástroje (Stavba)",
+        "tool_turnout": "Nástroje (Výhybky)",
+        "vehicle": "Vozidla",
+        "ui_popup": "UI (Popup)",
+        "ui_pause": "UI (Pauza)"
+      }
+    },
+    "bottom": {
+      "apply": "Použít",
+      "cancel": "Zrušit",
+      "reset_section": "Resetovat sekci",
+      "reset_all": "Resetovat vše"
+    },
+    "rebind": {
+      "change": "Změnit..."
+    },
+    "info": {
+      "key_rebind_restart": "Některé změny kláves mohou vyžadovat restart scény, aby fungovaly v aktivních systémech.",
+      "rebind_coming": "Změna klávesových zkratek — již brzy v aktualizaci",
+      "audio_mixer_pending": "Audio mixer bude připojen v aktualizaci M12 Polish.",
+      "i18n_partial": "Plný lokalizační framework přijde v M13-3 (i18n).",
+      "language_autodetect": "Výchozí jazyk = autodetekce ze Steam nastavení (pokud aktivní) nebo operačního systému.",
+      "color_blind_pending": "Plné režimy pro barvoslepé plánovány po EA.",
+      "ui_scale_pending": "Měřítko UI: 100% — více možností v 1.0."
+    },
+    "controls": {
+      "mouse_sensitivity": "Citlivost myši",
+      "scroll_sensitivity": "Citlivost scroll",
+      "pan_speed": "Rychlost posunu",
+      "invert_camera_scroll": "Invertovat scroll kamery",
+      "invert_mouse_y": "Invertovat osu Y myši",
+      "rebind_button": "Změnit...",
+      "rebind_reset": "Reset"
+    },
+    "graphics": {
+      "window_mode": "Režim okna",
+      "vsync": "Vertikální synchronizace (VSync)",
+      "quality_preset": "Předvolba kvality",
+      "shadows": "Stíny",
+      "textures": "Textury",
+      "lod_distance": "Vzdálenost LOD",
+      "antialiasing": "Vyhlazování",
+      "post_processing": "Post-processing (Bloom)"
+    },
+    "audio": {
+      "master_volume": "Hlavní hlasitost",
+      "music_volume": "Hlasitost hudby",
+      "sfx_volume": "Hlasitost efektů",
+      "voice_volume": "Hlasitost hlášení",
+      "mute_when_unfocused": "Ztlumit při neaktivním okně"
+    },
+    "language": {
+      "preference": "Jazyk rozhraní",
+      "currency": "Měna"
+    },
+    "general": {
+      "default_time_speed": "Výchozí rychlost času",
+      "fps_limit": "Limit FPS",
+      "auto_pause": {
+        "breakdown": "Auto-pauza: porucha vlaku",
+        "infrastructure": "Auto-pauza: porucha infrastruktury",
+        "critical_decision": "Auto-pauza: kritické rozhodnutí",
+        "collision": "Auto-pauza: kolize"
+      },
+      "show_tutorial": "Zobrazit tutoriál při nové hře",
+      "random_event_frequency": "Frekvence náhodných událostí",
+      "notify": {
+        "delays": "Notifikace: zpoždění",
+        "money": "Notifikace: finance",
+        "personnel": "Notifikace: personál",
+        "other": "Notifikace: ostatní"
+      },
+      "max_undos": "Max. počet vrácení (Ctrl+Z)"
+    },
+    "interface_section": {
+      "ui_scale": "Měřítko UI",
+      "tooltips_delay": "Zpoždění nápověd (s)",
+      "show_keybinds_in_tooltips": "Zobrazit klávesové zkratky v nápovědách",
+      "color_blind_mode": "Režim pro barvoslepé"
+    },
+    "options": {
+      "window": {
+        "fullscreen": "Celá obrazovka",
+        "borderless": "Bez okraje",
+        "windowed": "Okno"
+      },
+      "time_speed": {
+        "x1": "x1",
+        "x5": "x5",
+        "x25": "x25",
+        "x150": "x150",
+        "x500": "x500"
+      },
+      "event_frequency": {
+        "off": "Vyp.",
+        "rare": "Zřídka",
+        "normal": "Normálně",
+        "often": "Často"
+      },
+      "color_blind": {
+        "none": "Vyp.",
+        "protanopia": "Protanopie",
+        "deuteranopia": "Deuteranopie",
+        "tritanopia": "Tritanopie"
+      },
+      "language": {
+        "auto_steam": "Auto (Steam)",
+        "pl": "Polski",
+        "en": "English",
+        "de": "Deutsch",
+        "cz": "Čeština",
+        "jp": "日本語",
+        "ru_alpha": "Русский (alpha)",
+        "uk_alpha": "Українська (alpha)"
+      },
+      "currency": {
+        "pln": "PLN — zł",
+        "eur": "EUR — €",
+        "usd": "USD — $",
+        "czk": "CZK — Kč"
+      },
+      "ui_scale": {
+        "100_only": "100% (více možností brzy)"
+      },
+      "antialiasing": {
+        "off": "Vyp.",
+        "fxaa": "FXAA",
+        "smaa": "SMAA",
+        "taa": "TAA"
+      },
+      "vsync": {
+        "off": "Vyp.",
+        "on": "Zap."
+      },
+      "fps_limit": {
+        "unlimited": "Bez limitu",
+        "30": "30",
+        "60": "60",
+        "120": "120",
+        "144": "144"
+      },
+      "quality": {
+        "low": "Nízká",
+        "medium": "Střední",
+        "high": "Vysoká",
+        "ultra": "Ultra"
+      },
+      "shadows": {
+        "off": "Vyp.",
+        "low": "Nízké",
+        "medium": "Střední",
+        "high": "Vysoké"
+      },
+      "textures": {
+        "low": "Nízké",
+        "medium": "Střední",
+        "high": "Vysoké",
+        "ultra": "Ultra"
+      }
+    }
+  },
+  "game_creator": {
+    "title": {
+      "single_player": "Nová hra pro jednoho hráče",
+      "multiplayer": "Nová hra pro více hráčů"
+    },
+    "tabs": {
+      "general": "Obecné",
+      "gameplay": "Hratelnost",
+      "server": "Server"
+    },
+    "bottom": {
+      "cancel": "Zrušit",
+      "start_game": "Začít hru",
+      "create_server": "Vytvořit server"
+    },
+    "general": {
+      "game_name": "Název hry",
+      "assistant_name": "Jméno asistenta (zástupce)",
+      "server_name": "Název serveru",
+      "max_players": "Max. hráčů",
+      "password": "Heslo (volitelné)",
+      "visibility": "Viditelnost serveru"
+    },
+    "gameplay": {
+      "pause_on_start": "Pauza při startu",
+      "autosave": "Automatické uložení",
+      "autosave_interval": "Interval automatického uložení",
+      "seed": "Náhodný seed"
+    },
+    "placeholder": {
+      "game_name": "Moje hra",
+      "assistant_name": "pan Tadeusz",
+      "server_name": "Můj server",
+      "seed": "0 = deterministický (testování, MP)"
+    },
+    "options": {
+      "autosave_interval": {
+        "5min": "5 min",
+        "10min": "10 min",
+        "15min": "15 min",
+        "30min": "30 min"
+      },
+      "visibility": {
+        "public": "Veřejný",
+        "private": "Soukromý",
+        "hidden": "Skrytý"
+      },
+      "max_players": {
+        "2": "2",
+        "4": "4",
+        "6": "6",
+        "8": "8",
+        "12": "12",
+        "16": "16"
+      }
+    },
+    "cancel_confirm": {
+      "title": "Zrušit novou hru?",
+      "body": "Ztratíš všechna vybraná nastavení (obtížnost, modifikátory, pravidla). Tato operace neukládá stav konfigurace.",
+      "yes": "Ano, zpět do menu",
+      "no": "Ne, pokračovat"
+    }
+  },
+  "pause_menu": {
+    "title": "Pauza",
+    "back_btn": "← Zpět",
+    "buttons": {
+      "save_state": "Uložit stav",
+      "load_state": "Načíst stav",
+      "settings": "Nastavení",
+      "main_menu": "Do hlavního menu",
+      "exit": "Ukončit hru"
+    },
+    "confirm": {
+      "save_and_go": "Uložit a ukončit",
+      "no_save": "Ukončit",
+      "cancel": "Zrušit",
+      "main_menu_msg": "Uložit pokrok před návratem\ndo hlavního menu?",
+      "exit_msg": "Uložit pokrok před\nukončením hry?"
+    }
+  },
+  "top_bar": {
+    "scene_button": {
+      "depot": "Depo",
+      "map": "2D Mapa"
+    },
+    "depot_name_placeholder": "Název depa...",
+    "reputation_format": "Reputace {0}/100"
+  },
+  "fleet": {
+    "title": "Vozový park",
+    "counter_format": "Vlastníš {0} vozidel: {1}",
+    "tabs": {
+      "my_fleet": "Můj vozový park",
+      "consists": "Soupravy",
+      "buy_fleet": "Koupit vozidla"
+    },
+    "close_button": "X",
+    "vehicle_type": {
+      "short": {
+        "electric_loco": "El. lok.",
+        "diesel_loco": "Dieselová lok.",
+        "emu": "EJ",
+        "dmu": "MJ",
+        "passenger_car": "Vůz",
+        "unknown": "?"
+      },
+      "filter": {
+        "all": "Vše",
+        "loco": "Lok.",
+        "emu": "EJ",
+        "dmu": "MJ",
+        "car": "Vůz"
+      }
+    },
+    "status": {
+      "moving_on_map": "V pohybu",
+      "stopped_on_map": "Stojí (mapa)",
+      "stopped_in_depot": "Stojí (depo)",
+      "moving_in_depot": "Posunuje",
+      "in_repair": "V opravě",
+      "out_of_service": "Mimo provoz",
+      "in_production": "Ve výrobě",
+      "in_transit": "V dopravě",
+      "awaiting_pickup": "Čeká na vyzvednutí",
+      "unknown": "?"
+    },
+    "counter_parts": {
+      "loco_format": "{0} lokomotiv",
+      "emu_format": "{0} EJ",
+      "dmu_format": "{0} MJ",
+      "car_format": "{0} vozů"
+    },
+    "my_fleet": {
+      "search_label": "Hledat:",
+      "search_placeholder": "Zadej řadu, číslo...",
+      "columns": {
+        "name": "Řada / Číslo",
+        "status": "Stav",
+        "task": "Úkol",
+        "consist": "Souprava",
+        "mileage": "Nájezd",
+        "seats": "Místa",
+        "inspection": "Prohlídka",
+        "condition": "Stav"
+      },
+      "empty_no_match_format": "Žádná vozidla odpovídající \"{0}\"",
+      "empty_no_vehicles": "Žádná vozidla v parku",
+      "consist_format": "Oběh #{0}"
+    },
+    "market": {
+      "sub_tabs": {
+        "used": "Použitá",
+        "new": "Nová"
+      },
+      "columns": {
+        "location": "Lokalita",
+        "price": "Cena"
+      },
+      "empty_no_match_format": "Žádná vozidla odpovídající \"{0}\"",
+      "empty_no_market": "Žádná vozidla na trhu",
+      "inspection_format": "{0} do {1}",
+      "dash": "—"
+    },
+    "cart": {
+      "button_label": "Košík",
+      "title_format": "Košík ({0} položek)",
+      "total_format": "Celkem: {0}",
+      "order_all": "Objednat vše",
+      "empty": "Košík je prázdný",
+      "delivery": {
+        "self_pickup": "Vlastní odběr",
+        "delivery": "Doručení"
+      }
+    },
+    "configurator": {
+      "empty_select_prompt": "Vyber model ze seznamu vlevo",
+      "quantity_label": "Množství:",
+      "order_button": "Přidat do košíku",
+      "price_short_format": "{0}M",
+      "section": {
+        "safety": "Bezpečnost",
+        "voltages": "Napětí",
+        "comfort": "Komfort"
+      },
+      "option": {
+        "included": "(v ceně)",
+        "modifier_format": "+{0}"
+      },
+      "time": {
+        "month_singular": "1 měsíc",
+        "month_plural_format": "{0} měs.",
+        "production_single_format": "Doba výroby: {0}",
+        "production_multi_format": "1 ks: {0} | {1} ks: {2}"
+      },
+      "price": {
+        "total_format": "{0}",
+        "multi_format": "{0}x {1} = {2}"
+      },
+      "stats": {
+        "vmax_format": "V max: {0} km/h",
+        "power_format": "Výkon: {0} kW",
+        "axles_format": "Nápravy: {0}",
+        "seats_format": "Sedadla: {0}"
+      }
+    },
+    "consists": {
+      "empty": "Žádné soupravy nejsou sestaveny"
+    },
+    "seat_layout": {
+      "title": "Konfigurace sedadel",
+      "mode_manual": "Ručně",
+      "generate_button": "Generovat layout",
+      "eraser_button": "Guma",
+      "clear_all_button": "Vymazat vše",
+      "doors_label": "Dveře:",
+      "coach_short_format": "Sek.{0}:",
+      "coach_short_label_format": "Sek.{0}",
+      "coach_full_format": "Sekce {0}",
+      "count_format": "{0}/{1}",
+      "schematic_title_format": "Schéma ({0} sekcí)",
+      "wc": "WC"
+    },
+    "detail": {
+      "seat_preview": {
+        "title": "Náhled míst",
+        "placeholder": "Již brzy"
+      }
+    },
+    "currency": {
+      "million_format": "{0}M PLN",
+      "from_million_format": "od {0}M"
+    }
+  },
+  "finance": {
+    "title": "<b>Finance</b>    <size=14>(ESC pro zavření)</size>",
+    "close_btn": "✕",
+    "service_inactive": "(EconomyManager neaktivní)",
+    "today": {
+      "header_format": "<b><size=20>Dnešní bilance ({0})</size></b>",
+      "revenue_format": "Tržby:        <color=#60FF60>+{0} PLN</color>",
+      "costs_format": "Náklady:      <color=#FF6060>-{0} PLN</color>",
+      "subsidies_format": "Dotace:       <color=#60C0FF>+{0} PLN</color>",
+      "net_format": "<b>NETTO:        <color={0}>{1} PLN</color></b>",
+      "money_format": "Hotovost: <b>{0} PLN</b>"
+    },
+    "lines": {
+      "header": "<b><size=16>Na linku (oběh)</size></b>",
+      "empty": "<i><color=#888>(dnes žádné aktivní oběhy)</color></i>",
+      "overhead_label": "(režie/obecné)",
+      "circ_format": "#{0} {1}",
+      "circ_id_format": "#{0}",
+      "stats_format": "  <size=12>jízdy: {0}  cestující: {1}</size>",
+      "rev_cost_format": "  <size=12>tržby: <color=#60FF60>+{0} PLN</color>  náklady: <color=#FF6060>-{1} PLN</color></size>",
+      "subsidy_format": "  <size=11><color={0}>dotace: {1}</color></size>",
+      "net_format": "  <size=12>NETTO: <color={0}><b>{1} PLN</b></color></size>"
+    },
+    "history": {
+      "header": "<b><size=16>Historie — posledních 7 dnů</size></b>",
+      "empty": "<i><color=#888>(zatím žádné uzavřené dny — první přejde o půlnoci)</color></i>",
+      "date_format": "<size=11>{0}</size>",
+      "bar_format": "  <size=10><color={0}>{1}</color></size>",
+      "stats_format": "  <size=11>tr={0}PLN nakl={1}PLN dot={2}PLN <color={3}>net={4}PLN</color></size>"
+    }
+  },
+  "maintenance": {
+    "alerts": {
+      "overdue_format": "⚠ {0} po lhůtě",
+      "breakdown_format": "✕ {0} poruch",
+      "parts_format": "⚠ {0} nízký stav"
+    },
+    "workshops": {
+      "title": "<b>Dílny</b>    <size=14>(ESC pro zavření)</size>",
+      "close_btn": "✕",
+      "service_inactive": "<i><color=#888>(WorkshopManager neaktivní)</color></i>",
+      "slots": {
+        "header": "<b><size=18>Pracovní místa</size></b>",
+        "no_halls": "<i><color=#888>Žádné dílenské haly v depu.</color></i>",
+        "no_halls_hint": "<size=12>Jak postavit dílnu:\n• Postav halu (min. 100 m²) v režimu Stavba\n• Čím větší hala, tím vyšší úroveň (P1-P5)</size>",
+        "hall_name_format": "<b>Hala #{0}</b>  <size=12><color=#AAA>{1}</color></size>",
+        "hall_meta_format": "<size=11><color=#888>max P{0} • {1} míst</color></size>",
+        "slot_free_format": "  <color=#60FF60>● Místo #{0} — VOLNÉ</color>",
+        "slot_busy_format": "  <color=#FFA060>● Místo #{0} — {1} {2}</color>",
+        "slot_eta_format": "    <size=11><color=#888>hotovo za {0}</color></size>",
+        "vehicle_fallback_format": "vozidlo#{0}"
+      },
+      "external": {
+        "header": "<b><size=16>Externí zakázky (ZNTK)</size></b>",
+        "phase_out": "Doprava →",
+        "phase_inspection": "Prohlídka",
+        "phase_back": "← Návrat",
+        "row_format": "  <color={0}>● {1} {2} @ {3}</color>",
+        "row_eta_format": "    <size=11><color=#888>{0}  ETA {1}  cena {2} PLN</color></size>",
+        "picker_title_format": "<b>Vyber externí dílnu</b>  <size=12>vozidlo#{0} P{1} ({2})</size>",
+        "picker_no_workshops": "<i><color=#888>Žádná dílna nepodporuje tuto kombinaci úrovně + typu.</color></i>",
+        "picker_row_main_format": "<b>{0}</b>  <size=11><color=#AAA>@ {1}</color></size>\n<size=11>umí: {2}  <color={3}>cena ×{4}</color>  <color={5}>čas ×{6}</color></size>",
+        "send_btn": "Odeslat"
+      },
+      "overdue": {
+        "header": "<b><size=18>Vozidla k prohlídce</size></b>",
+        "all_current": "\n\n<i><color=#60FF60>Všechna vozidla mají aktuální prohlídku.</color></i>",
+        "header_with_count_format": "\n<size=12><color=#AAA>{0} vozidel čeká na prohlídku</color></size>",
+        "row_info_format": "<b>#{0} {1}</b> — {2}\n<size=11><color={3}>naléhavost: {4}</color>  <color=#AAA>nájezd: {5} km</color></size>",
+        "btn_no_slot": "Bez místa",
+        "btn_no_parts": "Bez dílů",
+        "btn_assign": "Přiřadit",
+        "btn_external": "ZNTK ▸"
+      }
+    },
+    "rescue": {
+      "phase": {
+        "inbound": "Cesta k poruše",
+        "returning": "Odtah do depa"
+      },
+      "vehicle_fallback_format": "lok#{0}",
+      "broken_vehicle_fallback_format": "vozidlo#{0}",
+      "ongoing": {
+        "title_format": "<b>ZÁCHRANA PROBÍHÁ</b> — jízda#{0}",
+        "info_format": "Lok: <b>{0}</b>\nFáze: <color=#60C0FF>{1}</color>\nTrasa: {2} km\n\n<i>Zbývá: {3}m {4}s</i>"
+      },
+      "dispatch": {
+        "title_format": "<b>PORUCHA</b> — jízda#{0} '{1}'",
+        "info_format": "Vozidlo: <b>{0}</b>\nKomponent: <color=#FF6060>{1}</color>\nSamooprava selhala — potřeba záchranná lokomotiva.",
+        "info_with_timer_format": "Vozidlo: <b>{0}</b>\nKomponent: <color=#FF6060>{1}</color>\nSamooprava selhala.\n\n<i>Auto-dispatch za: {2}m {3}s</i>",
+        "no_candidates": "<i><color=#888>Žádné volné lokomotivy — auto-dispatch nemožný. Kup nebo uvolni lokomotivu.</color></i>",
+        "candidate_format": "{0}-{1}  <size=12><color=#888>({2}, stav {3}%)</color></size>",
+        "candidates_label": "<b>Volné lokomotivy:</b>"
+      }
+    },
+    "parts": {
+      "title": "<b>Sklad dílů</b>    <size=14>(ESC pro zavření)</size>",
+      "list_header": "<b><size=16>Díly 1:1 ke komponentům</size></b>",
+      "service_inactive": "<i><color=#888>(PartInventoryService neaktivní)</color></i>",
+      "close_btn": "✕",
+      "row_info_format": "<b>{0}</b>\n<size=11><color={1}>sklad: {2} ks</color>  <color=#AAA>cena: {3} PLN / ks  •  dodávka: {4} dní</color></size>",
+      "btn_format": "+{0}",
+      "pending": {
+        "title": "<b><size=16>Čekající objednávky</size></b>",
+        "empty": "<i><color=#888>(žádné objednávky)</color></i>",
+        "row_format": "<color=#60C0FF>● {0}× {1}</color>",
+        "row_eta_format": "  <size=11><color=#888>dodávka za {0} dní  •  {1} PLN</color></size>"
+      },
+      "history": {
+        "title": "<b><size=16>Historie nákupů</size></b>",
+        "empty": "<i><color=#888>(žádné nákupy)</color></i>",
+        "row_format": "<size=12><color=#AAA>{0}</color>  {1}× {2}  <color=#FF6060>-{3} PLN</color></size>"
+      }
+    }
+  },
+  "popup_station": {
+    "title_format": "<b>{0}</b>",
+    "type_label_station": "Stanice",
+    "type_label_halt": "Zastávka",
+    "type_format": "Typ: {0} ({1})",
+    "voivodeship_format": "Vojvodství: {0}",
+    "city_format": "Město: {0}",
+    "waiting_format": "Čekající cestující: <color={0}><b>{1}</b></color>",
+    "reputation_format": "Reputace: <color={0}>{1}/100</color>",
+    "platforms_label_format": "<b>Nástupiště ({0}):</b>",
+    "no_platforms": "  (žádná data o nástupištích)",
+    "platform_status_busy_format": "<color=#FF6060>obsazeno</color> ({0})",
+    "platform_status_free": "<color=#60FF60>volné</color>",
+    "platform_label_named_format": "Nástupiště {0}",
+    "platform_label_track_format": "Nástupiště u koleje {0}",
+    "platform_label_id_format": "Nástupiště #{0}",
+    "platform_row_format": "  {0}: {1}",
+    "timetables_label": "<b>Procházející jízdní řády:</b>",
+    "no_timetables": "  (žádné)",
+    "timetable_row_format": "  • {0}",
+    "timetable_more_format": "  … a {0} dalších",
+    "halt_activation_hint": "<color=#FFAA60><i>[TBD] Aktivace zastávky za poplatek (→ M6 Ekonomika)</i></color>",
+    "train_fallback_format": "#{0}",
+    "tt_name_format": "{0} {1}",
+    "close_btn": "✕"
+  },
+  "popup_train": {
+    "title_format": "<b>{0}</b> {1}",
+    "info_format": "Trasa: {0}\nJízda: {1}\nStav: {2}\nRychlost: <b>{3} km/h</b>\nPozice: {4} / {5} km\nZpoždění: {6}\nDalší: <b>{7}</b> (za {8})",
+    "delay_dash": "—",
+    "delay_format": "<color=#FF6060>+{0}s</color>",
+    "delay_zero": "<color=#60FF60>0</color>",
+    "eta_format": "{0}m {1}s",
+    "state": {
+      "waiting": "Čeká na odjezd",
+      "running": "Jede",
+      "stopped": "Stojí",
+      "blocked": "<color=#FF6060>Blokováno</color>",
+      "completed": "Dokončeno"
+    },
+    "close_btn": "✕",
+    "follow_btn": "Sledovat kamerou",
+    "stop_follow_btn": "Zastavit sledování"
+  },
+  "popup_room_type": {
+    "header_default": "Nová místnost",
+    "header_format": "Nová místnost ({0} m²)",
+    "size_format": "Velikost: {0}m x {1}m",
+    "min_size_format": "min {0}x{1}m",
+    "selected_format": "Vybráno: {0}",
+    "select_prompt": "Vyber typ místnosti",
+    "btn_cancel": "Zrušit",
+    "btn_confirm": "Potvrdit",
+    "type": {
+      "hall": "Hala",
+      "storage": "Sklad",
+      "dispatcher": "Dispečink",
+      "office": "Kancelář",
+      "social": "Sociální",
+      "supervisor": "Dozorce",
+      "bathroom": "WC",
+      "locker": "Šatna",
+      "corridor": "Chodba",
+      "traffic_controller": "Výpravčí"
+    }
+  },
+  "popup_building": {
+    "title_default": "Místnost",
+    "title_format": "Místnost #{0}",
+    "type_unassigned": "Nepřiřazeno",
+    "type_format": "Typ: {0}",
+    "type_default": "Typ: —",
+    "size_format": "Velikost: {0}m x {1}m ({2} m²)",
+    "size_default": "Velikost: —",
+    "furniture_default": "Nábytek: žádný",
+    "furniture_stub": "Nábytek: žádný (zatím neimplementováno)",
+    "btn_change_type": "Změnit typ",
+    "btn_demolish": "Zbořit",
+    "btn_close": "✕"
+  },
+  "popup_depot_track": {
+    "type_format": "Typ: {0}  |  Obsazeno: {1}",
+    "type": {
+      "parking": "Odstavné",
+      "entry": "Vjezd",
+      "exit": "Výjezd",
+      "washing": "Mycí stání",
+      "workshop": "Dílna",
+      "maneuver": "Posunovací"
+    },
+    "occupied_yes": "Ano",
+    "occupied_no": "Ne",
+    "name_placeholder": "Název koleje...",
+    "length_label": "Délka (m):",
+    "radius_label": "Poloměr (m):",
+    "radius_placeholder": "0 = rovná",
+    "angle_label": "Úhel výjezdu (°):",
+    "btn_apply": "Použít parametry",
+    "btn_catenary": "Trolej",
+    "btn_parallel": "Přidat paralelní koleje",
+    "btn_rename": "Přejmenovat",
+    "btn_delete": "Smazat",
+    "btn_close": "X",
+    "turnout": {
+      "info_format": "Typ: {0}  |  Segmenty: {1}",
+      "type_crossover": "Křížová výhybka",
+      "type_normal": "Normální výhybka",
+      "btn_delete": "Smazat výhybku",
+      "btn_close": "X"
+    },
+    "parallel": {
+      "title": "Paralelní koleje",
+      "left_label": "Vlevo:",
+      "right_label": "Vpravo:",
+      "spacing_label": "Rozestup (m):",
+      "catenary_label": "Trolej:",
+      "btn_generate": "Generovat",
+      "btn_cancel": "Zrušit"
+    }
+  },
+  "popup_depot_train": {
+    "track_format": "Kolej: {0}",
+    "health_format": "Stav: {0}%",
+    "cleanliness_format": "Čistota: {0}%",
+    "type": {
+      "electric_loco": "El. lokomotiva",
+      "diesel_loco": "Dieselová lokomotiva",
+      "passenger_car": "Osobní vůz",
+      "freight_car": "Nákladní vůz",
+      "tank_car": "Cisternový vůz",
+      "unknown": "Neznámé"
+    },
+    "traction": {
+      "electric": "Elektrický",
+      "diesel": "Dieselový",
+      "none": "Žádný (vůz)",
+      "unknown": "?"
+    },
+    "state": {
+      "entering": "Vjíždí",
+      "parked": "Zaparkováno",
+      "moving": "V pohybu",
+      "washing": "Mytí",
+      "workshop": "Dílna",
+      "exiting": "Vyjíždí",
+      "unknown": "?"
+    },
+    "btn_exit": "Vyjet",
+    "btn_close": "Zavřít"
+  },
+  "popup_consist": {
+    "title_format": "<b>Souprava #{0}</b>",
+    "vehicles_format": "Vozidla v soupravě: {0}",
+    "track_format": "Kolej: #{0}",
+    "state_format": "Stav: {0}",
+    "speed_format": "Rychlost: <b>{0} km/h</b>{1}",
+    "speed_reverse": " <i>(couvá)</i>",
+    "distance_format": "Vzdálenost: {0}/{1} m",
+    "target_format": "<color=#FFDD60>Cíl: kolej #{0}</color>",
+    "hint_go": "<color=#60FF60><i>Klikni \"Jeď\" pro spuštění pohybu</i></color>",
+    "hint_pick_target": "<color=#FFDD60><i>Klikni cílovou kolej (ESC/RMB = zrušit)</i></color>",
+    "btn_close": "✕",
+    "btn_go": "Jeď",
+    "btn_exit": "Opustit depo"
+  },
+  "popup_couple": {
+    "title_format": "Spojit <b>{0}</b> s <b>{1}</b>?",
+    "warn_circulation": "⚠ Souprava je v aktivním oběhu — změní se řazení",
+    "btn_yes": "Spojit",
+    "btn_no": "Zrušit",
+    "consist_fallback": "Souprava #{0}",
+    "btn_adjacent": "Spojit se sousedním"
+  },
+  "popup_decouple": {
+    "btn_open": "Rozpojit",
+    "title": "Vyberte místo dělení",
+    "hint": "Klikněte na místo dělení mezi vozidly",
+    "status_format": "Vpředu: {0} voz. · vzadu: {1} voz.",
+    "btn_confirm": "Rozpojit zde",
+    "btn_cancel": "Zrušit"
+  },
+  "popup_track": {
+    "title": "<b>Kolej / trať</b>",
+    "edge_id_format": "Edge ID: #{0}",
+    "segment_format": "Segment: #{0}",
+    "length_format": "Délka: {0} m",
+    "vmax_format": "<b>Vmax: {0} km/h</b>",
+    "track_ref_format": "Kolej (track_ref): {0}",
+    "line_ref_format": "Číslo trati: {0}",
+    "electrified_format": "<color=#60FF60>Elektrifikováno</color> ({0})",
+    "non_electrified": "<color=#AAAAAA>Neelektrifikováno</color>",
+    "usage_format": "Užívání: {0}",
+    "service_format": "Provoz: {0}",
+    "status_inactive": "<color=#FF6060>Stav: NEAKTIVNÍ</color>",
+    "reactivate_hint": "<color=#FFAA60><i>[TBD] Reaktivace za poplatek (→ M6 Ekonomika)</i></color>",
+    "status_active": "<color=#60FF60>Stav: aktivní</color>",
+    "click_pos_format": "<i>Klik: ({0}, {1})</i>",
+    "close_btn": "✕",
+    "reactivate_btn": "Reaktivovat trať"
+  },
+  "save_load": {
+    "title_save": "Uložit hru",
+    "title_load": "Načíst hru",
+    "close_btn": "Zavřít [ESC]",
+    "empty": "<i>Žádné uložené hry.</i>",
+    "detail_select": "<i>Vyber slot ze seznamu</i>",
+    "detail_format": "<b>Typ:</b> {0}\n<b>Verze hry:</b> {1}\n<b>Datum ve hře:</b> {2}\n<b>Uloženo:</b> {3}\n<b>Doba hraní:</b> {4} min\n<b>Velikost:</b> {5}\n<b>ID slotu:</b> <color=#888>{6}</color>",
+    "type_manual": "ručně",
+    "type_auto": "auto",
+    "type_quick": "rychlé",
+    "type_exit": "konec",
+    "type_test": "test",
+    "new_save_btn": "+ Nové uložení",
+    "load_btn": "Načíst",
+    "delete_btn": "Smazat",
+    "new_save_title": "Pojmenuj uložení:",
+    "confirm_btn": "Uložit",
+    "cancel_btn": "Zrušit",
+    "busy_save": "Ukládám...",
+    "busy_load": "Načítám...",
+    "save_failed": "Uložení selhalo.",
+    "load_failed": "Načtení selhalo",
+    "not_found": "Vybraný slot neexistuje.",
+    "newer_version": "Uložená pozice je z novější verze hry — nelze načíst.",
+    "partial_load_msg": "Uložená pozice poškozena v modulech: {0}. Použity výchozí hodnoty.",
+    "modified_save_title": "Uložená pozice byla modifikována",
+    "modified_save_msg": "Tento soubor uložené pozice byl ručně modifikován (HMAC mismatch). Načtení může způsobit chyby nebo ztrátu postupu. Načíst i tak?",
+    "modified_save_load_anyway": "Načíst i tak"
+  },
+  "loading": {
+    "default_title": "Načítání...",
+    "scene_format": "Načítám scénu: {0}",
+    "tips": {
+      "tip1": "Stiskni F5 pro rychlé uložení. F9 načte poslední rychlé uložení.",
+      "tip2": "Jazyk můžeš změnit v Nastavení → Jazyk. Dostupné: PL, EN, DE, CZ, JP.",
+      "tip3": "Každý oběh vozidla lze upravit ve záložce Oběhy.",
+      "tip4": "Technický stav vozidla klesá s každým kilometrem. Nezapomeň na prohlídky!",
+      "tip5": "Komerční kategorie jízdního řádu ovlivňují cenu jízdenky a IRJ klasifikaci.",
+      "tip6": "Během pauzy (Mezerník) si můžeš v klidu naplánovat další tah.",
+      "tip7": "Auto-uložení běží každých 5 minut herního času. Tvůj postup je v bezpečí."
+    }
+  },
+  "difficulty": {
+    "preset": {
+      "easy": "Snadná",
+      "normal": "Normální",
+      "hard": "Těžká",
+      "realistic": "Realistická",
+      "custom": "Vlastní"
+    },
+    "preset_desc": {
+      "easy": "Více startovních peněz, méně poruch, štědré dotace. Pro začátečníky nebo na seznámení se systémy.",
+      "normal": "Vyvážené hodnoty — výchozí režim. Doporučeno pro první spuštění.",
+      "hard": "Méně peněz, více poruch, ostřejší náklady. Pro zkušené provozovatele.",
+      "realistic": "Simulace reálných tržních podmínek. Starý vozový park selhává, dotace vyžadují úsilí, cestující jsou nároční.",
+      "custom": "Nastav každý modifikátor posuvníky."
+    },
+    "modifier": {
+      "start_budget": "Startovní rozpočet",
+      "operational_cost": "Provozní náklady",
+      "breakdown_chance": "Pravděpodobnost poruch",
+      "passenger_demand": "Poptávka cestujících",
+      "salary": "Platy",
+      "subsidy": "Dotace",
+      "delay_propagation": "Šíření zpoždění",
+      "event_frequency": "Frekvence událostí",
+      "hotel_cost": "Cena hotelů",
+      "ticket_price_tolerance": "Cenová tolerance cestujících"
+    },
+    "section_title": "Obtížnost",
+    "modifiers_title": "Modifikátory (Vlastní)",
+    "info_locked": "Obtížnost se volí jednou na začátku hry — nelze ji během hraní změnit.",
+    "preset_subtitle": {
+      "easy": "pro začátečníky",
+      "normal": "doporučeno pro první spuštění",
+      "hard": "pro zkušené provozovatele",
+      "realistic": "simulace reálných tržních podmínek",
+      "custom": "plná kontrola modifikátorů"
+    },
+    "group": {
+      "economy": "Ekonomika",
+      "fleet": "Vozový park",
+      "passengers": "Cestující",
+      "personnel": "Personál",
+      "events": "Události"
+    },
+    "tooltip": {
+      "start_budget": "Startovní kapitál firmy. Základní hodnota = 150 000 PLN. Vyšší dává víc rezervy na první investice.",
+      "operational_cost": "Multiplikátor denních provozních nákladů: palivo, trakční energie, infrastrukturní poplatky, servisní náklady.",
+      "breakdown_chance": "Pravděpodobnost poruchy vozidla (M7 BreakdownService). 0.0 = soft-off, poruchy nikdy nenastanou. Působí společně s pravidlem „Poruchy vozidel“.",
+      "passenger_demand": "Multiplikátor cestujících čekajících na nástupištích (M6). Vyšší = víc tržeb z jízdenek ale i víc tlaku.",
+      "salary": "Multiplikátor platů všech zaměstnanců (M8). Nižší = nižší fixní náklady firmy.",
+      "subsidy": "Multiplikátor vojvodských dotací za poskytování veřejných služeb. 0.0 = soft-off (žádné dotace).",
+      "delay_propagation": "Jak silně se zpoždění kaskádují sítí (M9). 0.0 = každý vlak nezávislý, 2.5 = realistický domino efekt.",
+      "event_frequency": "Frekvence náhodných událostí: počasí, výpadky troleje, stávky (M12d). 0.0 = soft-off.",
+      "hotel_cost": "Multiplikátor cen hotelů pro zaměstnance v vícedenních turnusech (M8).",
+      "ticket_price_tolerance": "Tolerance cestujících k vyšším cenám jízdenek (M6.5). Vyšší = akceptují vyšší ceny bez ztráty poptávky."
+    },
+    "preview": {
+      "title": "<b>Po potvrzení dostaneš:</b>",
+      "start_budget_format": "• Startovní kapitál: <color=#FFC857>{0} PLN</color>",
+      "salary_format": "• Průměrný plat strojvedoucího: <color=#FFC857>~{0} PLN/měs</color>",
+      "breakdown_format": "• Poruchy vozidel: {0}× (~každých {1} km)",
+      "breakdown_disabled": "• Poruchy vozidel: <color=#60FF60>vypnuto</color>",
+      "subsidy_format": "• Vojvodská dotace: <color=#60C0FF>{0}%</color>",
+      "subsidy_disabled": "• Vojvodské dotace: <color=#FF6060>vypnuto</color>"
+    }
+  },
+  "game_rules": {
+    "section_title": "Pravidla hry",
+    "info_locked": "Pravidla se volí jednou na začátku hry — nelze je během hraní změnit.",
+    "rule": {
+      "vehicle_breakdowns": "Poruchy vozidel",
+      "assistant_proactivity": "Asistent vede (proaktivní)",
+      "random_events": "Náhodné události",
+      "voivodeship_subsidies": "Vojvodské dotace",
+      "maintenance_decay": "Opotřebení komponentů",
+      "employee_morale": "Morálka zaměstnanců",
+      "weather_impact": "Vliv počasí"
+    },
+    "rule_desc": {
+      "vehicle_breakdowns": "Aktivuje systém poruch (M7). Vypni pro casual režim bez údržby.",
+      "assistant_proactivity": "Asistent sám navrhuje další kroky a reaguje, když se zaseknete. Vyp = ozve se jen na požádání (panel funguje vždy).",
+      "random_events": "Počasí, výpadky troleje, stávky personálu, infrastrukturní zpoždění.",
+      "voivodeship_subsidies": "Příjmy z vojvodských dotací. Vypni pro hard režim (vše vyděláváš jízdenkami)."
+    },
+    "tooltip": {
+      "vehicle_breakdowns": "Aktivuje systém poruch (M7). Vypni pro casual režim bez údržbového gameplay.",
+      "assistant_proactivity": "Onboarding + proaktivní rady poradce. Vypnuto: asistent mlčí, dokud ho nepožádáte — delegování úkolů přes panel funguje vždy. Výchozí: zap. pro Lehkou/Normální, vyp. pro Těžkou/Realistickou.",
+      "random_events": "Počasí, výpadky troleje, stávky personálu, infrastrukturní události. Off = nikdy nenastanou.",
+      "voivodeship_subsidies": "Příjmy z vojvodských dotací. Off = žádné dotace, hard režim (vše vyděláváš jízdenkami).",
+      "maintenance_decay": "Opotřebení komponentů na km (M7). Off = všechny komponenty stále 100%. Kombinuj s 'Poruchy vozidel'=Off pro plný casual režim.",
+      "employee_morale": "Morálka ovlivňuje produktivitu (M8). Off = produktivita vždy 100%. Zaměstnanci nikdy nestávkují ani sami nedávají výpověď.",
+      "weather_impact": "Počasí zvyšuje pravděpodobnost poruchy a šíření zpoždění. Off = neutrální počasí (žádné 'mrznoucí déšť +30% poruch' události)."
+    }
+  },
+  "timetable": {
+    "category_editor": {
+      "title": "KOMERČNÍ KATEGORIE",
+      "list_label": "Seznam kategorií:",
+      "empty": "Žádné kategorie. Klikni [+ Nová].",
+      "button": {
+        "new": "+ Nová",
+        "close": "✕",
+        "edit": "Upravit",
+        "delete": "Smazat",
+        "save": "Uložit",
+        "clear_form": "Vyčistit formulář"
+      },
+      "form": {
+        "header_new": "Nová kategorie",
+        "header_select_prompt": "Vyber kategorii ze seznamu nebo klikni [+ Nová]",
+        "header_edit_format": "Úprava: {0} — {1}",
+        "field": {
+          "id": "ID:",
+          "short_code": "Kód:",
+          "name": "Název:",
+          "base_price": "Základní cena PLN:",
+          "price_per_km": "+ za km PLN:",
+          "first_class_mult": "1. třída ×:",
+          "min_stop_sec": "Min. zast. s:",
+          "priority": "Priorita:",
+          "vmax_suggestion": "Doporučená Vmax km/h:",
+          "default_emu_dmu": "Výchozí EJ/MJ",
+          "requires": "Vyžaduje:",
+          "wifi": "WiFi",
+          "restaurant": "Bistro",
+          "sleeping": "Lůžkový",
+          "notes": "Poznámky:",
+          "stops_policy": "  Pravidlo zastávek:"
+        },
+        "placeholder": {
+          "id": "např. ic_premium",
+          "short_code": "IC",
+          "name": "InterCity Premium",
+          "notes": "volitelné"
+        },
+        "status": {
+          "fill_form": "Vyplň pole a klikni Uložit",
+          "edit_form": "Uprav pole a klikni Uložit",
+          "id_required": "ID je povinné (např. 'os', 'ic_premium')",
+          "name_required": "Kód a název jsou povinné",
+          "id_invalid_chars": "ID smí obsahovat jen písmena, číslice a podtržítko",
+          "id_already_exists_format": "ID '{0}' již existuje — vyber jiné",
+          "no_category_selected": "Žádná kategorie nevybrána k úpravě",
+          "save_failed": "Nepodařilo se přidat kategorii",
+          "saved_format": "Uloženo: {0} — {1}",
+          "cant_delete_format": "Nelze smazat '{0}' — je použito v jízdních řádech"
+        }
+      }
+    },
+    "list": {
+      "title": "JÍZDNÍ ŘÁDY",
+      "empty": "Žádné jízdní řády. Klikni [+ Nový] pro vytvoření prvního.",
+      "button": {
+        "categories": "Kategorie...",
+        "new": "+ Nový",
+        "close": "✕"
+      },
+      "filter_label": "Filtr:",
+      "filter": {
+        "active": "Aktivní",
+        "suspended": "Pozastaveno",
+        "archived": "Archivováno",
+        "all": "Vše"
+      },
+      "row_status": {
+        "active": "aktivní",
+        "suspended": "pozastaveno",
+        "archived": "archivováno"
+      },
+      "row_action": {
+        "map": "Mapa",
+        "duplicate": "Dup"
+      },
+      "column_header": "Č.     Trasa                          Kat.R Kat.C Start  Konec  Jízda Zast.  Stk.  Vm     Stav       Akce",
+      "composition": {
+        "emu": "EJ",
+        "loco": "Lok",
+        "unknown": "?"
+      }
+    },
+    "circulations": {
+      "title": "OBĚHY VOZIDEL",
+      "button": {
+        "new_empty": "+ Nový prázdný oběh",
+        "auto_generate": "Auto-generovat",
+        "close": "✕"
+      },
+      "column": {
+        "circulations": "Oběhy",
+        "schedules_pool": "Pool jízdních řádů (přetáhni →)"
+      },
+      "warnings_label": "Varování:",
+      "pool": {
+        "empty": "Všechny jízdní řády jsou již v obězích.\nVytvoř nové ve záložce 'Jízdní řády'."
+      },
+      "warning": {
+        "flash_prefix_format": "⛔ {0}",
+        "draft_no_vehicle_format": "⚠ Oběh '{0}' nemá vozidlo (Návrh)",
+        "all_vehicles_assigned": "✓ Všechny oběhy mají vozidla",
+        "issue_error_format": "  ❌ krok {0}: {1}",
+        "issue_warn_format": "  ⚠ krok {0}: {1}"
+      },
+      "row": {
+        "no_name": "(bez názvu)",
+        "info_format": "  {0} kroků · {1} · {2}",
+        "broken_vehicles_prefix": "  ⚠ Rozbitá vozidla: ",
+        "broken_more_format": " +{0} dalších",
+        "broken_vehicle_format": "{0} {1} ({2})",
+        "broken_reason_repair": "oprava",
+        "broken_reason_off": "mimo provoz",
+        "broken_reason_condition_format": "stav {0}%",
+        "drop_first_schedule": "⇐ Sem přetáhni první jízdní řád",
+        "button_options": "⚙",
+        "button_duplicate": "Dup",
+        "button_remove": "✕"
+      },
+      "step_bar": {
+        "deadhead_tag": " [DEADHEAD]",
+        "format": "[{0} {1}{2}  →  {3} {4}{5}]  #{6}{7}",
+        "missing_format": "#{0} (jízdní řád smazán)",
+        "track_format": " k.{0}",
+        "btn_up": "↑",
+        "btn_down": "↓",
+        "btn_remove": "✕"
+      },
+      "gap": {
+        "format": "   ⋮ obrátka {0} min"
+      },
+      "tile": {
+        "no_train_number": "—",
+        "format": "#{0} {1}\n{2} → {3}\n{4}-{5}  {6}  ⇄"
+      },
+      "format": {
+        "route_empty": "— prázdné —",
+        "route_single_format": "{0} → {1}",
+        "route_multi_format": "{0} → ... → {1}",
+        "vehicle_add": "+ Vozidlo",
+        "vehicle_unknown_format": "?#{0}",
+        "vehicle_named_format": "{0} {1}",
+        "vehicles_count_format": "{0} vozidel",
+        "day_mask_everyday": "denně",
+        "day_mask_weekdays": "po-pá",
+        "day_mask_weekend": "so-ne",
+        "unknown": "?"
+      },
+      "status": {
+        "draft": "Návrh",
+        "active": "Aktivní",
+        "paused": "Pozastaveno",
+        "archived": "Archivováno"
+      },
+      "modal": {
+        "common": {
+          "cancel": "Zrušit"
+        },
+        "assign": {
+          "title": "Přiřazení vozidla",
+          "vehicle_label": "Vozidlo:",
+          "confirm_btn": "Přiřadit",
+          "select_prompt": "— vyber vozidlo —",
+          "vehicle_option_format": "{0} {1} (stav {2}%)",
+          "status": {
+            "select": "Vyber vozidlo",
+            "ok_format": "✓ OK: {0} {1}",
+            "conflict_format": "⚠ Konflikt s: {0}"
+          }
+        },
+        "auto_gen_settings": {
+          "title": "Nastavení auto-generování",
+          "min_gap_label": "Minimální mezera mezi jízdními řády:",
+          "min_gap_hint": "min (nad rezervu obrátky)",
+          "respect_composition": "Respektovat typ vozidla (EJ/MJ vs Lok+Vozy)",
+          "respect_class": "Respektovat třídu provozu (nemíchat osobní s express)",
+          "auto_assign": "Auto-přiřadit vozidla z parku",
+          "select_label": "Vyber jízdní řády k zahrnutí:",
+          "no_unassigned": "Žádné aktivní jízdní řády nepřiřazené k oběhům",
+          "select_all": "Vybrat vše",
+          "deselect_all": "Zrušit vše",
+          "generate_btn": "Generovat",
+          "no_selection_flash": "Vyber alespoň jeden jízdní řád v nastavení auto-gen",
+          "tt_row_format": "#{0} {1}  {2} → {3}  {4}-{5}  {6}"
+        },
+        "auto_gen_preview": {
+          "title": "Náhled auto-generování",
+          "accept_all_btn": "Přijmout vše",
+          "row_main_format": "• {0}  ({1} jízd, {2} min, {3})\n{4}",
+          "vehicle_undef": "   vozidlo: nedefinováno",
+          "vehicle_ok_format": "   ✓ vozidlo: {0}",
+          "vehicle_warn_format": "   ⚠ {0}",
+          "summary_format": "{0} oběhů bude vytvořeno. Auto-přiřazeno: {1}/{0}."
+        },
+        "options": {
+          "title": "Možnosti oběhu",
+          "name_label": "Název:",
+          "type_label": "Typ:",
+          "type_one_time_toggle": "Jednorázový",
+          "recurring_section": "Opakující se (cyklický):",
+          "days_label": "Dny:",
+          "preset_workdays": "Prac",
+          "preset_weekend": "Vík",
+          "preset_everyday": "Denně",
+          "valid_label": "Platí:",
+          "valid_hint": "týdnů (0 = neomezeně)",
+          "one_time_section": "Jednorázový:",
+          "date_label": "Datum:",
+          "date_placeholder": "RRRR-MM-DD",
+          "notes_label": "Poznámky:",
+          "notes_placeholder": "volitelné",
+          "save_btn": "Uložit"
+        },
+        "deadhead": {
+          "title": "Stanice se neshodují",
+          "body_format": "Stanice se neshodují:\n\nPředchozí končí v: {0}\nDalší začíná v: {1}\n\nVytvořit deadhead {0} → {1}?",
+          "yes_btn": "Ano, vytvořit deadhead"
+        },
+        "return_trip": {
+          "title": "Zpáteční jízda",
+          "body_format": "Oběh začíná {0} → {1}.\n\nVytvořit zpáteční jízdu {1} → {0}?",
+          "no_btn": "Ne, díky",
+          "yes_btn": "Ano, vytvořit zpáteční"
+        }
+      }
+    },
+    "vehicle_assign": {
+      "title": "Přiřazení vozidla",
+      "title_format": "Přiřazení vozidla — {0} (#{1})",
+      "save_btn": "Uložit",
+      "cancel_btn": "Zrušit",
+      "column": {
+        "days": "Dny oběhu (přetáhni vozidlo →)",
+        "pool": "Pool vozidel"
+      },
+      "empty": {
+        "no_active_dates": "Žádné aktivní dny — nastav kalendář v možnostech oběhu",
+        "no_matching_vehicles": "Žádná vozidla odpovídající jízdním řádům v tomto oběhu.",
+        "no_fleet": "Žádná vozidla v parku. Kup vozidla ve záložce 'Vozový park'."
+      },
+      "status": {
+        "drag_hint": "Přetáhni vozidla zprava na dny vlevo",
+        "assigned_format": "{0}/{1} dní přiřazeno",
+        "conflicts_format": "⚠ {0} konfliktů s jinými oběhy",
+        "consist_errors_format": "⚠ {0} dní s neplatnou soupravou",
+        "ok_prefix_format": "✓ {0}",
+        "separator": "  ·  "
+      },
+      "day": {
+        "names": {
+          "mon": "Po",
+          "tue": "Út",
+          "wed": "St",
+          "thu": "Čt",
+          "fri": "Pá",
+          "sat": "So",
+          "sun": "Ne"
+        },
+        "label_format": "{0}\n{1}",
+        "drop_hint": "⇐ přetáhni vozidlo",
+        "copy_btn": "↓ kopírovat\nna všechny"
+      },
+      "consist_status": {
+        "error_prefix": "  ❌ Souprava: ",
+        "warn_prefix": "  ⚠ Souprava: ",
+        "ok_prefix": "  ✓ Souprava: "
+      },
+      "vehicle": {
+        "tile_format": "{0}\n{1}",
+        "tile_conflict_format": "\n⚠ #{0}",
+        "tile_unknown_format": "?#{0}",
+        "remove_btn": "✕"
+      },
+      "pool": {
+        "filter_format": "Filtr podle jízdních řádů oběhu: {0}",
+        "tile_format": "#{0} {1} {2}\nstav {3}%\n{4}",
+        "availability_free": "✓ volné",
+        "availability_busy_format": "⚠ obsazené (#{0})",
+        "availability_partial_format": "⚠ {0}/{1} dní obsazeno"
+      },
+      "type": {
+        "loco": "lokomotivy",
+        "car": "vozy",
+        "emu": "EJ",
+        "dmu": "MJ",
+        "separator": " + "
+      }
+    },
+    "creator": {
+      "title": "Editor jízdních řádů",
+      "section": {
+        "route": "TRASA",
+        "parameters": "PARAMETRY"
+      },
+      "button": {
+        "close": "✕",
+        "back_to_list": "← Zpět na seznam",
+        "confirm": "Potvrdit",
+        "force_confirm": "Potvrdit i přes konflikty",
+        "generate_route": "Generovat trasu",
+        "compute_stops": "Spočítat zastávky",
+        "pick_on_map": "Na mapě",
+        "add_waypoint": "+ Bod cesty",
+        "remove_waypoint": "✕"
+      },
+      "route": {
+        "label_a": "A:",
+        "label_b": "B:",
+        "label_via_format": "Přes {0}:",
+        "input_placeholder": "zadej název stanice...",
+        "waypoint_placeholder": "bod cesty...",
+        "info_distance_format": "Trasa: {0} km",
+        "info_no_connection": "Žádné spojení mezi stanicemi",
+        "suggestion": {
+          "station": "stanice",
+          "halt": "zastávka"
+        }
+      },
+      "params": {
+        "category": "Kategorie:",
+        "mode": "Režim:",
+        "emu_dmu": "EJ/MJ",
+        "consist": "  Souprava:",
+        "consist_symbolic": "Symbolická",
+        "consist_concrete": "Konkrétní (M5)",
+        "vmax": "Vmax:",
+        "kmh": "km/h",
+        "start_date": "Datum startu:",
+        "start_date_placeholder": "RRRR-MM-DD",
+        "start_time": "čas:",
+        "start_time_placeholder": "HH:MM",
+        "weeks_valid": "Platí:",
+        "weeks_valid_hint": "týd. (0=neom.)",
+        "takt_label": "Takt:",
+        "takt_toggle": "opakovat každých N min",
+        "takt_every": "každých",
+        "takt_until": "min, do:",
+        "takt_until_placeholder": "HH:MM",
+        "train_number": "Č. vlaku:",
+        "train_number_placeholder": "auto",
+        "train_number_auto": "Auto",
+        "days_label": "Dny:",
+        "preset_weekdays": "Pracovní dny",
+        "preset_weekend": "Víkend",
+        "preset_everyday": "Denně"
+      },
+      "day_short": {
+        "mon": "Po",
+        "tue": "Út",
+        "wed": "St",
+        "thu": "Čt",
+        "fri": "Pá",
+        "sat": "So",
+        "sun": "Ne"
+      },
+      "takt_summary": {
+        "interval_must_be_positive": "interval musí být > 0",
+        "last_before_first": "poslední jízda před první?",
+        "summary_format": "{0} jízd {1}..{2} každých {3} min"
+      },
+      "train_number_status": {
+        "select_route_first": "Nejdřív vyber trasu",
+        "no_free_for_category": "Žádná volná čísla pro tuto kategorii",
+        "no_free": "Žádná volná čísla",
+        "select_route_to_validate": "Vyber trasu pro validaci",
+        "empty_will_autogen": "Prázdné → auto-gen při potvrzení",
+        "ok_format": "OK ({0})",
+        "soft_warn_format": "⚠ {0} — klikni Potvrdit znovu"
+      },
+      "stops": {
+        "km_format": "{0}km",
+        "duration_unit_s": "s",
+        "summary_format": "Čas: {0} min | Zastávky: {1}/{2} | {3}",
+        "segment_collision_format": "⚠ {0}",
+        "track_warning_format": "Kolej {0} při {1} prodlužuje trasu {2}x — může být nevhodná"
+      }
+    }
+  },
+  "personnel": {
+    "title": "Personál",
+    "close_button": "Zavřít [ESC]",
+    "tabs": {
+      "my_staff": "Můj personál",
+      "recruit": "Nábor",
+      "dispatch": "Dispečink",
+      "turnuses": "Turnusy",
+      "traffic": "Výpravní kancelář",
+      "workshops": "Dílny",
+      "office": "Kancelář+VaV",
+      "kasy": "Pokladny"
+    },
+    "role": {
+      "driver": "Strojvedoucí",
+      "conductor": "Průvodčí",
+      "mechanic": "Mechanik",
+      "cleaner": "Uklízeč",
+      "wash_bay": "Mycí pracovník",
+      "office": "Úředník",
+      "research": "VaV výzkumník",
+      "ticket_clerk": "Pokladní",
+      "dispatcher": "Dispečer",
+      "traffic_controller": "Výpravčí"
+    },
+    "status": {
+      "available": "K dispozici",
+      "on_shift": "Ve směně",
+      "resting": "Odpočívá",
+      "sick": "Nemocný",
+      "long_sick": "Dlouhodobě nemocný",
+      "training": "Školení",
+      "retired": "Důchod",
+      "fired": "Propuštěn"
+    },
+    "recruit": {
+      "info": "Nábor je samostatný panel.\n\nKlikni níže pro otevření trhu uchazečů.",
+      "open_btn": "Otevřít panel náboru →",
+      "panel": {
+        "header": "Nábor — Trh práce",
+        "close_btn": "Zavřít [ESC]",
+        "empty": "<i>Žádní uchazeči. Trh se obnovuje každých 7 herních dnů.</i>",
+        "hire_btn": "Zaměstnat",
+        "posting_btn": "Nový inzerát…",
+        "footer_main_format": "Uchazeči: <b>{0}/{1}</b>  |  Aktivní inzeráty: <b>{2}/{3}</b>",
+        "footer_active_format": "  <color=#9CA3AF>• #{0} {1} {2}★ — {3} dní</color>  ",
+        "candidate_main_format": "<b>{0} {1}</b>, věk {2} — <color=#FFC857>{3} {4}</color>",
+        "candidate_salary_format": "Plat: <b>{0} PLN/měs</b>",
+        "candidate_bonus_format": "  |  Náborový bonus: <color=#4ADE80>{0} PLN</color>",
+        "candidate_resume_format": "<i><color=#9CA3AF>{0}</color></i>"
+      },
+      "posting_modal": {
+        "title": "Nový inzerát",
+        "role_label": "Role:",
+        "skill_label": "Min. dovednost:",
+        "skill_option_format": "{0}★",
+        "cost_format": "<b>Cena: {0} PLN</b>  (14 dní, max {1} aktivní)",
+        "info": "Aktivní inzerát na 14 herních dnů zvyšuje 3× šanci\nuchazečů této role při refresh trhu.",
+        "confirm_btn": "Vytvořit inzerát",
+        "cancel_btn": "Zrušit"
+      }
+    },
+    "turnuses": {
+      "title": "<b><size=18>Turnusy personálu (M8-8)</size></b>",
+      "total_format": "Celkem:  <b>{0}</b>  ·  Návrh: <b>{1}</b>  ·  Aktivní: <color=#4ADE80><b>{2}</b></color>",
+      "roles_format": "Strojv: <b>{0}</b>  ·  Průvod: <b>{1}</b>",
+      "unassigned_format": "<color=#FBBF24>⚠ Nepřiřazené: {0}</color>",
+      "invalid_format": "<color=#F87171>✗ S validačními chybami: {0}</color>",
+      "all_ok": "<color=#4ADE80>✓ Všechny turnusy OK.</color>",
+      "footer": "<i>Plná správa (editor, validátor, vícedenní, hotely) v samostatném panelu.</i>",
+      "open_btn": "Otevřít plný panel turnusů →"
+    },
+    "traffic": {
+      "status": {
+        "normal": "Normální — prioritní plánování aktivní",
+        "queued": "Přetížené — fronta PendingTasks roste",
+        "critical_no_workers": "ŽÁDNÍ VÝPRAVČÍ — DepotMovementSim na FCFS (70% efektivita)",
+        "critical": "KRITICKÉ — 25% úkolů +50% času",
+        "unknown": "?"
+      },
+      "header_format": "<b><size=20>Výpravní kancelář (pohyb v depu)</size></b>  —  <color={0}>{1}</color>\nVýpravčí: <b>{2}</b>  |  Kapacita: <b>{3}</b> pohybů  |  Aktivní: <b>{4}</b>  |  Čekající: <b>{5}</b>",
+      "capacity_format": "Vytížení: <color={0}>{1}{2}</color>{3} <b>{4}%</b>",
+      "controllers_label": "<b>Aktivní výpravčí:</b>",
+      "controller_row_format": "#{0} <b>{1}</b> {2}  <color=#9CA3AF>kap. {3}, směna {4}</color>",
+      "no_controllers": "<i><color=#F87171>Žádní výpravčí.</color></i>\n\nD35: pro 24/7 řídicí stanoviště min. 3 osoby\n(jedna na směnu Ráno/Odp/Noc).\n\nDepotMovementSim běží defaultně FCFS +\nrandom ±20% zpoždění (žádné priority).",
+      "warn_need_more_format": "<color=#FBBF24>⚠ Pro 24/7 pokrytí potřebuješ {0} dalších ({1}/3).</color>",
+      "priorities_label": "<b>Priority pohybů (D34):</b>",
+      "pri_workshop": "Dílna po termínu:",
+      "pri_departure": "Plánovaný odjezd:",
+      "pri_wash_bay": "Plánovaná myčka:",
+      "pri_parking": "Přesun odstavení:",
+      "apply_btn": "Použít priority",
+      "reset_btn": "Resetovat na default",
+      "info_box": "<i>D28: Bez výpravčího — DepotMovementSim běží FCFS (70% efektivita, žádná priorita).\nD35: Stanoviště musí být obsazeno 24/7 (min 3 výpravčí, jeden na směnu).\nM8-11 MVP: provider infrastruktura připravena, plná sort integrace v M9b polish.</i>"
+    },
+    "office": {
+      "research_label": "<b><size=14>VaV výzkumné cesty</size></b>",
+      "summary_title": "<b><size=18>Kancelář + VaV</size></b>",
+      "clerks_format": "<b>Úředníci:</b> <color=#4ADE80>{0}</color>",
+      "reduction_format": "Redukce fixních nákladů: <b>{0}%</b> <color=#9CA3AF>(max {1}%)</color>",
+      "market_format": "Refresh pracovního trhu: <b>{0}</b> dní <color=#9CA3AF>(základ {1}d - úředníci × 1d)</color>",
+      "researchers_format": "<b>VaV výzkumníci:</b> <color=#4ADE80>{0}</color>",
+      "active_research_format": "<b>Aktivní výzkum:</b> <color=#FFC857>{0}</color>  <color={1}>[{2}]</color>",
+      "progress_format": "Pokrok: <b>{0}/{1}d</b> ({2}%) — vyžaduje {3}× ≥{4}★",
+      "no_research": "<i>Žádný aktivní výzkum. Vyber cestu níže.</i>",
+      "unlocks_label": "<b>✓ Odemčeno:</b>  ",
+      "unlock_item_format": "<color=#4ADE80>{0}={1}</color>  ",
+      "row_main_format": "<b>{0}</b>  <color=#9CA3AF>[{1}]</color>  <color=#FFC857>{2}× ≥{3}★</color>  <color=#9CA3AF>{4}d</color>",
+      "row_effect_format": "<color=#60A5FA>Efekt: {0} = {1}</color>",
+      "btn_start": "▶ Start",
+      "btn_cancel": "✕ Zrušit",
+      "completed_text": "✓ DOKONČENO"
+    },
+    "kasy": {
+      "summary_title": "<b><size=18>Staniční pokladny</size></b>",
+      "stats_format": "Aktivní pokladní: <color=#4ADE80><b>{0}</b></color>  |  Přiřazeno: <color=#4ADE80><b>{1}</b></color>  |  Volných: <color=#FBBF24><b>{2}</b></color>",
+      "bonus_format": "<b>Bonus tržeb na stanici:</b> +<color=#FFC857>{0}%</color> <color=#9CA3AF>(D19: pokladní jen v popup stanice, žádný 3D spawn)</color>",
+      "auto_assign_btn": "Auto-přiřadit pokladní k vzorovým stanicím (debug)",
+      "empty": "<i>Žádná přiřazení. Klikni 'Auto-přiřadit' nebo přiřaď ručně v popup stanice (M9a polish).</i>",
+      "row_format": "<b>Stanice #{0}</b>   <color=#FFC857>{1}</color> {2}   <color=#9CA3AF>směna {3}, od {4}</color>",
+      "unknown_employee": "?",
+      "unassign_btn": "✕"
+    },
+    "workshops": {
+      "title_default": "<b><size=18>Dílny — přiřazení mechaniků</size></b>",
+      "no_slots": "<b><size=18>Dílny</size></b>\n<i><color=#F87171>Žádná dílenská místa v depu.</color></i>\nPostav dílenskou halu (M7-4) pro přiřazení mechaniků.",
+      "header_format": "<b><size=18>Dílny — přiřazení mechaniků (M8-12)</size></b>\nMísta: <b>{0}</b>  |  Mechanici: <b>{1}</b> aktivní  |  Přiřazeno: <color=#4ADE80><b>{2}</b></color>, Volných: <color=#FBBF24><b>{3}</b></color>",
+      "slot_main_format": "<b>Místo #{0}</b>  <color=#FFC857>{1}</color>  ",
+      "slot_free": "<color=#9CA3AF>volné</color>",
+      "slot_busy_format": "<color=#F87171>vozidlo #{0} ({1})</color>",
+      "no_mechanics": "<color=#FBBF24>Žádní mechanici — místo nečinné (čas ×1.0 pokud někdo)</color>",
+      "mechanics_prefix_format": "Mechanici ({0}/2): ",
+      "multiplier_format": "Časový multiplikátor: <color={0}><b>×{1}</b></color>",
+      "unassign_btn_format": "✕ {0}",
+      "assign_dd_prompt": "— Přidat mechanika —",
+      "no_free_mechanics": "<i><color=#9CA3AF>žádní volní mechanici</color></i>"
+    },
+    "dispatch": {
+      "status": {
+        "normal": "Normální — auto-akce okamžité",
+        "delayed": "Přetížené — auto-akce zpožděny 2-6h",
+        "critical_no_workers": "ŽÁDNÍ DISPEČEŘI — vše ručně",
+        "critical": "KRITICKÉ — 20% akcí promeškáno",
+        "unknown": "?"
+      },
+      "header_format": "<b><size=20>Dispečink</size></b>  —  <color={0}>{1}</color>\nAktivní: <b>{2}</b>  |  Kapacita: <b>{3}</b> zaměstnanců  |  Spravuje: <b>{4}</b> (mimo dispečerů)  |  Čekající: <b>{5}</b>",
+      "capacity_format": "Vytížení: <color={0}>{1}{2}</color>{3} <b>{4}%</b>",
+      "dispatchers_label": "<b>Aktivní dispečeři:</b>",
+      "no_dispatchers": "<i><color=#F87171>Žádní dispečeři.</color></i>\n\nZaměstnej 1-3 dispečery (panel Náboru)\npro aktivaci auto-akcí při nemoci / ad-hoc.\n\nD35: pro 24/7 pokrytí depa min 3 osoby\n(jedna na směnu Ráno/Odp/Noc).",
+      "dispatcher_row_format": "#{0} <b>{1}</b> {2}  <color=#9CA3AF>kap. {3}, směna {4}</color>",
+      "weights_format": "<color=#9CA3AF>Váhy skóre (D30): blízkost {0}, dovednost {1}, odpočinek {2}</color>",
+      "pending_label": "<b>Fronta akcí:</b>",
+      "empty_pending": "<i>Žádné čekající akce.</i>",
+      "pending_main_format": "<b>#{0}</b> [{1}]  ",
+      "pending_eta_format": "<color=#FBBF24>ETA {0}h</color>  ",
+      "pending_vacancy_format": "Vakance: {0} ({1})  →  ",
+      "pending_replacement_format": "Náhrada: <color=#4ADE80>{0} {1}</color>",
+      "pending_dispatcher_used_format": "  <color=#9CA3AF>(disp {0}★)</color>",
+      "cancel_btn": "Zrušit",
+      "unknown_employee": "?"
+    },
+    "schedule": {
+      "title": "Plán zaměstnance",
+      "header_format": "<b>Plán:</b> #{0} {1}  — <color=#FFC857>{2}</color>",
+      "close_btn": "Zavřít [ESC]",
+      "cycle_label": "Cyklus:",
+      "cycle": {
+        "5_2": "5+2 (klasický)",
+        "4_2": "4+2",
+        "6_2": "6+2",
+        "7_7": "7+7 (dálkový)",
+        "custom": "Vlastní"
+      },
+      "default_shift_label": "Výchozí směna:",
+      "shift": {
+        "morning": "Ráno (6-14)",
+        "afternoon": "Odpoledne (14-22)",
+        "night": "Noc (22-6)"
+      },
+      "vacation_remaining_format": "Zbývá dovolené: {0}/{1}",
+      "month_header_format": "{0} {1}",
+      "month": {
+        "1": "Leden",
+        "2": "Únor",
+        "3": "Březen",
+        "4": "Duben",
+        "5": "Květen",
+        "6": "Červen",
+        "7": "Červenec",
+        "8": "Srpen",
+        "9": "Září",
+        "10": "Říjen",
+        "11": "Listopad",
+        "12": "Prosinec"
+      },
+      "nav_prev": "◄",
+      "nav_next": "►",
+      "legend": "<color=#4ADE80>■</color> Ráno  <color=#60A5FA>■</color> Odp.  <color=#374151>■</color> Noc  <color=#6B7280>■</color> Volno  <color=#A855F7>■</color> Dovolená  <color=#F87171>■</color> Nemoc  <color=#F59E0B>■</color> Výměna",
+      "day_format": "<b>{0}</b>\n<size=10>{1}</size>",
+      "day_label": {
+        "vacation": "Dov",
+        "sick": "Nem",
+        "training": "Škol.",
+        "swap_format": "→{0}",
+        "extra": "Přesč",
+        "free": "Volno",
+        "morning": "Ráno",
+        "afternoon": "Odp",
+        "night": "Noc"
+      },
+      "shift_short": {
+        "morning": "Ráno",
+        "afternoon": "Odp",
+        "night": "Noc",
+        "unknown": "?"
+      },
+      "context": {
+        "title": "Vyber akci",
+        "vacation_1": "Dovolená 1 den",
+        "vacation_7": "Dovolená 7 dní (od tohoto dne)",
+        "swap_morning": "Výměna → Ráno",
+        "swap_afternoon": "Výměna → Odpoledne",
+        "swap_night": "Výměna → Noc",
+        "extra_duty": "Extra služební den",
+        "free_day": "Extra volný den",
+        "remove": "Odebrat override",
+        "cancel": "Zrušit"
+      }
+    },
+    "hotel": {
+      "title": "Rezervace hotelu (Přespání)",
+      "city_label": "Město (stanice):",
+      "city_placeholder": "např. Olsztyn Główny",
+      "city_default": "Neznámé město",
+      "nights_label": "Nocí:",
+      "nights_1": "1 noc",
+      "nights_2": "2 noci",
+      "tier_label": "Třída hotelu:",
+      "tier_basic": "Basic  (80 PLN/noc, morálka -1, regen -20%)",
+      "tier_standard": "Standard  (150 PLN/noc, neutrální)",
+      "tier_premium": "Premium  (250 PLN/noc, morálka +2, regen +20%)",
+      "cost_format": "Cena: <color=#FBBF24>{0} PLN</color>",
+      "morale_format": "Morálka zaměstnance: <color={0}>{1}</color>",
+      "info_format": "Firemní výchozí (viz Nastavení): <i>{0}</i>.\nD36: regionální cenové multiplikátory post-EA.",
+      "ok_btn": "Potvrdit",
+      "cancel_btn": "Zrušit"
+    },
+    "toast": {
+      "retirement_announced_format": "<b>{0}</b> ({1}, věk {2}) oznamuje odchod do důchodu. Odejde <b>{3}</b> (30 dní výpovědi).",
+      "retirement_done_format": "<b>{0}</b> odešel do důchodu (odstupné {1} PLN).",
+      "recovered_format": "<b>{0}</b> se vrátil z nemocenské.",
+      "vacancy_format": "<b>{0}</b> ({1}) — {2}.\nPotřebná náhrada za {3}.",
+      "reason": {
+        "sick_format": "nemocný do {0}",
+        "vacation": "dovolená",
+        "retirement": "důchod",
+        "training": "školení",
+        "other": "absence"
+      },
+      "btn": {
+        "auto_dispatcher": "Auto-dispatch",
+        "manual": "Ručně…",
+        "ignore": "Ignorovat",
+        "dismiss": "X"
+      },
+      "warn": {
+        "no_dispatcher": "Žádný dispečer — zaměstnej nebo klikni Ručně",
+        "no_candidate": "Žádný uchazeč — všichni nedostupní",
+        "overloaded": "Dispečer přetížen — zopakuj nebo Ručně",
+        "format": "\n<color=#F87171>⚠ {0}</color>"
+      }
+    },
+    "crew_list": {
+      "title": "Turnusy personálu",
+      "close_btn": "Zavřít [ESC]",
+      "filter_role_all": "Všechny role",
+      "filter_status_all": "Všechny stavy",
+      "status": {
+        "draft": "Návrh",
+        "active": "Aktivní",
+        "paused": "Pozastaveno",
+        "archived": "Archivováno"
+      },
+      "count_format": "Turnusy: <b>{0}</b> / {1}",
+      "empty": "<i>Žádné turnusy. Klikni '+ Nový turnus'.</i>",
+      "btn": {
+        "new": "+ Nový",
+        "auto_gen": "⚙ Auto-generovat turnusy (M8-9)",
+        "edit": "Upravit →",
+        "activate": "Aktivovat",
+        "delete": "Smazat"
+      },
+      "row": {
+        "no_employee": "<i>žádný zaměstnanec</i>",
+        "format": "<b>#{0} {1}</b>  <color={2}>[{3}]</color>\n{4} · {5} · {6} služeb · {7}d"
+      },
+      "detail": {
+        "select_prompt": "<i>Vyber turnus ze seznamu</i>",
+        "no_employee": "<color=#9CA3AF>žádný</color>",
+        "header_format": "<b><size=20>#{0} {1}</size></b>\n<color=#FFC857>{2}</color> · Zaměstnanec: {3} · {4}d · Stav: <b>{5}</b>",
+        "duties_label_format": "<b>Služby ({0}):</b>",
+        "no_duties": "<i>Žádné. Klikni 'Upravit' pro přidání.</i>",
+        "duty_main_format": "  {0}. [{1}] den {2}  ",
+        "duty_route_format": "  {0}→{1}",
+        "validation_format": "<color={0}><b>Validace: {1}</b></color>"
+      },
+      "new_turnus_format": "Turnus {0}",
+      "unknown_employee": "?"
+    },
+    "crew_editor": {
+      "name_placeholder": "Název turnusu",
+      "close_btn": "Zavřít [ESC]",
+      "status_format": "Stav: <color={0}>{1}</color>  |  Role: <color=#FFC857>{2}</color>",
+      "employee_label": "Zaměstnanec:",
+      "employee_none": "— Žádný —",
+      "employee_format": "#{0} {1} ({2}★ {3})",
+      "duration_label": "Trvání:",
+      "duration_1": "1 den (jednodenní)",
+      "duration_2": "2 dny (s přespáním)",
+      "duration_3": "3 dny",
+      "no_duties": "<i>Žádné služby. Přidej první vpravo.</i>",
+      "btn_activate": "Aktivovat",
+      "btn_active_label": "AKTIVNÍ",
+      "btn_draft": "Na Návrh",
+      "btn_archive": "Archivovat",
+      "btn_delete": "Smazat",
+      "form": {
+        "title": "Přidat službu",
+        "kind_label": "Typ:",
+        "kind": {
+          "service": "Služba (jízda)",
+          "break": "Pauza (odpočinek)",
+          "deadhead": "Deadhead (zpáteční jízda)",
+          "handover": "Předání",
+          "overnight": "Přespání"
+        },
+        "day_label": "Den (0..N):",
+        "start_time_label": "Start (HH:MM:SS):",
+        "end_time_label": "Konec (HH:MM:SS):",
+        "start_station_label": "Startovní stanice:",
+        "start_station_placeholder": "např. Olsztyn Główny",
+        "end_station_label": "Cílová stanice:",
+        "end_station_placeholder": "např. Gdynia Główna",
+        "trainrun_label": "TrainRun ID:",
+        "trainrun_placeholder": "-1 (žádné)",
+        "info": "<i>M8-11: TrainRun pool z aktivních oběhů (M5) — klikni místo psaní id.</i>",
+        "add_btn": "+ Přidat službu"
+      },
+      "duty_row": {
+        "main_format": "<b>#{0}</b> [{1}]  <color=#9CA3AF>den {2}</color>  ",
+        "route_format": "{0} → {1}  ",
+        "trainrun_format": "<color=#9CA3AF>TR#{0}</color>  ",
+        "hotel_format": "<color=#A855F7>Hotel {0} v {1}</color>",
+        "no_hotel": "<color=#F87171>BEZ HOTELU</color>",
+        "btn_up": "↑",
+        "btn_down": "↓",
+        "btn_hotel": "Hotel…",
+        "btn_delete": "✕"
+      },
+      "validation_summary_format": "<color={0}><b>Validace: {1}</b></color>",
+      "validation_error_format": "  <color=#F87171>✗</color> {0}",
+      "validation_warning_format": "  <color=#FBBF24>⚠</color> {0}"
+    },
+    "crew_autogen": {
+      "title": "Auto-generátor turnusů personálu (M8-9)",
+      "btn_generate": "Generovat náhled",
+      "btn_commit": "Potvrdit",
+      "btn_commit_format": "Potvrdit {0} turnusů",
+      "btn_commit_disabled": "Potvrdit (nejdřív náhled)",
+      "btn_cancel": "Zrušit [ESC]",
+      "preview_header": "Náhled",
+      "preview_prompt": "<i>Klikni 'Generovat náhled' po nastavení parametrů.</i>",
+      "preview_no_input": "<color=#F87171>Žádné TrainRuny na vstupu.\n\nPovol 'Použít fake jízdní řád' v M8-9 — adapter k M5 v M8-11.</color>",
+      "preview_summary_format": "<b><color=#4ADE80>Vygenerováno {0} turnusů</color></b> ({1} služeb, {2} deadhead)",
+      "preview_warnings_label": "<color=#FBBF24><b>Varování:</b></color>",
+      "preview_warning_format": "  ⚠ {0}",
+      "preview_circ_format": "<b>#{0} {1}</b> <color=#FFC857>({2})</color>",
+      "preview_duty_format": "  <color={0}>[{1}]</color> ",
+      "preview_route_format": "  {0}→{1}",
+      "preview_trainrun_format": " <color=#9CA3AF>TR#{0}</color>",
+      "settings": {
+        "title": "Parametry:",
+        "min_gap_label": "Min mezera [min]:",
+        "max_hours_label": "Max práce/den [h]:",
+        "role_label": "Role:",
+        "role_drivers": "Pouze strojvedoucí",
+        "role_conductors": "Pouze průvodčí",
+        "role_both": "Obě role",
+        "deadhead_toggle": "Auto-deadhead zpět (pokud konec ≠ domov)",
+        "multiday_toggle": "Vícedenní turnusy (vyžaduje M8-11)",
+        "fake_toggle": "Použít fake jízdní řád (5 TR)",
+        "prefix_label": "Prefix názvu:",
+        "info": "<i>M8-9 prototyp:\nPool TrainRun = fake debug jízdní řád.\nAdapter k M5 Circulation v M8-11.</i>"
+      }
+    },
+    "details": {
+      "close_btn": "Zavřít [ESC]",
+      "header_main_format": "<b><size=22>#{0} {1}</size></b>\n<color=#FFC857>{2} {3}</color>  |  Věk: {4}  |  Praxe: {5}  |  Stav: <color=#4ADE80>{6}</color>",
+      "tenure_days_format": "{0} dní",
+      "tenure_months_format": "{0}m {1}d",
+      "tenure_years_format": "{0}r {1}m",
+      "stats": {
+        "morale_format": "<b>Morálka:</b> {0} {1}/100",
+        "fatigue_format": "<b>Únava:</b> {0} {1}/100",
+        "shift_format": "<b>Směna:</b> {0}",
+        "vacation_format": "<b>Dovolená:</b> {0}/{1} dní",
+        "hire_format": "<b>Zaměstnán:</b> {0}",
+        "sick_until_format": "<color=#F87171><b>Nemocný do:</b> {0}</color>"
+      },
+      "salary": {
+        "current_format": "<b>Aktuální plat:</b> {0} PLN/měs",
+        "market_format": "<b>Tržní sazba:</b> {0} PLN/měs",
+        "diff_format": "<b>Rozdíl:</b> <color={0}>{1}%</color>",
+        "missed_format": "  <color=#F87171>(promeškáno: {0}×)</color>"
+      },
+      "buttons": {
+        "raise10": "Zvýšit +10%",
+        "bonus_1k": "Bonus 1 000 PLN",
+        "bonus_5k": "Bonus 5 000 PLN",
+        "bonus_10k": "Bonus 10 000 PLN",
+        "shift_label": "Nastav směnu:",
+        "shift_morning": "Ráno 6-14",
+        "shift_afternoon": "Odp. 14-22",
+        "shift_night": "Noc 22-6",
+        "edit_schedule": "Upravit plán (dovolené, výměny) →",
+        "qualifications": "Kvalifikace →",
+        "vacation_7": "Udělit 7-denní dovolenou (od zítřka)",
+        "fire": "Propustit",
+        "fire_confirm": "KLIKNI ZNOVU — POTVRDIT"
+      },
+      "severance_format": "Odstupné při propuštění: <b>{0} PLN</b> (praxe {1}d)",
+      "cant_fire_format": "<i>Zaměstnanec {0} — nelze propustit</i>",
+      "bonus_label": "Jednorázový"
+    },
+    "qualifications": {
+      "title_format": "Kvalifikace: {0}",
+      "disclaimer": "Early Access: zaměstnanci nepotřebují žádné kvalifikace. V plné verzi bude každá lokomotiva a kategorie vlaku vyžadovat konkrétní oprávnění (získané školením).",
+      "traction": {
+        "title": "Trakční oprávnění"
+      },
+      "category": {
+        "title": "Kategorie vlaků"
+      },
+      "none": "(žádné — vše povoleno v EA)",
+      "close": "Zavřít"
+    },
+    "my_staff": {
+      "filter_role_all": "Všechny role",
+      "filter_status": {
+        "all": "Vše",
+        "active": "Aktivní",
+        "fired": "Propuštěn",
+        "retired": "Důchod",
+        "sick": "Nemocný"
+      },
+      "count_default": "Zaměstnanci: 0",
+      "count_format": "Zaměstnanci: <b>{0}</b> / {1}",
+      "empty": "<i>Žádní zaměstnanci neodpovídají filtrům.</i>",
+      "details_btn": "Detail",
+      "row_main_format": "<b>#{0} {1}</b>, věk {2}  <color=#FFC857>{3} {4}</color>  <color={5}>[{6}]</color>",
+      "row_stats_format": "Směna: {0}  |  Morálka: {1}  |  Únava: {2}  |  Plat: {3}PLN/měs"
+    }
+  }
+}

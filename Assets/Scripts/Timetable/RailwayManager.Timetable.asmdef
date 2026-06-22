@@ -1,0 +1,23 @@
+{
+    "name": "RailwayManager.Timetable",
+    "rootNamespace": "",
+    "references": [
+        "RailwayManager.Core",
+        "RailwayManager.Economy",
+        "RailwayManager.Depot",
+        "RailwayManager.Fleet",
+        "RailwayManager.Map",
+        "RailwayManager.SharedUI",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

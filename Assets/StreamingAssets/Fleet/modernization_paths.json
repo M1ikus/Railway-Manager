@@ -1,0 +1,59 @@
+{
+    "schemaFormatVersion": 1,
+    "paths": [
+        {
+            "pathId": "EN57_to_Ryba",
+            "sourceSeriesId": "EN57",
+            "targetSeriesId": "EN57_Ryba",
+            "displayName": "EN57 → Ryba (PESA modernizacja)",
+            "description": "Modernizacja stara EN57 do wersji Ryba (EN57AKM/EN57AKD): nowy układ napędowy, klimatyzacja, monitory pasażerskie, vmax 110 km/h. Real-world ref: Pesa MM 6.75M, Newag 8.07M, FPS Cegielski 8.5M.",
+            "durationDays": 60,
+            "externalCostPln": 7000000,
+            "internalCostPln": 6000000,
+            "minHallLevelInternal": 5,
+            "minServicePitLength": 65,
+            "targetDisplaySeries": "EN57AKM",
+            "newMaxSpeedKmh": 110,
+            "newPowerKw": 1000,
+            "newComfortClass": 4,
+            "newReliabilityScore": 85,
+            "newComfortFeatures": ["AirConditioning", "PowerSockets", "PassengerInfo"]
+        },
+        {
+            "pathId": "EU07_to_160",
+            "sourceSeriesId": "EU07",
+            "targetSeriesId": "EU07_mod_160",
+            "displayName": "EU07/EP07 → 160 km/h (Olkol-style)",
+            "description": "Modernizacja EU07/EP07 do prędkości 160 km/h: nowe wózki tarczowe, ETCS L1, modernized cab. Real-world ref: PKP IC 2024 9.96M.",
+            "durationDays": 90,
+            "externalCostPln": 10000000,
+            "internalCostPln": 8500000,
+            "minHallLevelInternal": 5,
+            "minServicePitLength": 17,
+            "targetDisplaySeries": "EP07-160",
+            "newMaxSpeedKmh": 160,
+            "newPowerKw": 2000,
+            "newComfortClass": 3,
+            "newReliabilityScore": 90,
+            "newComfortFeatures": []
+        },
+        {
+            "pathId": "SM42_to_6Dg",
+            "sourceSeriesId": "SM42",
+            "targetSeriesId": "6Dg",
+            "displayName": "SM42 → 6Dg (Newag)",
+            "description": "Modernizacja SM42 do wersji 6Dg: nowy silnik EURO IIIB, chłodzenie, mniejsze zużycie paliwa. Real-world ref: Newag 2014 77M / 20 szt = 3.85M.",
+            "durationDays": 30,
+            "externalCostPln": 3850000,
+            "internalCostPln": 3200000,
+            "minHallLevelInternal": 3,
+            "minServicePitLength": 16,
+            "targetDisplaySeries": "6Dg",
+            "newMaxSpeedKmh": 90,
+            "newPowerKw": 800,
+            "newComfortClass": 1,
+            "newReliabilityScore": 80,
+            "newComfortFeatures": []
+        }
+    ]
+}

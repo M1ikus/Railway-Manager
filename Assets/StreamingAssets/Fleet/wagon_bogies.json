@@ -1,0 +1,31 @@
+{
+  "bogies": [
+    {
+      "id": "klockowy",
+      "displayName": "Wózek klasyczny (klockowy)",
+      "description": "Wózek klasyczny z hamulcami klockowymi i kołami obręczowanymi. Vmax 140 km/h. Tani, prosty w utrzymaniu, ale ograniczona prędkość. Standard starszych wagonów.",
+      "maxSpeedKmh": 140,
+      "emptyMassTonsPair": 12.0,
+      "brakeRegime": 2,
+      "basePricePair": 400000
+    },
+    {
+      "id": "tarczowy",
+      "displayName": "Wózek tarczowy",
+      "description": "Wózek monoblokowy z hamulcami tarczowymi. Vmax 160 km/h. Standard nowoczesnych wagonów regionalnych i międzyregionalnych.",
+      "maxSpeedKmh": 160,
+      "emptyMassTonsPair": 14.0,
+      "brakeRegime": 4,
+      "basePricePair": 600000
+    },
+    {
+      "id": "tarczowy-szynowy",
+      "displayName": "Wózek tarczowy z hamulcem szynowym",
+      "description": "Wózek monoblokowy z hamulcami tarczowymi i magnetycznym hamulcem szynowym. Vmax 200+ km/h. Dla wagonów dalekobieżnych i ekspresów.",
+      "maxSpeedKmh": 200,
+      "emptyMassTonsPair": 16.0,
+      "brakeRegime": 3,
+      "basePricePair": 800000
+    }
+  ]
+}

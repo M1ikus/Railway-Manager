@@ -1,0 +1,37 @@
+{
+    "name": "RailwayManager.Tests.EditMode",
+    "rootNamespace": "RailwayManager.Tests.EditMode",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "RailwayManager.Core",
+        "RailwayManager.Economy",
+        "RailwayManager.GameCreator",
+        "RailwayManager.SaveLoad",
+        "RailwayManager.Fleet",
+        "RailwayManager.Timetable",
+        "RailwayManager.Map",
+        "RailwayManager.SharedUI",
+        "RailwayManager.Depot",
+        "RailwayManager.Personnel",
+        "RailwayManager.Maintenance",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Newtonsoft.Json.dll",
+        "K4os.Compression.LZ4.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

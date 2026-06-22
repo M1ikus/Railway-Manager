@@ -1,0 +1,642 @@
+{
+  "models": [
+    {
+      "seriesId": "EU160_Griffin",
+      "modelName": "Newag EU160 Griffin",
+      "manufacturer": "Newag",
+      "country": "PL",
+      "family": "EU160_family",
+      "type": 0,
+      "supportedTractions": [
+        0
+      ],
+      "voltages": [
+        "3kV DC",
+        "15kV AC 16.7Hz",
+        "25kV AC 50Hz"
+      ],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "ETCS L1",
+        "ETCS L2",
+        "GSM-R",
+        "PKP Radio R3"
+      ],
+      "comfortFeatures": [],
+      "comfortClass": 4,
+      "maxSpeedKmh": 160,
+      "powerKw": 5600,
+      "wheelbase": "Bo'Bo'",
+      "passengerSeats": 0,
+      "seatBreakdown": [],
+      "coachCount": 1,
+      "maxCoachesInTrain": 18,
+      "lengthM": 19.75,
+      "emptyMassTons": 90,
+      "maxLoadedMassTons": 90,
+      "brakingMassTons": 110,
+      "brakeRegime": 3,
+      "accelerationMps2": 0.8,
+      "decelerationMps2": 0.9,
+      "basePrice": 25000000,
+      "operationalCostPerKmGroszy": 380,
+      "reliabilityScore": 88,
+      "breakdownRiskFactor": 0.7,
+      "maintenanceCostFactor": 0.9,
+      "componentRisk": {
+        "engine": 0.7,
+        "brake": 0.7,
+        "doors": 0.8,
+        "ac": 0.7,
+        "body": 0.6,
+        "wheels": 0.8,
+        "electrical": 0.7,
+        "interior": 0.7,
+        "lights": 0.7,
+        "toilets": 0.8,
+        "pantograph": 0.7,
+        "coupling": 0.7
+      },
+      "inspectionIntervalKmP1": 25000,
+      "inspectionIntervalKmP2": 100000,
+      "inspectionIntervalKmP3": 400000,
+      "inspectionIntervalYearsP4": 8,
+      "inspectionIntervalYearsP5": 24,
+      "inProductionFromYear": 2015,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2015,
+      "status": 0,
+      "minPlatformLengthM": 0,
+      "requiresMaintenanceCapabilities": [
+        "ElectricWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "ExpressDomestic",
+        "InterregionalFast"
+      ],
+      "canBePulledByDiesel": false,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "Newag Griffin E6ACT — nowoczesna polska lokomotywa wielosystemowa. Pierwsza seryjna rodzimej produkcji z ETCS. Używana przez PKP Intercity, PKP Cargo, LOTOS Kolej.",
+      "description": "Nowoczesna lokomotywa elektryczna 160 km/h, wielosystemowa — może jeździć po sieciach 3kV DC (PL) i 15/25 kV AC (za granicą).",
+      "factoryLocation": "Nowy Sącz"
+    },
+    {
+      "seriesId": "FLIRT_L4268",
+      "modelName": "Stadler FLIRT L-4268 (2 człony)",
+      "manufacturer": "Stadler",
+      "country": "CH",
+      "family": "FLIRT",
+      "type": 2,
+      "supportedTractions": [
+        0
+      ],
+      "voltages": [
+        "3kV DC"
+      ],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "ETCS L1",
+        "GSM-R"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy"
+      ],
+      "comfortClass": 3,
+      "maxSpeedKmh": 160,
+      "powerKw": 2000,
+      "wheelbase": "Bo'2'Bo'",
+      "passengerSeats": 120,
+      "seatBreakdown": [
+        {
+          "type": 0,
+          "count": 100
+        },
+        {
+          "type": 4,
+          "count": 12
+        },
+        {
+          "type": 10,
+          "count": 8
+        }
+      ],
+      "coachCount": 2,
+      "maxCoachesInTrain": 0,
+      "lengthM": 41.4,
+      "emptyMassTons": 80,
+      "maxLoadedMassTons": 100,
+      "brakingMassTons": 95,
+      "brakeRegime": 4,
+      "accelerationMps2": 1.0,
+      "decelerationMps2": 1.1,
+      "basePrice": 24000000,
+      "_opCostRebalanceComment": "M6.5 rebalans: 280 → 550 gr/km (5.50 zł/km), real estymata EZT regionalny 5-8 zł/km — środek dla 2-czł.",
+      "operationalCostPerKmGroszy": 550,
+      "reliabilityScore": 90,
+      "breakdownRiskFactor": 0.6,
+      "maintenanceCostFactor": 0.8,
+      "inspectionIntervalKmP1": 30000,
+      "inspectionIntervalKmP2": 120000,
+      "inspectionIntervalKmP3": 450000,
+      "inspectionIntervalYearsP4": 8,
+      "inspectionIntervalYearsP5": 24,
+      "inProductionFromYear": 2014,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2014,
+      "status": 0,
+      "minPlatformLengthM": 45,
+      "requiresMaintenanceCapabilities": [
+        "ElectricWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "RegionalAgglomeration",
+        "RegionalLocal"
+      ],
+      "canBePulledByDiesel": true,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "Stadler FLIRT (Flinker Leichter Innovativer Regional-Triebzug) — najpopularniejszy nowoczesny EZT w Europie. W PL używany przez Koleje Mazowieckie, Koleje Śląskie, PKP SKM.",
+      "description": "Krótki 2-członowy FLIRT dla aglomeracji i słabszych potoków regionalnych. Komfortowy, szybki rozruch.",
+      "factoryLocation": "Siedlce"
+    },
+    {
+      "seriesId": "FLIRT_LM4268",
+      "modelName": "Stadler FLIRT LM-4268 (3 człony)",
+      "manufacturer": "Stadler",
+      "country": "CH",
+      "family": "FLIRT",
+      "type": 2,
+      "supportedTractions": [
+        0
+      ],
+      "voltages": [
+        "3kV DC"
+      ],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "ETCS L1",
+        "GSM-R"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy"
+      ],
+      "comfortClass": 3,
+      "maxSpeedKmh": 160,
+      "powerKw": 2000,
+      "wheelbase": "Bo'2'2'Bo'",
+      "passengerSeats": 180,
+      "seatBreakdown": [
+        {
+          "type": 0,
+          "count": 148
+        },
+        {
+          "type": 4,
+          "count": 16
+        },
+        {
+          "type": 10,
+          "count": 8
+        },
+        {
+          "type": 9,
+          "count": 8
+        }
+      ],
+      "coachCount": 3,
+      "maxCoachesInTrain": 0,
+      "lengthM": 62.5,
+      "emptyMassTons": 110,
+      "maxLoadedMassTons": 140,
+      "brakingMassTons": 130,
+      "brakeRegime": 4,
+      "accelerationMps2": 0.95,
+      "decelerationMps2": 1.1,
+      "basePrice": 35000000,
+      "_opCostRebalanceComment": "M6.5 rebalans: 320 → 650 gr/km (6.50 zł/km), real estymata EZT regionalny 5-8 zł/km — środek-górny dla 3-czł.",
+      "operationalCostPerKmGroszy": 650,
+      "reliabilityScore": 90,
+      "breakdownRiskFactor": 0.6,
+      "maintenanceCostFactor": 0.85,
+      "inspectionIntervalKmP1": 30000,
+      "inspectionIntervalKmP2": 120000,
+      "inspectionIntervalKmP3": 450000,
+      "inspectionIntervalYearsP4": 8,
+      "inspectionIntervalYearsP5": 24,
+      "inProductionFromYear": 2014,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2014,
+      "status": 0,
+      "minPlatformLengthM": 65,
+      "requiresMaintenanceCapabilities": [
+        "ElectricWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "RegionalFast",
+        "RegionalAgglomeration",
+        "InterregionalLocal"
+      ],
+      "canBePulledByDiesel": true,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "3-członowy wariant FLIRT-a, najpopularniejszy rozmiar wśród polskich operatorów regionalnych.",
+      "description": "Średni 3-członowy FLIRT, standard regionalny. Lepszy komfort, większa pojemność bez radykalnego skoku cenowego.",
+      "factoryLocation": "Siedlce"
+    },
+    {
+      "seriesId": "FLIRT_ER160",
+      "modelName": "Stadler FLIRT ER160 (5 członów)",
+      "manufacturer": "Stadler",
+      "country": "CH",
+      "family": "FLIRT",
+      "type": 2,
+      "supportedTractions": [
+        0
+      ],
+      "voltages": [
+        "3kV DC"
+      ],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "ETCS L1",
+        "ETCS L2",
+        "GSM-R"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "USB",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy",
+        "Przewijak"
+      ],
+      "comfortClass": 4,
+      "maxSpeedKmh": 160,
+      "powerKw": 2600,
+      "wheelbase": "Bo'2'2'2'2'Bo'",
+      "passengerSeats": 300,
+      "seatBreakdown": [
+        {
+          "type": 0,
+          "count": 248
+        },
+        {
+          "type": 4,
+          "count": 24
+        },
+        {
+          "type": 10,
+          "count": 10
+        },
+        {
+          "type": 9,
+          "count": 18
+        }
+      ],
+      "coachCount": 5,
+      "maxCoachesInTrain": 0,
+      "lengthM": 103.0,
+      "emptyMassTons": 165,
+      "maxLoadedMassTons": 215,
+      "brakingMassTons": 200,
+      "brakeRegime": 4,
+      "accelerationMps2": 0.85,
+      "decelerationMps2": 1.1,
+      "basePrice": 58000000,
+      "_opCostRebalanceComment": "M6.5 rebalans: 420 → 700 gr/km (7.00 zł/km), real estymata EZT regionalny 5-8 zł/km — górny dla 5-czł.",
+      "operationalCostPerKmGroszy": 700,
+      "reliabilityScore": 90,
+      "breakdownRiskFactor": 0.6,
+      "maintenanceCostFactor": 0.9,
+      "inspectionIntervalKmP1": 30000,
+      "inspectionIntervalKmP2": 120000,
+      "inspectionIntervalKmP3": 450000,
+      "inspectionIntervalYearsP4": 8,
+      "inspectionIntervalYearsP5": 24,
+      "inProductionFromYear": 2014,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2014,
+      "status": 0,
+      "minPlatformLengthM": 105,
+      "requiresMaintenanceCapabilities": [
+        "ElectricWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "RegionalFast",
+        "InterregionalFast",
+        "InterregionalLocal"
+      ],
+      "canBePulledByDiesel": true,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "Długi 5-członowy FLIRT do mocnych potoków regionalnych i międzyregionalnych. PKP IC zamawiało takie warianty dla TLK.",
+      "description": "Duży 5-członowy FLIRT — dla mocnych relacji regionalnych, międzyregionalnych oraz wybranych TLK.",
+      "factoryLocation": "Siedlce"
+    },
+    {
+      "seriesId": "FLIRT_ED160",
+      "modelName": "Stadler FLIRT ED160 (8 członów)",
+      "manufacturer": "Stadler",
+      "country": "CH",
+      "family": "FLIRT",
+      "type": 2,
+      "supportedTractions": [
+        0
+      ],
+      "voltages": [
+        "3kV DC"
+      ],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "ETCS L1",
+        "ETCS L2",
+        "GSM-R",
+        "PKP Radio R3"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "USB",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy",
+        "Bar/restauracja",
+        "Przewijak",
+        "Strefa ciszy",
+        "Strefa dziecka"
+      ],
+      "comfortClass": 5,
+      "maxSpeedKmh": 160,
+      "powerKw": 4000,
+      "wheelbase": "Bo'2'2'2'2'2'2'2'Bo'",
+      "passengerSeats": 450,
+      "seatBreakdown": [
+        {
+          "type": 2,
+          "count": 60
+        },
+        {
+          "type": 0,
+          "count": 330
+        },
+        {
+          "type": 4,
+          "count": 24
+        },
+        {
+          "type": 10,
+          "count": 12
+        },
+        {
+          "type": 9,
+          "count": 12
+        },
+        {
+          "type": 5,
+          "count": 12
+        }
+      ],
+      "coachCount": 8,
+      "maxCoachesInTrain": 0,
+      "lengthM": 160.0,
+      "emptyMassTons": 260,
+      "maxLoadedMassTons": 340,
+      "brakingMassTons": 320,
+      "brakeRegime": 4,
+      "accelerationMps2": 0.75,
+      "decelerationMps2": 1.05,
+      "basePrice": 135000000,
+      "_priceRebalanceComment": "M6.5 rebalans: 107M → 135M, real PKP IC 2021 kontrakt 20 szt FLIRT ED160 za 2.7 mld brutto = 135M/szt",
+      "operationalCostPerKmGroszy": 580,
+      "reliabilityScore": 92,
+      "breakdownRiskFactor": 0.55,
+      "maintenanceCostFactor": 0.95,
+      "inspectionIntervalKmP1": 35000,
+      "inspectionIntervalKmP2": 140000,
+      "inspectionIntervalKmP3": 500000,
+      "inspectionIntervalYearsP4": 8,
+      "inspectionIntervalYearsP5": 24,
+      "inProductionFromYear": 2014,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2021,
+      "status": 0,
+      "minPlatformLengthM": 165,
+      "requiresMaintenanceCapabilities": [
+        "ElectricWorkshop",
+        "UndergroundInspection",
+        "WheelLathe"
+      ],
+      "suggestedCategoryGroups": [
+        "ExpressDomestic",
+        "InterregionalFast",
+        "InterregionalFastNight"
+      ],
+      "canBePulledByDiesel": false,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "PKP Intercity w 2021 zamówiło 20 sztuk FLIRT ED160 za 2.7 mld zł brutto — największa transakcja na EZT w PL. Dostawy od 2023.",
+      "description": "Długi 8-członowy FLIRT do pociągów dalekobieżnych i premium TLK. Alternatywa Pendolino w niższym segmencie cenowym.",
+      "factoryLocation": "Siedlce"
+    },
+    {
+      "seriesId": "SA137",
+      "modelName": "Pesa SA137 (2 człony)",
+      "manufacturer": "Pesa",
+      "country": "PL",
+      "family": "SA_new_family",
+      "type": 3,
+      "supportedTractions": [
+        1
+      ],
+      "voltages": [],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "GSM-R"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy"
+      ],
+      "comfortClass": 3,
+      "maxSpeedKmh": 120,
+      "powerKw": 410,
+      "wheelbase": "2'B'B'2'",
+      "passengerSeats": 120,
+      "seatBreakdown": [
+        {
+          "type": 0,
+          "count": 100
+        },
+        {
+          "type": 4,
+          "count": 12
+        },
+        {
+          "type": 10,
+          "count": 8
+        }
+      ],
+      "coachCount": 2,
+      "maxCoachesInTrain": 0,
+      "lengthM": 42.0,
+      "emptyMassTons": 72,
+      "maxLoadedMassTons": 95,
+      "brakingMassTons": 85,
+      "brakeRegime": 2,
+      "accelerationMps2": 0.7,
+      "decelerationMps2": 0.9,
+      "basePrice": 12000000,
+      "_opCostRebalanceComment": "M6.5 rebalans: 420 → 600 gr/km (6.00 zł/km), real estymata SZT spalinowy 6-12 zł/km — dolny dla 2-czł. (paliwo dominuje)",
+      "operationalCostPerKmGroszy": 600,
+      "reliabilityScore": 82,
+      "breakdownRiskFactor": 0.8,
+      "maintenanceCostFactor": 0.95,
+      "inspectionIntervalKmP1": 25000,
+      "inspectionIntervalKmP2": 100000,
+      "inspectionIntervalKmP3": 350000,
+      "inspectionIntervalYearsP4": 7,
+      "inspectionIntervalYearsP5": 22,
+      "inProductionFromYear": 2008,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2008,
+      "status": 0,
+      "minPlatformLengthM": 45,
+      "requiresMaintenanceCapabilities": [
+        "DieselWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "RegionalLocal",
+        "RegionalAgglomeration"
+      ],
+      "canBePulledByDiesel": false,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "Pesa SA137 / SA138 to następcy rodziny Bydgostia. Nowoczesny komfort i Wi-Fi na liniach niezelektryfikowanych.",
+      "description": "2-członowy szynobus spalinowy nowszej generacji — lepszy komfort, Wi-Fi, klimatyzacja standardowa.",
+      "factoryLocation": "Bydgoszcz"
+    },
+    {
+      "seriesId": "SA138",
+      "modelName": "Pesa SA138 (3 człony)",
+      "manufacturer": "Pesa",
+      "country": "PL",
+      "family": "SA_new_family",
+      "type": 3,
+      "supportedTractions": [
+        1
+      ],
+      "voltages": [],
+      "safetySystemsInstalled": [
+        "CA",
+        "SHP",
+        "GSM-R"
+      ],
+      "comfortFeatures": [
+        "Klimatyzacja",
+        "Wi-Fi",
+        "Gniazdka 230V",
+        "Toalety",
+        "WC dostępne dla niepełnosprawnych",
+        "Info pasażerskie",
+        "Monitoring CCTV",
+        "Przedział rowerowy"
+      ],
+      "comfortClass": 3,
+      "maxSpeedKmh": 120,
+      "powerKw": 600,
+      "wheelbase": "2'B'B'B'2'",
+      "passengerSeats": 180,
+      "seatBreakdown": [
+        {
+          "type": 0,
+          "count": 150
+        },
+        {
+          "type": 4,
+          "count": 16
+        },
+        {
+          "type": 10,
+          "count": 8
+        },
+        {
+          "type": 9,
+          "count": 6
+        }
+      ],
+      "coachCount": 3,
+      "maxCoachesInTrain": 0,
+      "lengthM": 56.0,
+      "emptyMassTons": 100,
+      "maxLoadedMassTons": 130,
+      "brakingMassTons": 120,
+      "brakeRegime": 2,
+      "accelerationMps2": 0.65,
+      "decelerationMps2": 0.9,
+      "basePrice": 14000000,
+      "_priceRebalanceComment": "M6.5 rebalans: 17M → 14M, real estymata 11-15M dla 3-czł. SZT spalinowego (Newag SA138 5 szt 2011-12 Koleje Śląskie / Pesa Link 3-czł.)",
+      "_opCostRebalanceComment": "M6.5 rebalans: 510 → 700 gr/km (7.00 zł/km), real estymata SZT spalinowy 6-12 zł/km — środek dla 3-czł.",
+      "operationalCostPerKmGroszy": 700,
+      "reliabilityScore": 82,
+      "breakdownRiskFactor": 0.8,
+      "maintenanceCostFactor": 1.0,
+      "inspectionIntervalKmP1": 25000,
+      "inspectionIntervalKmP2": 100000,
+      "inspectionIntervalKmP3": 350000,
+      "inspectionIntervalYearsP4": 7,
+      "inspectionIntervalYearsP5": 22,
+      "inProductionFromYear": 2009,
+      "inProductionToYear": 0,
+      "introducedToPolandYear": 2009,
+      "status": 0,
+      "minPlatformLengthM": 58,
+      "requiresMaintenanceCapabilities": [
+        "DieselWorkshop",
+        "UndergroundInspection"
+      ],
+      "suggestedCategoryGroups": [
+        "RegionalLocal",
+        "RegionalFast",
+        "InterregionalLocal"
+      ],
+      "canBePulledByDiesel": false,
+      "isShuntingLocomotive": false,
+      "historicalFactoid": "Mocniejszy 3-członowy wariant serii Pesa. Dobre dla linii niezelektryfikowanych o większym potoku pasażerów.",
+      "description": "3-członowy szynobus spalinowy nowszej generacji — większa pojemność, mocniejszy silnik.",
+      "factoryLocation": "Bydgoszcz"
+    }
+  ]
+}

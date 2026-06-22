@@ -1,0 +1,24 @@
+{
+  "bodies": [
+    {
+      "id": "UIC-X-24.5m",
+      "displayName": "Pudło krótkie 24.5m",
+      "description": "Klasyczne pudło PKP 24.5m (UIC-X). Standard polskich wagonów Bdhpumn, B11, A9. Vmax 160 km/h.",
+      "lengthM": 24.5,
+      "emptyMassTons": 24.0,
+      "maxSpeedKmhCap": 160,
+      "basePrice": 1500000,
+      "defaultDoorType": "SwingFolding"
+    },
+    {
+      "id": "UIC-Z-26.4m",
+      "displayName": "Pudło długie 26.4m",
+      "description": "Międzynarodowe pudło 26.4m (UIC-Z). Większa pojemność, lepszy komfort, Vmax 200 km/h. Standard nowoczesnych wagonów PKP IC.",
+      "lengthM": 26.4,
+      "emptyMassTons": 26.0,
+      "maxSpeedKmhCap": 200,
+      "basePrice": 1800000,
+      "defaultDoorType": "SlidingPlugDoor"
+    }
+  ]
+}

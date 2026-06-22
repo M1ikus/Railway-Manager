@@ -1,0 +1,23 @@
+{
+    "name": "RailwayManager.Personnel",
+    "rootNamespace": "RailwayManager.Personnel",
+    "references": [
+        "RailwayManager.Core",
+        "RailwayManager.Depot",
+        "RailwayManager.Fleet",
+        "RailwayManager.Timetable",
+        "RailwayManager.Maintenance",
+        "RailwayManager.SharedUI",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

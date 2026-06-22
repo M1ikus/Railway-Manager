@@ -1,0 +1,28 @@
+{
+    "name": "RailwayManager.Tests.PlayMode",
+    "rootNamespace": "RailwayManager.Tests.PlayMode",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "RailwayManager.Core",
+        "RailwayManager.Economy",
+        "RailwayManager.Fleet",
+        "RailwayManager.Map",
+        "RailwayManager.Depot",
+        "RailwayManager.Timetable",
+        "RailwayManager.Personnel"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
